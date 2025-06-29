@@ -571,8 +571,8 @@ namespace FYP_PROJECT
             errorMessage = "";
             try
             {
-                string accountSid = "ACce0ef485c010ab783ced9d8400821263";
-                string authToken = "d6767dd9bc2a67642487d71a0177a17c";
+                string accountSid = "TWILIO_SID";
+                string authToken = "TWILIO_AUTH";
                 TwilioClient.Init(accountSid, authToken);
 
                 var message = MessageResource.Create(
