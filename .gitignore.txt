@@ -1,0 +1,17 @@
+# Ignore compiled output
+bin/
+obj/
+*.exe
+*.dll
+
+# Ignore user-specific files
+*.suo
+*.user
+*.log
+
+# Ignore VS folders
+.vscode/
+*.vs/
+
+# Optional: Ignore config files if they contain secrets
+*.config
