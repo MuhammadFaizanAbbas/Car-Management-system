@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net.Http;
+using System.Xml;
 using System.Threading.Tasks;
 //using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
-using Twilio.Types;
+using MySql.Data.MySqlClient;
+
 
 namespace FYP_PROJECT
 {
@@ -34,7 +36,6 @@ namespace FYP_PROJECT
             forgotPassword_pnl.Visible = false;
             signup_admin_pnl.Visible = false;
             login_forgotPasswordPhoneCode_pnl.Visible = false;
-            this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
 
@@ -217,18 +218,86 @@ namespace FYP_PROJECT
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Employee emp = new Employee();
-            ShowFormWithFade(emp);
+            string enteredUsername = employe_username_tb.Text.Trim();
+            string enteredPassword = employe_password_tb.Text.Trim();
 
+            if (string.IsNullOrEmpty(enteredUsername) || string.IsNullOrEmpty(enteredPassword))
+            {
+                MessageBox.Show("Please enter both username and password.");
+                return;
+            }
 
+            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT * 
+                FROM users 
+                WHERE User_UserName = @username 
+                  AND User_Password = @password 
+                  AND User_Account_Type = 'Employee'";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", enteredUsername);
+                        cmd.Parameters.AddWithValue("@password", enteredPassword);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // ✅ Store data into Session class
+                                Session.UserId = Convert.ToInt32(reader["User_Id"]);
+                                Session.AccountType = reader["User_Account_Type"].ToString();
+                                Session.Name = reader["User_Name"].ToString();
+                                Session.Username = reader["User_UserName"].ToString();
+                                Session.Password = reader["User_Password"].ToString();
+                                Session.Occupation = reader["User_Occupation"].ToString();
+                                Session.PhoneNumber = reader["User_PhoneNumber"].ToString();
+                                Session.Cnic = reader["User_Cnic"].ToString();
+                                Session.Email = reader["User_Email"].ToString();
+                                Session.SecurityQuestion = reader["User_SecurityQuestions"].ToString();
+                                Session.SecurityAnswer = reader["User_SecurityAnswer"].ToString();
+
+                                // ✅ Pass values if needed and show main employee form
+                                Employee emp = new Employee();
+                                emp.EmployeeName = Session.Name;
+                                emp.EmployeeDesignation = Session.Occupation;
+
+                                ShowFormWithFade(emp);
+                                forgotPassword_btn.Hide(); // Optional
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid employee credentials or access denied.",
+                                    "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Database connection error:\n" + ex.Message,
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
 
 
         private void Login_form_Load(object sender, EventArgs e)
         {
+            
+
             employe_username_tb.MaxLength = 40;
             admin_userName_tb.MaxLength = 40;
             FadeInSelf();
+            
 
         }
 
@@ -237,10 +306,65 @@ namespace FYP_PROJECT
 
         private void admin_proceed_btn_Click(object sender, EventArgs e)
         {
+            string enteredUsername = admin_userName_tb.Text.Trim();   // Your TextBox for username
+            string enteredPassword = admin_password_tb.Text.Trim();   // Your TextBox for password
 
-            admin admin_Page = new admin();
-            ShowFormWithFade(admin_Page); ;
-            forgotPassword_btn.Hide();
+            if (string.IsNullOrEmpty(enteredUsername) || string.IsNullOrEmpty(enteredPassword))
+            {
+                MessageBox.Show("Please enter both username and password.");
+                return;
+            }
+
+            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Add condition to check User_Account_Type = 'Admin'
+                    string query = "SELECT * FROM users WHERE User_UserName = @username AND User_Password = @password AND User_Account_Type = 'Admin'";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", enteredUsername);
+                        cmd.Parameters.AddWithValue("@password", enteredPassword);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read()) // ✅ Use Read() to access fields
+                            {
+                                // Store admin info in Session
+                                Session.UserId = Convert.ToInt32(reader["User_Id"]);
+                                Session.AccountType = reader["User_Account_Type"].ToString();
+                                Session.Name = reader["User_Name"].ToString();
+                                Session.Username = reader["User_UserName"].ToString();
+                                Session.Password = reader["User_Password"].ToString();
+                                Session.Occupation = reader["User_Occupation"].ToString();
+                                Session.PhoneNumber = reader["User_PhoneNumber"].ToString();
+                                Session.Cnic = reader["User_Cnic"].ToString();
+                                Session.Email = reader["User_Email"].ToString();
+                                Session.SecurityQuestion = reader["User_SecurityQuestions"].ToString();
+                                Session.SecurityAnswer = reader["User_SecurityAnswer"].ToString();
+
+                                // Open Admin Page
+                                admin admin_Page = new admin();
+                                ShowFormWithFade(admin_Page);
+                                forgotPassword_btn.Hide(); // optional
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid admin credentials or access denied.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Database connection error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void admin_back_btn_Click(object sender, EventArgs e)
@@ -395,8 +519,8 @@ namespace FYP_PROJECT
             signup_admin_pnl.Show();
 
         }
-      
-       
+
+
 
 
 
@@ -433,30 +557,71 @@ namespace FYP_PROJECT
 
         private void login_forgotPasswordProceed_btn_Click(object sender, EventArgs e)
         {
+            string name = forgotPassword_Name.Text.Trim();
+            string email = forgotPassword_email.Text.Trim();
             string phoneNumber = forgotPasswordPhoneNumber_tb.Text.Trim();
+            string securityQuestion = forgotPasswordSecurity_comboBox.SelectedItem?.ToString() ?? "";
+            string securityAnswer = forgotPassword_SecurityAnswer.Text.Trim();
 
-            if (string.IsNullOrEmpty(phoneNumber))
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(phoneNumber) ||
+                string.IsNullOrEmpty(securityQuestion) || string.IsNullOrEmpty(securityAnswer))
             {
-                MessageBox.Show("Please enter a valid phone number.");
+                MessageBox.Show("Please fill all fields.");
                 return;
             }
 
-            generatedOTP = new Random().Next(100000, 999999).ToString();
-            string message = $"Your password reset code is: {generatedOTP}";
-            string error;
+            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT * FROM users 
+                             WHERE User_Name = @name AND User_Email = @Email AND User_PhoneNumber = @Phone 
+                             AND User_SecurityQuestions = @Question AND User_SecurityAnswer = @Answer";
 
-            if (SendSms(phoneNumber, message, out error))
-            {
-                login_forgotPasswordPhone_lbl.Text = phoneNumber;
-                login_otpStatus_lbl.Text = $"OTP sent to {phoneNumber}";
-                login_otpStatus_lbl.Visible = true;
-                login_forgotPasswordPhoneCode_pnl.Show();
-                forgotPassword_pnl.Hide();
-                otpResendCount = 0; // reset count for fresh start
-            }
-            else
-            {
-                MessageBox.Show("Failed to send OTP: " + error);
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@name", name);
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@Phone", phoneNumber);
+                        cmd.Parameters.AddWithValue("@Question", securityQuestion);
+                        cmd.Parameters.AddWithValue("@Answer", securityAnswer);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                // ✅ All user details matched, send OTP
+                                generatedOTP = new Random().Next(100000, 999999).ToString();
+                                string message = $"Your password reset code is: {generatedOTP}";
+                                string error;
+
+                                if (SendSms(phoneNumber, message, out error))
+                                {
+                                    login_forgotPasswordPhone_lbl.Text = phoneNumber;
+                                    login_otpStatus_lbl.Text = $"OTP sent to {phoneNumber}";
+                                    login_otpStatus_lbl.Visible = true;
+                                    login_forgotPasswordPhoneCode_pnl.Show();
+                                    forgotPassword_pnl.Hide();
+                                    otpResendCount = 0;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Failed to send OTP: " + error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Entered information does not match our records.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Database error:\n" + ex.Message);
+                }
             }
         }
 
@@ -474,6 +639,48 @@ namespace FYP_PROJECT
         private void login_forgotPasswordPhoneCode_tb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private bool SendSms(string toNumber, string messageBody, out string errorMessage)
+        {
+            errorMessage = "";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var values = new Dictionary<string, string>
+            {
+                { "mocean-api-key", "1f2fbc99" },
+                { "mocean-api-secret", "8f6ea851" },
+                { "mocean-from", "Fazi420" },
+                { "mocean-to", toNumber },
+                { "mocean-text", messageBody }
+            };
+
+                    var content = new FormUrlEncodedContent(values);
+                    var response = client.PostAsync("https://rest.moceanapi.com/rest/2/sms", content).Result;
+                    var responseString = response.Content.ReadAsStringAsync().Result;
+
+                    // ✅ Parse <status> tag from XML
+                    XmlDocument doc = new XmlDocument();
+                    doc.LoadXml(responseString);
+                    XmlNode statusNode = doc.SelectSingleNode("//status");
+
+                    if (statusNode != null && statusNode.InnerText == "0")
+                    {
+                        return true; // Success
+                    }
+                    else
+                    {
+                        errorMessage = "Mocean response status is not 0:\n" + responseString;
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = "Exception: " + ex.Message;
+                return false;
+            }
         }
 
         private void login_forgotPasswordSendCodeAgain_btn_Click(object sender, EventArgs e)
@@ -532,64 +739,86 @@ namespace FYP_PROJECT
         private void login_forgotPasswordChangePass_btn_Click(object sender, EventArgs e)
         {
             string enteredOTP = login_forgotPasswordPhoneCode_tb.Text.Trim();
-            string phoneNumber = login_forgotPasswordPhone_lbl.Text.Trim();
+            string phoneNumber = login_forgotPasswordPhone_lbl.Text.Trim(); // stored when OTP was sent
+            string newPassword = forgotPassword_NewPassword.Text.Trim();   // new password field
 
+            // Step 1: Check if OTP is empty
             if (string.IsNullOrEmpty(enteredOTP))
             {
                 MessageBox.Show("Please enter the OTP.", "Missing OTP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            // Step 2: Check if new password is empty
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                MessageBox.Show("Please enter a new password.", "Missing Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Step 3: Match OTP
             if (enteredOTP == generatedOTP)
             {
-                MessageBox.Show("OTP verified successfully!\nYour password has been changed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                string message = "Your password has been successfully changed.";
-                string error;
-
-                if (!SendSms(phoneNumber, message, out error))
+                // Step 4: Update password in the database
+                string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
-                    MessageBox.Show("Failed to send confirmation SMS:\n" + error, "SMS Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    try
+                    {
+                        conn.Open();
+                        string updateQuery = "UPDATE users SET User_Password  = @newPassword WHERE User_PhoneNumber = @phone";
 
-                // Reset
-                login_forgotPasswordPhoneCode_tb.Clear();
-                login_otpStatus_lbl.Visible = false;
-                login_forgotPasswordPhoneCode_pnl.Hide();
-                generatedOTP = null;
-                otpResendCount = 0;
-                signup_btn.Show();
-                login_btn.Show();
+                        using (MySqlCommand cmd = new MySqlCommand(updateQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@newPassword", newPassword);
+                            cmd.Parameters.AddWithValue("@phone", phoneNumber);
+
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Password changed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Optionally send confirmation SMS
+                                string message = "Your password has been successfully changed.";
+                                string error;
+
+                                if (!SendSms(phoneNumber, message, out error))
+                                {
+                                    MessageBox.Show("Failed to send confirmation SMS:\n" + error, "SMS Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                                // Reset fields
+                                login_forgotPasswordPhoneCode_tb.Clear();
+                                forgotPassword_NewPassword.Clear();
+                                generatedOTP = null;
+                                otpResendCount = 0;
+                                login_otpStatus_lbl.Visible = false;
+                                login_forgotPasswordPhoneCode_pnl.Hide();
+                                signup_btn.Show();
+                                login_btn.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to update password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Database error:\n" + ex.Message);
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Incorrect OTP. Please try again.", "Invalid Code", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
-        private bool SendSms(string toNumber, string messageBody, out string errorMessage)
+
+        private void employe_login_pnl_Paint(object sender, PaintEventArgs e)
         {
-            errorMessage = "";
-            try
-            {
-                string accountSid = "TWILIO_SID";
-                string authToken = "TWILIO_AUTH";
-                TwilioClient.Init(accountSid, authToken);
 
-                var message = MessageResource.Create(
-                    body: messageBody,
-                    from: new PhoneNumber("+12678132211"),
-                    to: new PhoneNumber(toNumber)
-                );
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                errorMessage = ex.Message;
-                return false;
-            }
         }
-
     }
-
 }

@@ -42,7 +42,7 @@
             this.admin_login_pnl = new System.Windows.Forms.Panel();
             this.admin_back_btn = new Guna.UI2.WinForms.Guna2Button();
             this.admin_proceed_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.admin_password_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.admin_userName_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.admin_login_lbl = new System.Windows.Forms.Label();
@@ -75,10 +75,10 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.login_forgotPasswordProceed_btn = new Guna.UI2.WinForms.Guna2Button();
             this.forgotPasswordSecurity_comboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.forgotPassword_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.forgotPassword_SecurityAnswer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.forgotPassword_email = new Guna.UI2.WinForms.Guna2TextBox();
+            this.forgotPassword_NewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.forgotPasswordPhoneNumber_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -86,13 +86,13 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.login_forgotPasswordPhoneCode_pnl = new System.Windows.Forms.Panel();
+            this.login_otpStatus_lbl = new System.Windows.Forms.Label();
+            this.login_forgotPasswordSendCodeAgain_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.login_forgotPasswordPhone_lbl = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.login_forgotPasswordChangePass_btn = new Guna.UI2.WinForms.Guna2Button();
             this.login_forgotPasswordPhoneCode_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.login_forgotPasswordPhone_lbl = new System.Windows.Forms.Label();
-            this.login_forgotPasswordSendCodeAgain_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.login_otpStatus_lbl = new System.Windows.Forms.Label();
             this.login_pnl.SuspendLayout();
             this.backGround_pnl.SuspendLayout();
             this.employe_login_pnl.SuspendLayout();
@@ -140,8 +140,8 @@
             this.backGround_pnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backGround_pnl.BackgroundImage")));
             this.backGround_pnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.backGround_pnl.Controls.Add(this.employe_login_pnl);
-            this.backGround_pnl.Controls.Add(this.admin_login_pnl);
             this.backGround_pnl.Controls.Add(this.employee_login_btn);
+            this.backGround_pnl.Controls.Add(this.admin_login_pnl);
             this.backGround_pnl.Controls.Add(this.admin_login_btn);
             this.backGround_pnl.Controls.Add(this.label1);
             this.backGround_pnl.Location = new System.Drawing.Point(-2, -2);
@@ -161,10 +161,11 @@
             this.employe_login_pnl.Controls.Add(this.pictureBox3);
             this.employe_login_pnl.Controls.Add(this.pictureBox2);
             this.employe_login_pnl.Controls.Add(this.label2);
-            this.employe_login_pnl.Location = new System.Drawing.Point(29, 54);
+            this.employe_login_pnl.Location = new System.Drawing.Point(32, 51);
             this.employe_login_pnl.Name = "employe_login_pnl";
             this.employe_login_pnl.Size = new System.Drawing.Size(216, 614);
             this.employe_login_pnl.TabIndex = 4;
+            this.employe_login_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.employe_login_pnl_Paint);
             // 
             // employe_password_tb
             // 
@@ -291,12 +292,12 @@
             this.admin_login_pnl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.admin_login_pnl.Controls.Add(this.admin_back_btn);
             this.admin_login_pnl.Controls.Add(this.admin_proceed_btn);
-            this.admin_login_pnl.Controls.Add(this.guna2TextBox1);
+            this.admin_login_pnl.Controls.Add(this.admin_password_tb);
             this.admin_login_pnl.Controls.Add(this.admin_userName_tb);
             this.admin_login_pnl.Controls.Add(this.pictureBox1);
             this.admin_login_pnl.Controls.Add(this.admin_login_lbl);
             this.admin_login_pnl.Controls.Add(this.username_logo_pb);
-            this.admin_login_pnl.Location = new System.Drawing.Point(29, 54);
+            this.admin_login_pnl.Location = new System.Drawing.Point(32, 51);
             this.admin_login_pnl.Name = "admin_login_pnl";
             this.admin_login_pnl.Size = new System.Drawing.Size(216, 630);
             this.admin_login_pnl.TabIndex = 5;
@@ -341,29 +342,29 @@
             this.admin_proceed_btn.Text = "Proceed";
             this.admin_proceed_btn.Click += new System.EventHandler(this.admin_proceed_btn_Click);
             // 
-            // guna2TextBox1
+            // admin_password_tb
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(43, 276);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.PlaceholderText = "Password";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(153, 32);
-            this.guna2TextBox1.TabIndex = 12;
+            this.admin_password_tb.Animated = true;
+            this.admin_password_tb.AutoRoundedCorners = true;
+            this.admin_password_tb.BorderColor = System.Drawing.Color.Black;
+            this.admin_password_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.admin_password_tb.DefaultText = "";
+            this.admin_password_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.admin_password_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.admin_password_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.admin_password_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.admin_password_tb.FillColor = System.Drawing.Color.DarkGray;
+            this.admin_password_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.admin_password_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.admin_password_tb.ForeColor = System.Drawing.Color.Black;
+            this.admin_password_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.admin_password_tb.Location = new System.Drawing.Point(43, 276);
+            this.admin_password_tb.Name = "admin_password_tb";
+            this.admin_password_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.admin_password_tb.PlaceholderText = "Password";
+            this.admin_password_tb.SelectedText = "";
+            this.admin_password_tb.Size = new System.Drawing.Size(153, 32);
+            this.admin_password_tb.TabIndex = 12;
             // 
             // admin_userName_tb
             // 
@@ -779,10 +780,10 @@
             this.forgotPassword_pnl.Controls.Add(this.guna2Button2);
             this.forgotPassword_pnl.Controls.Add(this.login_forgotPasswordProceed_btn);
             this.forgotPassword_pnl.Controls.Add(this.forgotPasswordSecurity_comboBox);
-            this.forgotPassword_pnl.Controls.Add(this.guna2TextBox3);
-            this.forgotPassword_pnl.Controls.Add(this.guna2TextBox7);
-            this.forgotPassword_pnl.Controls.Add(this.guna2TextBox2);
-            this.forgotPassword_pnl.Controls.Add(this.guna2TextBox5);
+            this.forgotPassword_pnl.Controls.Add(this.forgotPassword_Name);
+            this.forgotPassword_pnl.Controls.Add(this.forgotPassword_SecurityAnswer);
+            this.forgotPassword_pnl.Controls.Add(this.forgotPassword_email);
+            this.forgotPassword_pnl.Controls.Add(this.forgotPassword_NewPassword);
             this.forgotPassword_pnl.Controls.Add(this.forgotPasswordPhoneNumber_tb);
             this.forgotPassword_pnl.Controls.Add(this.pictureBox12);
             this.forgotPassword_pnl.Controls.Add(this.pictureBox11);
@@ -862,97 +863,97 @@
             this.forgotPasswordSecurity_comboBox.TabIndex = 21;
             this.forgotPasswordSecurity_comboBox.SelectedIndexChanged += new System.EventHandler(this.forgotPasswordSecurity_comboBox_SelectedIndexChanged);
             // 
-            // guna2TextBox3
+            // forgotPassword_Name
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.AutoRoundedCorners = true;
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(89, 96);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.PlaceholderText = "Full Name";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(200, 32);
-            this.guna2TextBox3.TabIndex = 18;
+            this.forgotPassword_Name.Animated = true;
+            this.forgotPassword_Name.AutoRoundedCorners = true;
+            this.forgotPassword_Name.BorderColor = System.Drawing.Color.Black;
+            this.forgotPassword_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.forgotPassword_Name.DefaultText = "";
+            this.forgotPassword_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.forgotPassword_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.forgotPassword_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_Name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPassword_Name.ForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_Name.Location = new System.Drawing.Point(89, 96);
+            this.forgotPassword_Name.Name = "forgotPassword_Name";
+            this.forgotPassword_Name.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_Name.PlaceholderText = "Full Name";
+            this.forgotPassword_Name.SelectedText = "";
+            this.forgotPassword_Name.Size = new System.Drawing.Size(200, 32);
+            this.forgotPassword_Name.TabIndex = 18;
             // 
-            // guna2TextBox7
+            // forgotPassword_SecurityAnswer
             // 
-            this.guna2TextBox7.Animated = true;
-            this.guna2TextBox7.AutoRoundedCorners = true;
-            this.guna2TextBox7.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox7.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Location = new System.Drawing.Point(413, 146);
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox7.PlaceholderText = "Security Question Answer";
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.Size = new System.Drawing.Size(200, 32);
-            this.guna2TextBox7.TabIndex = 17;
+            this.forgotPassword_SecurityAnswer.Animated = true;
+            this.forgotPassword_SecurityAnswer.AutoRoundedCorners = true;
+            this.forgotPassword_SecurityAnswer.BorderColor = System.Drawing.Color.Black;
+            this.forgotPassword_SecurityAnswer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.forgotPassword_SecurityAnswer.DefaultText = "";
+            this.forgotPassword_SecurityAnswer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.forgotPassword_SecurityAnswer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.forgotPassword_SecurityAnswer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_SecurityAnswer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_SecurityAnswer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_SecurityAnswer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.forgotPassword_SecurityAnswer.ForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_SecurityAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_SecurityAnswer.Location = new System.Drawing.Point(413, 146);
+            this.forgotPassword_SecurityAnswer.Name = "forgotPassword_SecurityAnswer";
+            this.forgotPassword_SecurityAnswer.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_SecurityAnswer.PlaceholderText = "Security Question Answer";
+            this.forgotPassword_SecurityAnswer.SelectedText = "";
+            this.forgotPassword_SecurityAnswer.Size = new System.Drawing.Size(200, 32);
+            this.forgotPassword_SecurityAnswer.TabIndex = 17;
             // 
-            // guna2TextBox2
+            // forgotPassword_email
             // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(89, 48);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.PlaceholderText = "Email";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(200, 32);
-            this.guna2TextBox2.TabIndex = 16;
+            this.forgotPassword_email.Animated = true;
+            this.forgotPassword_email.AutoRoundedCorners = true;
+            this.forgotPassword_email.BorderColor = System.Drawing.Color.Black;
+            this.forgotPassword_email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.forgotPassword_email.DefaultText = "";
+            this.forgotPassword_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.forgotPassword_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.forgotPassword_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_email.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.forgotPassword_email.ForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_email.Location = new System.Drawing.Point(89, 48);
+            this.forgotPassword_email.Name = "forgotPassword_email";
+            this.forgotPassword_email.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_email.PlaceholderText = "Email";
+            this.forgotPassword_email.SelectedText = "";
+            this.forgotPassword_email.Size = new System.Drawing.Size(200, 32);
+            this.forgotPassword_email.TabIndex = 16;
             // 
-            // guna2TextBox5
+            // forgotPassword_NewPassword
             // 
-            this.guna2TextBox5.Animated = true;
-            this.guna2TextBox5.AutoRoundedCorners = true;
-            this.guna2TextBox5.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(413, 96);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.PlaceholderText = "New Password";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(200, 32);
-            this.guna2TextBox5.TabIndex = 14;
+            this.forgotPassword_NewPassword.Animated = true;
+            this.forgotPassword_NewPassword.AutoRoundedCorners = true;
+            this.forgotPassword_NewPassword.BorderColor = System.Drawing.Color.Black;
+            this.forgotPassword_NewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.forgotPassword_NewPassword.DefaultText = "";
+            this.forgotPassword_NewPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.forgotPassword_NewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.forgotPassword_NewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_NewPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.forgotPassword_NewPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_NewPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.forgotPassword_NewPassword.ForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_NewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.forgotPassword_NewPassword.Location = new System.Drawing.Point(413, 96);
+            this.forgotPassword_NewPassword.Name = "forgotPassword_NewPassword";
+            this.forgotPassword_NewPassword.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.forgotPassword_NewPassword.PlaceholderText = "New Password";
+            this.forgotPassword_NewPassword.SelectedText = "";
+            this.forgotPassword_NewPassword.Size = new System.Drawing.Size(200, 32);
+            this.forgotPassword_NewPassword.TabIndex = 14;
             // 
             // forgotPasswordPhoneNumber_tb
             // 
@@ -1036,10 +1037,53 @@
             this.login_forgotPasswordPhoneCode_pnl.Controls.Add(this.login_forgotPasswordChangePass_btn);
             this.login_forgotPasswordPhoneCode_pnl.Controls.Add(this.login_forgotPasswordPhoneCode_tb);
             this.login_forgotPasswordPhoneCode_pnl.Controls.Add(this.pictureBox17);
-            this.login_forgotPasswordPhoneCode_pnl.Location = new System.Drawing.Point(356, 228);
+            this.login_forgotPasswordPhoneCode_pnl.Location = new System.Drawing.Point(356, 229);
             this.login_forgotPasswordPhoneCode_pnl.Name = "login_forgotPasswordPhoneCode_pnl";
-            this.login_forgotPasswordPhoneCode_pnl.Size = new System.Drawing.Size(651, 429);
+            this.login_forgotPasswordPhoneCode_pnl.Size = new System.Drawing.Size(651, 427);
             this.login_forgotPasswordPhoneCode_pnl.TabIndex = 24;
+            // 
+            // login_otpStatus_lbl
+            // 
+            this.login_otpStatus_lbl.AutoSize = true;
+            this.login_otpStatus_lbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_otpStatus_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.login_otpStatus_lbl.Location = new System.Drawing.Point(254, 131);
+            this.login_otpStatus_lbl.Name = "login_otpStatus_lbl";
+            this.login_otpStatus_lbl.Size = new System.Drawing.Size(57, 21);
+            this.login_otpStatus_lbl.TabIndex = 26;
+            this.login_otpStatus_lbl.Text = "label3";
+            // 
+            // login_forgotPasswordSendCodeAgain_btn
+            // 
+            this.login_forgotPasswordSendCodeAgain_btn.Animated = true;
+            this.login_forgotPasswordSendCodeAgain_btn.AutoRoundedCorners = true;
+            this.login_forgotPasswordSendCodeAgain_btn.BackColor = System.Drawing.Color.Transparent;
+            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.login_forgotPasswordSendCodeAgain_btn.FillColor = System.Drawing.Color.Silver;
+            this.login_forgotPasswordSendCodeAgain_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.login_forgotPasswordSendCodeAgain_btn.ForeColor = System.Drawing.Color.Black;
+            this.login_forgotPasswordSendCodeAgain_btn.Location = new System.Drawing.Point(460, 97);
+            this.login_forgotPasswordSendCodeAgain_btn.Name = "login_forgotPasswordSendCodeAgain_btn";
+            this.login_forgotPasswordSendCodeAgain_btn.Size = new System.Drawing.Size(89, 31);
+            this.login_forgotPasswordSendCodeAgain_btn.TabIndex = 25;
+            this.login_forgotPasswordSendCodeAgain_btn.Text = "Send Again";
+            this.login_forgotPasswordSendCodeAgain_btn.UseTransparentBackground = true;
+            this.login_forgotPasswordSendCodeAgain_btn.Click += new System.EventHandler(this.login_forgotPasswordSendCodeAgain_btn_Click);
+            // 
+            // login_forgotPasswordPhone_lbl
+            // 
+            this.login_forgotPasswordPhone_lbl.AutoSize = true;
+            this.login_forgotPasswordPhone_lbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_forgotPasswordPhone_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.login_forgotPasswordPhone_lbl.Location = new System.Drawing.Point(263, 48);
+            this.login_forgotPasswordPhone_lbl.Name = "login_forgotPasswordPhone_lbl";
+            this.login_forgotPasswordPhone_lbl.Size = new System.Drawing.Size(41, 21);
+            this.login_forgotPasswordPhone_lbl.TabIndex = 24;
+            this.login_forgotPasswordPhone_lbl.Text = "N/A";
+            this.login_forgotPasswordPhone_lbl.Click += new System.EventHandler(this.login_forgotPasswordPhone_lbl_Click);
             // 
             // guna2Button3
             // 
@@ -1116,49 +1160,6 @@
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 3;
             this.pictureBox17.TabStop = false;
-            // 
-            // login_forgotPasswordPhone_lbl
-            // 
-            this.login_forgotPasswordPhone_lbl.AutoSize = true;
-            this.login_forgotPasswordPhone_lbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_forgotPasswordPhone_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.login_forgotPasswordPhone_lbl.Location = new System.Drawing.Point(263, 48);
-            this.login_forgotPasswordPhone_lbl.Name = "login_forgotPasswordPhone_lbl";
-            this.login_forgotPasswordPhone_lbl.Size = new System.Drawing.Size(41, 21);
-            this.login_forgotPasswordPhone_lbl.TabIndex = 24;
-            this.login_forgotPasswordPhone_lbl.Text = "N/A";
-            this.login_forgotPasswordPhone_lbl.Click += new System.EventHandler(this.login_forgotPasswordPhone_lbl_Click);
-            // 
-            // login_forgotPasswordSendCodeAgain_btn
-            // 
-            this.login_forgotPasswordSendCodeAgain_btn.Animated = true;
-            this.login_forgotPasswordSendCodeAgain_btn.AutoRoundedCorners = true;
-            this.login_forgotPasswordSendCodeAgain_btn.BackColor = System.Drawing.Color.Transparent;
-            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.login_forgotPasswordSendCodeAgain_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.login_forgotPasswordSendCodeAgain_btn.FillColor = System.Drawing.Color.Silver;
-            this.login_forgotPasswordSendCodeAgain_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.login_forgotPasswordSendCodeAgain_btn.ForeColor = System.Drawing.Color.Black;
-            this.login_forgotPasswordSendCodeAgain_btn.Location = new System.Drawing.Point(460, 97);
-            this.login_forgotPasswordSendCodeAgain_btn.Name = "login_forgotPasswordSendCodeAgain_btn";
-            this.login_forgotPasswordSendCodeAgain_btn.Size = new System.Drawing.Size(89, 31);
-            this.login_forgotPasswordSendCodeAgain_btn.TabIndex = 25;
-            this.login_forgotPasswordSendCodeAgain_btn.Text = "Send Again";
-            this.login_forgotPasswordSendCodeAgain_btn.UseTransparentBackground = true;
-            this.login_forgotPasswordSendCodeAgain_btn.Click += new System.EventHandler(this.login_forgotPasswordSendCodeAgain_btn_Click);
-            // 
-            // login_otpStatus_lbl
-            // 
-            this.login_otpStatus_lbl.AutoSize = true;
-            this.login_otpStatus_lbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_otpStatus_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.login_otpStatus_lbl.Location = new System.Drawing.Point(254, 131);
-            this.login_otpStatus_lbl.Name = "login_otpStatus_lbl";
-            this.login_otpStatus_lbl.Size = new System.Drawing.Size(57, 21);
-            this.login_otpStatus_lbl.TabIndex = 26;
-            this.login_otpStatus_lbl.Text = "label3";
             // 
             // Login_form
             // 
@@ -1243,7 +1244,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private Guna.UI2.WinForms.Guna2Button employee_proceed_btn;
         private Guna.UI2.WinForms.Guna2TextBox admin_userName_tb;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox admin_password_tb;
         private Guna.UI2.WinForms.Guna2Button admin_proceed_btn;
         private Guna.UI2.WinForms.Guna2Button admin_back_btn;
         private Guna.UI2.WinForms.Guna2Button admin_login_btn;
@@ -1260,12 +1261,12 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox forgotPassword_NewPassword;
         private Guna.UI2.WinForms.Guna2TextBox forgotPasswordPhoneNumber_tb;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox forgotPassword_SecurityAnswer;
+        private Guna.UI2.WinForms.Guna2TextBox forgotPassword_email;
+        private Guna.UI2.WinForms.Guna2TextBox forgotPassword_Name;
         private Guna.UI2.WinForms.Guna2ComboBox forgotPasswordSecurity_comboBox;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button login_forgotPasswordProceed_btn;

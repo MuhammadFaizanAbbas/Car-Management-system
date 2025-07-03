@@ -28,44 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle163 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle164 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle165 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle166 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle167 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle168 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle169 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle170 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle171 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle172 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle173 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle174 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle175 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle176 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle177 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle178 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle179 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle180 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle217 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle218 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle219 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle220 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle221 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle222 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle223 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle224 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle225 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle226 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle227 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle228 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle229 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle230 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle231 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle232 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle233 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle234 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle235 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle236 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle237 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle238 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle239 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle240 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle241 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle242 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle243 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle244 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle245 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle246 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle247 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle248 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle249 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle250 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle251 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle252 = new System.Windows.Forms.DataGridViewCellStyle();
             this.admin_menu_pnl = new System.Windows.Forms.Panel();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.admin_designation_lbl = new System.Windows.Forms.Label();
+            this.admin_name_lbl = new System.Windows.Forms.Label();
+            this.admin_accountType_lbl = new System.Windows.Forms.Label();
             this.admin_welcomePage_btn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.admin_closeApplication_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -138,9 +143,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.admin_service_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.admin_clients_pnl = new System.Windows.Forms.Panel();
-            this.admin_clientUpdate_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.admin_clientDelete_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.admin_clientAdd_btn = new Guna.UI2.WinForms.Guna2Button();
             this.admin_client_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label18 = new System.Windows.Forms.Label();
             this.admin_schedule_pnl = new System.Windows.Forms.Panel();
@@ -167,33 +169,64 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.admin_user_pnl = new System.Windows.Forms.Panel();
-            this.label34 = new System.Windows.Forms.Label();
-            this.admin_userAccountType_lbl = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.admin_user_Name_lbl = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.admin_userUsername_lbl = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.admin_userPassword_lbl = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.admin_userOccupation_lbl = new System.Windows.Forms.Label();
-            this.admin_userEdit_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.admin_userManageOtherUsers_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.admin_userEdit_pnl = new System.Windows.Forms.Panel();
-            this.admin_userEdit_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.label39 = new System.Windows.Forms.Label();
             this.admin_userManagerOtherUsers_pnl = new System.Windows.Forms.Panel();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label40 = new System.Windows.Forms.Label();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.admin_editOtherUsers_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.admin_userEdit_pnl = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.admin_userEdit_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.admin_userManageOtherUsers_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.admin_userEdit_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.admin_userOccupation_lbl = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.admin_userPassword_lbl = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.admin_userUsername_lbl = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.admin_user_Name_lbl = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.admin_userAccountType_lbl = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.admin_designation_lbl = new System.Windows.Forms.Label();
-            this.admin_name_lbl = new System.Windows.Forms.Label();
-            this.admin_accountType_lbl = new System.Windows.Forms.Label();
+            this.admin_userSecurityAnswer_lbl = new System.Windows.Forms.Label();
+            this.admin_userSecurityQuestion_lbl = new System.Windows.Forms.Label();
+            this.admin_userEmail_lbl = new System.Windows.Forms.Label();
+            this.admin_userCnic_lbl = new System.Windows.Forms.Label();
+            this.admin_userPhone_lbl = new System.Windows.Forms.Label();
+            this.cnic_lbl = new System.Windows.Forms.Label();
+            this.phone_lbl = new System.Windows.Forms.Label();
+            this.securityA_lbl = new System.Windows.Forms.Label();
+            this.email_lbl = new System.Windows.Forms.Label();
+            this.securityQ_lbl = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.admin_financialReportProfit_lbl = new System.Windows.Forms.Label();
+            this.admin_financialReportMonthSelection_cb = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.admin_financialReportPrint_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.addExpennse_pnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.addExpenseBack_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.expenseAmount_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.expenseDiscription_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.addService_pnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.addServiceDone_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.addServiceName_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.addServiceDiscription_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.addServicePrice_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.addServiceBack_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.updateService_pnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.updateServiceDone_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.updateServiceName_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.updateServiceDiscription_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.updateServicePrice_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.admin_menu_pnl.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.admin_dashboard_pnl.SuspendLayout();
             this.admin_totalSalariesAndProfit_pnl.SuspendLayout();
             this.admin_totalServiceAndEmployees_pnl.SuspendLayout();
@@ -220,13 +253,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.admin_appointmentThisMonth_gridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.admin_appointmentTodayAppointment_gridView)).BeginInit();
             this.admin_user_pnl.SuspendLayout();
+            this.admin_userManagerOtherUsers_pnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.admin_editOtherUsers_gridView)).BeginInit();
             this.admin_userEdit_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.admin_userEdit_gridView)).BeginInit();
-            this.admin_userManagerOtherUsers_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.addExpennse_pnl.SuspendLayout();
+            this.addService_pnl.SuspendLayout();
+            this.updateService_pnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // admin_menu_pnl
@@ -253,6 +288,71 @@
             this.admin_menu_pnl.Size = new System.Drawing.Size(200, 751);
             this.admin_menu_pnl.TabIndex = 0;
             this.admin_menu_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.admin_menu_pnl_Paint);
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.AutoRoundedCorners = true;
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.BorderThickness = 2;
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.admin_designation_lbl);
+            this.guna2CustomGradientPanel1.Controls.Add(this.admin_name_lbl);
+            this.guna2CustomGradientPanel1.Controls.Add(this.admin_accountType_lbl);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Gray;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Blue;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(21, 25);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(150, 139);
+            this.guna2CustomGradientPanel1.TabIndex = 15;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(50, 12);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 53);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 4;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // admin_designation_lbl
+            // 
+            this.admin_designation_lbl.AutoSize = true;
+            this.admin_designation_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_designation_lbl.Location = new System.Drawing.Point(57, 104);
+            this.admin_designation_lbl.Name = "admin_designation_lbl";
+            this.admin_designation_lbl.Size = new System.Drawing.Size(35, 16);
+            this.admin_designation_lbl.TabIndex = 3;
+            this.admin_designation_lbl.Text = "CEO";
+            this.admin_designation_lbl.Click += new System.EventHandler(this.admin_designation_lbl_Click);
+            // 
+            // admin_name_lbl
+            // 
+            this.admin_name_lbl.AutoSize = true;
+            this.admin_name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_name_lbl.ForeColor = System.Drawing.Color.Black;
+            this.admin_name_lbl.Location = new System.Drawing.Point(14, 86);
+            this.admin_name_lbl.Name = "admin_name_lbl";
+            this.admin_name_lbl.Size = new System.Drawing.Size(121, 16);
+            this.admin_name_lbl.TabIndex = 2;
+            this.admin_name_lbl.Text = "Muhammad Faizan\r\n";
+            this.admin_name_lbl.Click += new System.EventHandler(this.admin_name_lbl_Click);
+            // 
+            // admin_accountType_lbl
+            // 
+            this.admin_accountType_lbl.AutoSize = true;
+            this.admin_accountType_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_accountType_lbl.Location = new System.Drawing.Point(46, 66);
+            this.admin_accountType_lbl.Name = "admin_accountType_lbl";
+            this.admin_accountType_lbl.Size = new System.Drawing.Size(59, 20);
+            this.admin_accountType_lbl.TabIndex = 1;
+            this.admin_accountType_lbl.Text = "Admin";
+            this.admin_accountType_lbl.Click += new System.EventHandler(this.employee_accountType_lbl_Click);
             // 
             // admin_welcomePage_btn
             // 
@@ -764,26 +864,26 @@
             // 
             this.admin_searchGridView.AllowUserToAddRows = false;
             this.admin_searchGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle145.BackColor = System.Drawing.Color.White;
-            this.admin_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle145;
-            dataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle146.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle146.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle146.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle146.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle146.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle146.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle146;
+            dataGridViewCellStyle217.BackColor = System.Drawing.Color.White;
+            this.admin_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle217;
+            dataGridViewCellStyle218.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle218.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle218.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle218.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle218.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle218.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle218.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle218;
             this.admin_searchGridView.ColumnHeadersHeight = 4;
             this.admin_searchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle147.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle147.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle147.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle147.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle147.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle147.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_searchGridView.DefaultCellStyle = dataGridViewCellStyle147;
+            dataGridViewCellStyle219.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle219.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle219.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle219.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle219.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle219.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle219.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_searchGridView.DefaultCellStyle = dataGridViewCellStyle219;
             this.admin_searchGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_searchGridView.Location = new System.Drawing.Point(30, 468);
             this.admin_searchGridView.Name = "admin_searchGridView";
@@ -1192,26 +1292,26 @@
             // 
             // admin_employee_gridView
             // 
-            dataGridViewCellStyle148.BackColor = System.Drawing.Color.White;
-            this.admin_employee_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle148;
-            dataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle149.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle149.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle149.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle149.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle149.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle149.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_employee_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle149;
+            dataGridViewCellStyle220.BackColor = System.Drawing.Color.White;
+            this.admin_employee_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle220;
+            dataGridViewCellStyle221.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle221.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle221.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle221.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle221.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle221.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle221.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_employee_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle221;
             this.admin_employee_gridView.ColumnHeadersHeight = 4;
             this.admin_employee_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle150.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle150.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle150.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle150.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle150.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle150.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_employee_gridView.DefaultCellStyle = dataGridViewCellStyle150;
+            dataGridViewCellStyle222.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle222.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle222.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle222.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle222.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle222.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle222.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_employee_gridView.DefaultCellStyle = dataGridViewCellStyle222;
             this.admin_employee_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_employee_gridView.Location = new System.Drawing.Point(3, 104);
             this.admin_employee_gridView.Name = "admin_employee_gridView";
@@ -1254,6 +1354,8 @@
             // 
             // admin_service_pnl
             // 
+            this.admin_service_pnl.Controls.Add(this.updateService_pnl);
+            this.admin_service_pnl.Controls.Add(this.addService_pnl);
             this.admin_service_pnl.Controls.Add(this.admin_serviceDelete_btn);
             this.admin_service_pnl.Controls.Add(this.admin_serviceUpdate_btn);
             this.admin_service_pnl.Controls.Add(this.admin_serviceAdd_btn);
@@ -1284,6 +1386,7 @@
             this.admin_serviceDelete_btn.TabIndex = 4;
             this.admin_serviceDelete_btn.Text = "DELETE";
             this.admin_serviceDelete_btn.UseTransparentBackground = true;
+            this.admin_serviceDelete_btn.Click += new System.EventHandler(this.admin_serviceDelete_btn_Click);
             // 
             // admin_serviceUpdate_btn
             // 
@@ -1305,6 +1408,7 @@
             this.admin_serviceUpdate_btn.TabIndex = 3;
             this.admin_serviceUpdate_btn.Text = "UPDATE";
             this.admin_serviceUpdate_btn.UseTransparentBackground = true;
+            this.admin_serviceUpdate_btn.Click += new System.EventHandler(this.admin_serviceUpdate_btn_Click);
             // 
             // admin_serviceAdd_btn
             // 
@@ -1326,6 +1430,7 @@
             this.admin_serviceAdd_btn.TabIndex = 2;
             this.admin_serviceAdd_btn.Text = "ADD";
             this.admin_serviceAdd_btn.UseTransparentBackground = true;
+            this.admin_serviceAdd_btn.Click += new System.EventHandler(this.admin_serviceAdd_btn_Click);
             // 
             // label16
             // 
@@ -1341,26 +1446,26 @@
             // 
             // admin_service_gridView
             // 
-            dataGridViewCellStyle151.BackColor = System.Drawing.Color.White;
-            this.admin_service_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle151;
-            dataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle152.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle152.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle152.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle152.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle152.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle152.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_service_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle152;
-            this.admin_service_gridView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle223.BackColor = System.Drawing.Color.White;
+            this.admin_service_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle223;
+            dataGridViewCellStyle224.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle224.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle224.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle224.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle224.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle224.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle224.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_service_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle224;
+            this.admin_service_gridView.ColumnHeadersHeight = 40;
             this.admin_service_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle153.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle153.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle153.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle153.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle153.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle153.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle153.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_service_gridView.DefaultCellStyle = dataGridViewCellStyle153;
+            dataGridViewCellStyle225.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle225.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle225.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle225.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle225.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle225.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle225.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_service_gridView.DefaultCellStyle = dataGridViewCellStyle225;
             this.admin_service_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_service_gridView.Location = new System.Drawing.Point(3, 114);
             this.admin_service_gridView.Name = "admin_service_gridView";
@@ -1379,7 +1484,7 @@
             this.admin_service_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_service_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_service_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_service_gridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.admin_service_gridView.ThemeStyle.HeaderStyle.Height = 40;
             this.admin_service_gridView.ThemeStyle.ReadOnly = false;
             this.admin_service_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_service_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1388,104 +1493,39 @@
             this.admin_service_gridView.ThemeStyle.RowsStyle.Height = 22;
             this.admin_service_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_service_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_service_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_service_gridView_CellContentClick);
             // 
             // admin_clients_pnl
             // 
-            this.admin_clients_pnl.Controls.Add(this.admin_clientUpdate_btn);
-            this.admin_clients_pnl.Controls.Add(this.admin_clientDelete_btn);
-            this.admin_clients_pnl.Controls.Add(this.admin_clientAdd_btn);
             this.admin_clients_pnl.Controls.Add(this.admin_client_gridView);
             this.admin_clients_pnl.Controls.Add(this.label18);
-            this.admin_clients_pnl.Location = new System.Drawing.Point(217, 0);
+            this.admin_clients_pnl.Location = new System.Drawing.Point(206, 674);
             this.admin_clients_pnl.Name = "admin_clients_pnl";
             this.admin_clients_pnl.Size = new System.Drawing.Size(1148, 751);
             this.admin_clients_pnl.TabIndex = 7;
             // 
-            // admin_clientUpdate_btn
-            // 
-            this.admin_clientUpdate_btn.Animated = true;
-            this.admin_clientUpdate_btn.AutoRoundedCorners = true;
-            this.admin_clientUpdate_btn.BackColor = System.Drawing.Color.Transparent;
-            this.admin_clientUpdate_btn.BorderColor = System.Drawing.Color.White;
-            this.admin_clientUpdate_btn.BorderThickness = 1;
-            this.admin_clientUpdate_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.admin_clientUpdate_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.admin_clientUpdate_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.admin_clientUpdate_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.admin_clientUpdate_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.admin_clientUpdate_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.admin_clientUpdate_btn.ForeColor = System.Drawing.Color.Black;
-            this.admin_clientUpdate_btn.Location = new System.Drawing.Point(486, 618);
-            this.admin_clientUpdate_btn.Name = "admin_clientUpdate_btn";
-            this.admin_clientUpdate_btn.Size = new System.Drawing.Size(180, 45);
-            this.admin_clientUpdate_btn.TabIndex = 4;
-            this.admin_clientUpdate_btn.Text = "UPDATE";
-            this.admin_clientUpdate_btn.UseTransparentBackground = true;
-            // 
-            // admin_clientDelete_btn
-            // 
-            this.admin_clientDelete_btn.Animated = true;
-            this.admin_clientDelete_btn.AutoRoundedCorners = true;
-            this.admin_clientDelete_btn.BackColor = System.Drawing.Color.Transparent;
-            this.admin_clientDelete_btn.BorderColor = System.Drawing.Color.White;
-            this.admin_clientDelete_btn.BorderThickness = 1;
-            this.admin_clientDelete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.admin_clientDelete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.admin_clientDelete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.admin_clientDelete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.admin_clientDelete_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.admin_clientDelete_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.admin_clientDelete_btn.ForeColor = System.Drawing.Color.Black;
-            this.admin_clientDelete_btn.Location = new System.Drawing.Point(944, 617);
-            this.admin_clientDelete_btn.Name = "admin_clientDelete_btn";
-            this.admin_clientDelete_btn.Size = new System.Drawing.Size(180, 45);
-            this.admin_clientDelete_btn.TabIndex = 3;
-            this.admin_clientDelete_btn.Text = "DELETE";
-            this.admin_clientDelete_btn.UseTransparentBackground = true;
-            // 
-            // admin_clientAdd_btn
-            // 
-            this.admin_clientAdd_btn.Animated = true;
-            this.admin_clientAdd_btn.AutoRoundedCorners = true;
-            this.admin_clientAdd_btn.BackColor = System.Drawing.Color.Transparent;
-            this.admin_clientAdd_btn.BorderColor = System.Drawing.Color.White;
-            this.admin_clientAdd_btn.BorderThickness = 1;
-            this.admin_clientAdd_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.admin_clientAdd_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.admin_clientAdd_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.admin_clientAdd_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.admin_clientAdd_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.admin_clientAdd_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.admin_clientAdd_btn.ForeColor = System.Drawing.Color.Black;
-            this.admin_clientAdd_btn.Location = new System.Drawing.Point(3, 617);
-            this.admin_clientAdd_btn.Name = "admin_clientAdd_btn";
-            this.admin_clientAdd_btn.Size = new System.Drawing.Size(180, 45);
-            this.admin_clientAdd_btn.TabIndex = 2;
-            this.admin_clientAdd_btn.Text = "ADD";
-            this.admin_clientAdd_btn.UseTransparentBackground = true;
-            // 
             // admin_client_gridView
             // 
-            dataGridViewCellStyle154.BackColor = System.Drawing.Color.White;
-            this.admin_client_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle154;
-            dataGridViewCellStyle155.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle155.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle155.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle155.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle155.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle155.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle155.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_client_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle155;
-            this.admin_client_gridView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle226.BackColor = System.Drawing.Color.White;
+            this.admin_client_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle226;
+            dataGridViewCellStyle227.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle227.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle227.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle227.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle227.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle227.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle227.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_client_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle227;
+            this.admin_client_gridView.ColumnHeadersHeight = 40;
             this.admin_client_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle156.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle156.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle156.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle156.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle156.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle156.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle156.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_client_gridView.DefaultCellStyle = dataGridViewCellStyle156;
+            dataGridViewCellStyle228.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle228.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle228.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle228.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle228.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle228.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle228.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_client_gridView.DefaultCellStyle = dataGridViewCellStyle228;
             this.admin_client_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_client_gridView.Location = new System.Drawing.Point(3, 126);
             this.admin_client_gridView.Name = "admin_client_gridView";
@@ -1504,7 +1544,7 @@
             this.admin_client_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_client_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_client_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_client_gridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.admin_client_gridView.ThemeStyle.HeaderStyle.Height = 40;
             this.admin_client_gridView.ThemeStyle.ReadOnly = false;
             this.admin_client_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_client_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1513,6 +1553,7 @@
             this.admin_client_gridView.ThemeStyle.RowsStyle.Height = 22;
             this.admin_client_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_client_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_client_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_client_gridView_CellContentClick);
             // 
             // label18
             // 
@@ -1533,7 +1574,7 @@
             this.admin_schedule_pnl.Controls.Add(this.label20);
             this.admin_schedule_pnl.Controls.Add(this.admin_schedule_gridView);
             this.admin_schedule_pnl.Controls.Add(this.guna2CustomGradientPanel5);
-            this.admin_schedule_pnl.Location = new System.Drawing.Point(214, 0);
+            this.admin_schedule_pnl.Location = new System.Drawing.Point(206, 687);
             this.admin_schedule_pnl.Name = "admin_schedule_pnl";
             this.admin_schedule_pnl.Size = new System.Drawing.Size(1151, 751);
             this.admin_schedule_pnl.TabIndex = 8;
@@ -1558,6 +1599,7 @@
             this.admin_scheduleTurnOffAlert.TabIndex = 4;
             this.admin_scheduleTurnOffAlert.Text = "Turn off Alert";
             this.admin_scheduleTurnOffAlert.UseTransparentBackground = true;
+            this.admin_scheduleTurnOffAlert.Click += new System.EventHandler(this.admin_scheduleTurnOffAlert_Click);
             // 
             // admin_scheduleSendAlert_btn
             // 
@@ -1579,6 +1621,7 @@
             this.admin_scheduleSendAlert_btn.TabIndex = 3;
             this.admin_scheduleSendAlert_btn.Text = "Send Alert";
             this.admin_scheduleSendAlert_btn.UseTransparentBackground = true;
+            this.admin_scheduleSendAlert_btn.Click += new System.EventHandler(this.admin_scheduleSendAlert_btn_Click);
             // 
             // label20
             // 
@@ -1594,26 +1637,26 @@
             // 
             // admin_schedule_gridView
             // 
-            dataGridViewCellStyle157.BackColor = System.Drawing.Color.White;
-            this.admin_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle157;
-            dataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle158.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle158.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle158.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle158.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle158.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle158.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle158;
-            this.admin_schedule_gridView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle229.BackColor = System.Drawing.Color.White;
+            this.admin_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle229;
+            dataGridViewCellStyle230.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle230.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle230.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle230.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle230.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle230.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle230.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle230;
+            this.admin_schedule_gridView.ColumnHeadersHeight = 40;
             this.admin_schedule_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle159.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle159.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle159.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle159.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle159.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle159.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle159.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle159;
+            dataGridViewCellStyle231.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle231.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle231.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle231.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle231.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle231.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle231.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle231;
             this.admin_schedule_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_schedule_gridView.Location = new System.Drawing.Point(3, 104);
             this.admin_schedule_gridView.Name = "admin_schedule_gridView";
@@ -1632,7 +1675,7 @@
             this.admin_schedule_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_schedule_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_schedule_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_schedule_gridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.admin_schedule_gridView.ThemeStyle.HeaderStyle.Height = 40;
             this.admin_schedule_gridView.ThemeStyle.ReadOnly = false;
             this.admin_schedule_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_schedule_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1681,13 +1724,17 @@
             // 
             // admin_financialReport_pnl
             // 
+            this.admin_financialReport_pnl.Controls.Add(this.addExpennse_pnl);
+            this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportPrint_btn);
+            this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportMonthSelection_cb);
+            this.admin_financialReport_pnl.Controls.Add(this.guna2Panel1);
             this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportExpenses_btn);
             this.admin_financialReport_pnl.Controls.Add(this.label28);
             this.admin_financialReport_pnl.Controls.Add(this.label26);
             this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportExpenses_gridView);
             this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportIncome_gridView);
             this.admin_financialReport_pnl.Controls.Add(this.label24);
-            this.admin_financialReport_pnl.Location = new System.Drawing.Point(214, 0);
+            this.admin_financialReport_pnl.Location = new System.Drawing.Point(203, 706);
             this.admin_financialReport_pnl.Name = "admin_financialReport_pnl";
             this.admin_financialReport_pnl.Size = new System.Drawing.Size(1151, 748);
             this.admin_financialReport_pnl.TabIndex = 9;
@@ -1706,12 +1753,13 @@
             this.admin_financialReportExpenses_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.admin_financialReportExpenses_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.admin_financialReportExpenses_btn.ForeColor = System.Drawing.Color.Black;
-            this.admin_financialReportExpenses_btn.Location = new System.Drawing.Point(768, 626);
+            this.admin_financialReportExpenses_btn.Location = new System.Drawing.Point(876, 618);
             this.admin_financialReportExpenses_btn.Name = "admin_financialReportExpenses_btn";
-            this.admin_financialReportExpenses_btn.Size = new System.Drawing.Size(180, 45);
+            this.admin_financialReportExpenses_btn.Size = new System.Drawing.Size(180, 35);
             this.admin_financialReportExpenses_btn.TabIndex = 5;
             this.admin_financialReportExpenses_btn.Text = "Add Expenses";
             this.admin_financialReportExpenses_btn.UseTransparentBackground = true;
+            this.admin_financialReportExpenses_btn.Click += new System.EventHandler(this.admin_financialReportExpenses_btn_Click);
             // 
             // label28
             // 
@@ -1738,26 +1786,26 @@
             // 
             // admin_financialReportExpenses_gridView
             // 
-            dataGridViewCellStyle160.BackColor = System.Drawing.Color.White;
-            this.admin_financialReportExpenses_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle160;
-            dataGridViewCellStyle161.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle161.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle161.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle161.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle161.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle161.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle161.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_financialReportExpenses_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle161;
-            this.admin_financialReportExpenses_gridView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle232.BackColor = System.Drawing.Color.White;
+            this.admin_financialReportExpenses_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle232;
+            dataGridViewCellStyle233.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle233.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle233.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle233.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle233.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle233.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle233.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_financialReportExpenses_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle233;
+            this.admin_financialReportExpenses_gridView.ColumnHeadersHeight = 40;
             this.admin_financialReportExpenses_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle162.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle162.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle162.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle162.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle162.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle162.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle162.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_financialReportExpenses_gridView.DefaultCellStyle = dataGridViewCellStyle162;
+            dataGridViewCellStyle234.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle234.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle234.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle234.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle234.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle234.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle234.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_financialReportExpenses_gridView.DefaultCellStyle = dataGridViewCellStyle234;
             this.admin_financialReportExpenses_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_financialReportExpenses_gridView.Location = new System.Drawing.Point(591, 172);
             this.admin_financialReportExpenses_gridView.Name = "admin_financialReportExpenses_gridView";
@@ -1776,7 +1824,7 @@
             this.admin_financialReportExpenses_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_financialReportExpenses_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_financialReportExpenses_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_financialReportExpenses_gridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.admin_financialReportExpenses_gridView.ThemeStyle.HeaderStyle.Height = 40;
             this.admin_financialReportExpenses_gridView.ThemeStyle.ReadOnly = false;
             this.admin_financialReportExpenses_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_financialReportExpenses_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1785,29 +1833,30 @@
             this.admin_financialReportExpenses_gridView.ThemeStyle.RowsStyle.Height = 22;
             this.admin_financialReportExpenses_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_financialReportExpenses_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_financialReportExpenses_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_financialReportExpenses_gridView_CellContentClick);
             // 
             // admin_financialReportIncome_gridView
             // 
-            dataGridViewCellStyle163.BackColor = System.Drawing.Color.White;
-            this.admin_financialReportIncome_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle163;
-            dataGridViewCellStyle164.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle164.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle164.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle164.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle164.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle164.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle164.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_financialReportIncome_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle164;
-            this.admin_financialReportIncome_gridView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle235.BackColor = System.Drawing.Color.White;
+            this.admin_financialReportIncome_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle235;
+            dataGridViewCellStyle236.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle236.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle236.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle236.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle236.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle236.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle236.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_financialReportIncome_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle236;
+            this.admin_financialReportIncome_gridView.ColumnHeadersHeight = 40;
             this.admin_financialReportIncome_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle165.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle165.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle165.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle165.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle165.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle165.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle165.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_financialReportIncome_gridView.DefaultCellStyle = dataGridViewCellStyle165;
+            dataGridViewCellStyle237.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle237.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle237.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle237.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle237.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle237.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle237.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_financialReportIncome_gridView.DefaultCellStyle = dataGridViewCellStyle237;
             this.admin_financialReportIncome_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_financialReportIncome_gridView.Location = new System.Drawing.Point(66, 172);
             this.admin_financialReportIncome_gridView.Name = "admin_financialReportIncome_gridView";
@@ -1826,7 +1875,7 @@
             this.admin_financialReportIncome_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_financialReportIncome_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_financialReportIncome_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_financialReportIncome_gridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.admin_financialReportIncome_gridView.ThemeStyle.HeaderStyle.Height = 40;
             this.admin_financialReportIncome_gridView.ThemeStyle.ReadOnly = false;
             this.admin_financialReportIncome_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_financialReportIncome_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1858,36 +1907,39 @@
             this.admin_appointment_pnl.Controls.Add(this.admin_appointmentTodayAppointment_gridView);
             this.admin_appointment_pnl.Controls.Add(this.label31);
             this.admin_appointment_pnl.Controls.Add(this.label30);
-            this.admin_appointment_pnl.Location = new System.Drawing.Point(214, 0);
+            this.admin_appointment_pnl.Location = new System.Drawing.Point(206, 724);
             this.admin_appointment_pnl.Name = "admin_appointment_pnl";
             this.admin_appointment_pnl.Size = new System.Drawing.Size(1148, 751);
             this.admin_appointment_pnl.TabIndex = 10;
             // 
             // admin_appointmentCompletedToday_gridView
             // 
-            dataGridViewCellStyle166.BackColor = System.Drawing.Color.White;
-            this.admin_appointmentCompletedToday_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle166;
-            dataGridViewCellStyle167.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle167.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle167.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle167.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle167.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle167.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle167.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_appointmentCompletedToday_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle167;
-            this.admin_appointmentCompletedToday_gridView.ColumnHeadersHeight = 4;
+            this.admin_appointmentCompletedToday_gridView.AllowUserToAddRows = false;
+            this.admin_appointmentCompletedToday_gridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle238.BackColor = System.Drawing.Color.White;
+            this.admin_appointmentCompletedToday_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle238;
+            dataGridViewCellStyle239.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle239.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle239.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle239.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle239.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle239.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle239.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_appointmentCompletedToday_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle239;
+            this.admin_appointmentCompletedToday_gridView.ColumnHeadersHeight = 40;
             this.admin_appointmentCompletedToday_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle168.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle168.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle168.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle168.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle168.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle168.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle168.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_appointmentCompletedToday_gridView.DefaultCellStyle = dataGridViewCellStyle168;
+            dataGridViewCellStyle240.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle240.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle240.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle240.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle240.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle240.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle240.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_appointmentCompletedToday_gridView.DefaultCellStyle = dataGridViewCellStyle240;
             this.admin_appointmentCompletedToday_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentCompletedToday_gridView.Location = new System.Drawing.Point(3, 550);
             this.admin_appointmentCompletedToday_gridView.Name = "admin_appointmentCompletedToday_gridView";
+            this.admin_appointmentCompletedToday_gridView.ReadOnly = true;
             this.admin_appointmentCompletedToday_gridView.RowHeadersVisible = false;
             this.admin_appointmentCompletedToday_gridView.Size = new System.Drawing.Size(1121, 150);
             this.admin_appointmentCompletedToday_gridView.TabIndex = 6;
@@ -1903,8 +1955,8 @@
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_appointmentCompletedToday_gridView.ThemeStyle.HeaderStyle.Height = 4;
-            this.admin_appointmentCompletedToday_gridView.ThemeStyle.ReadOnly = false;
+            this.admin_appointmentCompletedToday_gridView.ThemeStyle.HeaderStyle.Height = 40;
+            this.admin_appointmentCompletedToday_gridView.ThemeStyle.ReadOnly = true;
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1912,6 +1964,7 @@
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.RowsStyle.Height = 22;
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentCompletedToday_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_appointmentCompletedToday_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_appointmentCompletedToday_gridView_CellContentClick);
             // 
             // label33
             // 
@@ -1921,32 +1974,32 @@
             this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label33.Location = new System.Drawing.Point(3, 514);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(335, 25);
+            this.label33.Size = new System.Drawing.Size(270, 25);
             this.label33.TabIndex = 5;
-            this.label33.Text = "Appointments completed today\r\n";
+            this.label33.Text = "Appointments completed";
             // 
             // admin_appointmentThisMonth_gridview
             // 
-            dataGridViewCellStyle169.BackColor = System.Drawing.Color.White;
-            this.admin_appointmentThisMonth_gridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle169;
-            dataGridViewCellStyle170.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle170.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle170.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle170.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle170.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle170.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle170.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_appointmentThisMonth_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle170;
-            this.admin_appointmentThisMonth_gridview.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle241.BackColor = System.Drawing.Color.White;
+            this.admin_appointmentThisMonth_gridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle241;
+            dataGridViewCellStyle242.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle242.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle242.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle242.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle242.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle242.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle242.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_appointmentThisMonth_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle242;
+            this.admin_appointmentThisMonth_gridview.ColumnHeadersHeight = 40;
             this.admin_appointmentThisMonth_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle171.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle171.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle171.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle171.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle171.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle171.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle171.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_appointmentThisMonth_gridview.DefaultCellStyle = dataGridViewCellStyle171;
+            dataGridViewCellStyle243.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle243.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle243.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle243.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle243.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle243.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle243.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_appointmentThisMonth_gridview.DefaultCellStyle = dataGridViewCellStyle243;
             this.admin_appointmentThisMonth_gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentThisMonth_gridview.Location = new System.Drawing.Point(3, 343);
             this.admin_appointmentThisMonth_gridview.Name = "admin_appointmentThisMonth_gridview";
@@ -1965,7 +2018,7 @@
             this.admin_appointmentThisMonth_gridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_appointmentThisMonth_gridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_appointmentThisMonth_gridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_appointmentThisMonth_gridview.ThemeStyle.HeaderStyle.Height = 4;
+            this.admin_appointmentThisMonth_gridview.ThemeStyle.HeaderStyle.Height = 40;
             this.admin_appointmentThisMonth_gridview.ThemeStyle.ReadOnly = false;
             this.admin_appointmentThisMonth_gridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_appointmentThisMonth_gridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1974,6 +2027,7 @@
             this.admin_appointmentThisMonth_gridview.ThemeStyle.RowsStyle.Height = 22;
             this.admin_appointmentThisMonth_gridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentThisMonth_gridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_appointmentThisMonth_gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_appointmentThisMonth_gridview_CellContentClick);
             // 
             // label32
             // 
@@ -1989,26 +2043,26 @@
             // 
             // admin_appointmentTodayAppointment_gridView
             // 
-            dataGridViewCellStyle172.BackColor = System.Drawing.Color.White;
-            this.admin_appointmentTodayAppointment_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle172;
-            dataGridViewCellStyle173.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle173.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle173.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle173.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle173.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle173.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle173.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_appointmentTodayAppointment_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle173;
-            this.admin_appointmentTodayAppointment_gridView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle244.BackColor = System.Drawing.Color.White;
+            this.admin_appointmentTodayAppointment_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle244;
+            dataGridViewCellStyle245.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle245.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle245.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle245.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle245.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle245.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle245.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_appointmentTodayAppointment_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle245;
+            this.admin_appointmentTodayAppointment_gridView.ColumnHeadersHeight = 40;
             this.admin_appointmentTodayAppointment_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle174.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle174.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle174.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle174.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle174.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle174.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle174.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_appointmentTodayAppointment_gridView.DefaultCellStyle = dataGridViewCellStyle174;
+            dataGridViewCellStyle246.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle246.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle246.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle246.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle246.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle246.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle246.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_appointmentTodayAppointment_gridView.DefaultCellStyle = dataGridViewCellStyle246;
             this.admin_appointmentTodayAppointment_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentTodayAppointment_gridView.Location = new System.Drawing.Point(3, 144);
             this.admin_appointmentTodayAppointment_gridView.Name = "admin_appointmentTodayAppointment_gridView";
@@ -2027,7 +2081,7 @@
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.admin_appointmentTodayAppointment_gridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.admin_appointmentTodayAppointment_gridView.ThemeStyle.HeaderStyle.Height = 40;
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.ReadOnly = false;
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -2036,6 +2090,7 @@
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.RowsStyle.Height = 22;
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentTodayAppointment_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_appointmentTodayAppointment_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_appointmentTodayAppointment_gridView_CellContentClick);
             // 
             // label31
             // 
@@ -2063,7 +2118,17 @@
             // 
             // admin_user_pnl
             // 
+            this.admin_user_pnl.Controls.Add(this.admin_userSecurityAnswer_lbl);
+            this.admin_user_pnl.Controls.Add(this.admin_userSecurityQuestion_lbl);
+            this.admin_user_pnl.Controls.Add(this.admin_userEmail_lbl);
             this.admin_user_pnl.Controls.Add(this.admin_userManagerOtherUsers_pnl);
+            this.admin_user_pnl.Controls.Add(this.admin_userCnic_lbl);
+            this.admin_user_pnl.Controls.Add(this.admin_userPhone_lbl);
+            this.admin_user_pnl.Controls.Add(this.cnic_lbl);
+            this.admin_user_pnl.Controls.Add(this.phone_lbl);
+            this.admin_user_pnl.Controls.Add(this.securityA_lbl);
+            this.admin_user_pnl.Controls.Add(this.email_lbl);
+            this.admin_user_pnl.Controls.Add(this.securityQ_lbl);
             this.admin_user_pnl.Controls.Add(this.admin_userEdit_pnl);
             this.admin_user_pnl.Controls.Add(this.admin_userManageOtherUsers_btn);
             this.admin_user_pnl.Controls.Add(this.admin_userEdit_btn);
@@ -2077,198 +2142,169 @@
             this.admin_user_pnl.Controls.Add(this.label36);
             this.admin_user_pnl.Controls.Add(this.admin_userAccountType_lbl);
             this.admin_user_pnl.Controls.Add(this.label34);
-            this.admin_user_pnl.Location = new System.Drawing.Point(214, 0);
+            this.admin_user_pnl.Location = new System.Drawing.Point(206, 715);
             this.admin_user_pnl.Name = "admin_user_pnl";
             this.admin_user_pnl.Size = new System.Drawing.Size(1148, 748);
             this.admin_user_pnl.TabIndex = 11;
             // 
-            // label34
+            // admin_userManagerOtherUsers_pnl
             // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label34.Location = new System.Drawing.Point(389, 47);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(163, 25);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Account Type:";
+            this.admin_userManagerOtherUsers_pnl.Controls.Add(this.guna2Button5);
+            this.admin_userManagerOtherUsers_pnl.Controls.Add(this.label40);
+            this.admin_userManagerOtherUsers_pnl.Controls.Add(this.admin_editOtherUsers_gridView);
+            this.admin_userManagerOtherUsers_pnl.Location = new System.Drawing.Point(78, 42);
+            this.admin_userManagerOtherUsers_pnl.Name = "admin_userManagerOtherUsers_pnl";
+            this.admin_userManagerOtherUsers_pnl.Size = new System.Drawing.Size(913, 617);
+            this.admin_userManagerOtherUsers_pnl.TabIndex = 13;
             // 
-            // admin_userAccountType_lbl
+            // guna2Button5
             // 
-            this.admin_userAccountType_lbl.AutoSize = true;
-            this.admin_userAccountType_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_userAccountType_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.admin_userAccountType_lbl.Location = new System.Drawing.Point(579, 54);
-            this.admin_userAccountType_lbl.Name = "admin_userAccountType_lbl";
-            this.admin_userAccountType_lbl.Size = new System.Drawing.Size(35, 20);
-            this.admin_userAccountType_lbl.TabIndex = 1;
-            this.admin_userAccountType_lbl.Text = "N/A";
+            this.guna2Button5.Animated = true;
+            this.guna2Button5.AutoRoundedCorners = true;
+            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.BorderColor = System.Drawing.Color.White;
+            this.guna2Button5.BorderThickness = 1;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button5.Location = new System.Drawing.Point(382, 376);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(208, 37);
+            this.guna2Button5.TabIndex = 4;
+            this.guna2Button5.Text = "Back";
+            this.guna2Button5.UseTransparentBackground = true;
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
-            // label36
+            // label40
             // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label36.Location = new System.Drawing.Point(424, 96);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(79, 25);
-            this.label36.TabIndex = 2;
-            this.label36.Text = "Name:";
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label40.Location = new System.Drawing.Point(248, 30);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(450, 24);
+            this.label40.TabIndex = 3;
+            this.label40.Text = "Information: Press enter after changing the data";
             // 
-            // admin_user_Name_lbl
+            // admin_editOtherUsers_gridView
             // 
-            this.admin_user_Name_lbl.AutoSize = true;
-            this.admin_user_Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_user_Name_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.admin_user_Name_lbl.Location = new System.Drawing.Point(579, 106);
-            this.admin_user_Name_lbl.Name = "admin_user_Name_lbl";
-            this.admin_user_Name_lbl.Size = new System.Drawing.Size(35, 20);
-            this.admin_user_Name_lbl.TabIndex = 3;
-            this.admin_user_Name_lbl.Text = "N/A";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label35.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label35.Location = new System.Drawing.Point(401, 148);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(125, 25);
-            this.label35.TabIndex = 4;
-            this.label35.Text = "Username:";
-            // 
-            // admin_userUsername_lbl
-            // 
-            this.admin_userUsername_lbl.AutoSize = true;
-            this.admin_userUsername_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_userUsername_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.admin_userUsername_lbl.Location = new System.Drawing.Point(579, 152);
-            this.admin_userUsername_lbl.Name = "admin_userUsername_lbl";
-            this.admin_userUsername_lbl.Size = new System.Drawing.Size(35, 20);
-            this.admin_userUsername_lbl.TabIndex = 5;
-            this.admin_userUsername_lbl.Text = "N/A";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label37.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label37.Location = new System.Drawing.Point(401, 197);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(121, 25);
-            this.label37.TabIndex = 6;
-            this.label37.Text = "Password:";
-            // 
-            // admin_userPassword_lbl
-            // 
-            this.admin_userPassword_lbl.AutoSize = true;
-            this.admin_userPassword_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_userPassword_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.admin_userPassword_lbl.Location = new System.Drawing.Point(579, 202);
-            this.admin_userPassword_lbl.Name = "admin_userPassword_lbl";
-            this.admin_userPassword_lbl.Size = new System.Drawing.Size(35, 20);
-            this.admin_userPassword_lbl.TabIndex = 7;
-            this.admin_userPassword_lbl.Text = "N/A";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label38.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label38.Location = new System.Drawing.Point(401, 248);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(138, 25);
-            this.label38.TabIndex = 8;
-            this.label38.Text = "Occupation:";
-            // 
-            // admin_userOccupation_lbl
-            // 
-            this.admin_userOccupation_lbl.AutoSize = true;
-            this.admin_userOccupation_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_userOccupation_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.admin_userOccupation_lbl.Location = new System.Drawing.Point(579, 252);
-            this.admin_userOccupation_lbl.Name = "admin_userOccupation_lbl";
-            this.admin_userOccupation_lbl.Size = new System.Drawing.Size(35, 20);
-            this.admin_userOccupation_lbl.TabIndex = 9;
-            this.admin_userOccupation_lbl.Text = "N/A";
-            // 
-            // admin_userEdit_btn
-            // 
-            this.admin_userEdit_btn.Animated = true;
-            this.admin_userEdit_btn.AutoRoundedCorners = true;
-            this.admin_userEdit_btn.BackColor = System.Drawing.Color.Transparent;
-            this.admin_userEdit_btn.BorderColor = System.Drawing.Color.White;
-            this.admin_userEdit_btn.BorderThickness = 1;
-            this.admin_userEdit_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.admin_userEdit_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.admin_userEdit_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.admin_userEdit_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.admin_userEdit_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.admin_userEdit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_userEdit_btn.ForeColor = System.Drawing.Color.Black;
-            this.admin_userEdit_btn.Location = new System.Drawing.Point(423, 301);
-            this.admin_userEdit_btn.Name = "admin_userEdit_btn";
-            this.admin_userEdit_btn.Size = new System.Drawing.Size(180, 45);
-            this.admin_userEdit_btn.TabIndex = 10;
-            this.admin_userEdit_btn.Text = "Edit";
-            this.admin_userEdit_btn.UseTransparentBackground = true;
-            this.admin_userEdit_btn.Click += new System.EventHandler(this.admin_userEdit_btn_Click);
-            // 
-            // admin_userManageOtherUsers_btn
-            // 
-            this.admin_userManageOtherUsers_btn.Animated = true;
-            this.admin_userManageOtherUsers_btn.AutoRoundedCorners = true;
-            this.admin_userManageOtherUsers_btn.BackColor = System.Drawing.Color.Transparent;
-            this.admin_userManageOtherUsers_btn.BorderColor = System.Drawing.Color.White;
-            this.admin_userManageOtherUsers_btn.BorderThickness = 1;
-            this.admin_userManageOtherUsers_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.admin_userManageOtherUsers_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.admin_userManageOtherUsers_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.admin_userManageOtherUsers_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.admin_userManageOtherUsers_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.admin_userManageOtherUsers_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.admin_userManageOtherUsers_btn.ForeColor = System.Drawing.Color.Black;
-            this.admin_userManageOtherUsers_btn.Location = new System.Drawing.Point(394, 448);
-            this.admin_userManageOtherUsers_btn.Name = "admin_userManageOtherUsers_btn";
-            this.admin_userManageOtherUsers_btn.Size = new System.Drawing.Size(250, 45);
-            this.admin_userManageOtherUsers_btn.TabIndex = 11;
-            this.admin_userManageOtherUsers_btn.Text = "Manage Other Users";
-            this.admin_userManageOtherUsers_btn.UseTransparentBackground = true;
-            this.admin_userManageOtherUsers_btn.Click += new System.EventHandler(this.admin_userManageOtherUsers_btn_Click);
+            dataGridViewCellStyle247.BackColor = System.Drawing.Color.White;
+            this.admin_editOtherUsers_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle247;
+            dataGridViewCellStyle248.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle248.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle248.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle248.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle248.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle248.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle248.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_editOtherUsers_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle248;
+            this.admin_editOtherUsers_gridView.ColumnHeadersHeight = 40;
+            this.admin_editOtherUsers_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle249.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle249.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle249.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle249.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle249.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle249.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle249.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_editOtherUsers_gridView.DefaultCellStyle = dataGridViewCellStyle249;
+            this.admin_editOtherUsers_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.admin_editOtherUsers_gridView.Location = new System.Drawing.Point(6, 88);
+            this.admin_editOtherUsers_gridView.Name = "admin_editOtherUsers_gridView";
+            this.admin_editOtherUsers_gridView.RowHeadersVisible = false;
+            this.admin_editOtherUsers_gridView.Size = new System.Drawing.Size(887, 246);
+            this.admin_editOtherUsers_gridView.TabIndex = 0;
+            this.admin_editOtherUsers_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.admin_editOtherUsers_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.admin_editOtherUsers_gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.admin_editOtherUsers_gridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.admin_editOtherUsers_gridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.admin_editOtherUsers_gridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.admin_editOtherUsers_gridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.admin_editOtherUsers_gridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.admin_editOtherUsers_gridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.admin_editOtherUsers_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_editOtherUsers_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.admin_editOtherUsers_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.admin_editOtherUsers_gridView.ThemeStyle.HeaderStyle.Height = 40;
+            this.admin_editOtherUsers_gridView.ThemeStyle.ReadOnly = false;
+            this.admin_editOtherUsers_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.admin_editOtherUsers_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.admin_editOtherUsers_gridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_editOtherUsers_gridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_editOtherUsers_gridView.ThemeStyle.RowsStyle.Height = 22;
+            this.admin_editOtherUsers_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.admin_editOtherUsers_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_editOtherUsers_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_editOtherUsers_gridView_CellContentClick);
             // 
             // admin_userEdit_pnl
             // 
             this.admin_userEdit_pnl.Controls.Add(this.label39);
             this.admin_userEdit_pnl.Controls.Add(this.guna2Button4);
             this.admin_userEdit_pnl.Controls.Add(this.admin_userEdit_gridView);
-            this.admin_userEdit_pnl.Location = new System.Drawing.Point(66, 34);
+            this.admin_userEdit_pnl.Location = new System.Drawing.Point(81, 45);
             this.admin_userEdit_pnl.Name = "admin_userEdit_pnl";
-            this.admin_userEdit_pnl.Size = new System.Drawing.Size(913, 459);
+            this.admin_userEdit_pnl.Size = new System.Drawing.Size(913, 617);
             this.admin_userEdit_pnl.TabIndex = 12;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label39.Location = new System.Drawing.Point(235, 36);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(450, 24);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "Information: Press enter after changing the data";
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.AutoRoundedCorners = true;
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderColor = System.Drawing.Color.White;
+            this.guna2Button4.BorderThickness = 1;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button4.Location = new System.Drawing.Point(379, 412);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(183, 34);
+            this.guna2Button4.TabIndex = 1;
+            this.guna2Button4.Text = "Back";
+            this.guna2Button4.UseTransparentBackground = true;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // admin_userEdit_gridView
             // 
-            dataGridViewCellStyle175.BackColor = System.Drawing.Color.White;
-            this.admin_userEdit_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle175;
-            dataGridViewCellStyle176.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle176.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle176.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle176.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle176.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle176.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle176.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_userEdit_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle176;
+            dataGridViewCellStyle250.BackColor = System.Drawing.Color.White;
+            this.admin_userEdit_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle250;
+            dataGridViewCellStyle251.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle251.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle251.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle251.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle251.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle251.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle251.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_userEdit_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle251;
             this.admin_userEdit_gridView.ColumnHeadersHeight = 4;
             this.admin_userEdit_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle177.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle177.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle177.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle177.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle177.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle177.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle177.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_userEdit_gridView.DefaultCellStyle = dataGridViewCellStyle177;
+            dataGridViewCellStyle252.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle252.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle252.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle252.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle252.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle252.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle252.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_userEdit_gridView.DefaultCellStyle = dataGridViewCellStyle252;
             this.admin_userEdit_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_userEdit_gridView.Location = new System.Drawing.Point(18, 132);
             this.admin_userEdit_gridView.Name = "admin_userEdit_gridView";
@@ -2296,130 +2332,162 @@
             this.admin_userEdit_gridView.ThemeStyle.RowsStyle.Height = 22;
             this.admin_userEdit_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_userEdit_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.admin_userEdit_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.admin_userEdit_gridView_CellContentClick);
             // 
-            // guna2Button4
+            // admin_userManageOtherUsers_btn
             // 
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderColor = System.Drawing.Color.White;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(379, 412);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(183, 34);
-            this.guna2Button4.TabIndex = 1;
-            this.guna2Button4.Text = "Back";
-            this.guna2Button4.UseTransparentBackground = true;
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.admin_userManageOtherUsers_btn.Animated = true;
+            this.admin_userManageOtherUsers_btn.AutoRoundedCorners = true;
+            this.admin_userManageOtherUsers_btn.BackColor = System.Drawing.Color.Transparent;
+            this.admin_userManageOtherUsers_btn.BorderColor = System.Drawing.Color.White;
+            this.admin_userManageOtherUsers_btn.BorderThickness = 1;
+            this.admin_userManageOtherUsers_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.admin_userManageOtherUsers_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.admin_userManageOtherUsers_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.admin_userManageOtherUsers_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.admin_userManageOtherUsers_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.admin_userManageOtherUsers_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.admin_userManageOtherUsers_btn.ForeColor = System.Drawing.Color.Black;
+            this.admin_userManageOtherUsers_btn.Location = new System.Drawing.Point(406, 608);
+            this.admin_userManageOtherUsers_btn.Name = "admin_userManageOtherUsers_btn";
+            this.admin_userManageOtherUsers_btn.Size = new System.Drawing.Size(250, 45);
+            this.admin_userManageOtherUsers_btn.TabIndex = 11;
+            this.admin_userManageOtherUsers_btn.Text = "Manage Other Users";
+            this.admin_userManageOtherUsers_btn.UseTransparentBackground = true;
+            this.admin_userManageOtherUsers_btn.Click += new System.EventHandler(this.admin_userManageOtherUsers_btn_Click);
             // 
-            // label39
+            // admin_userEdit_btn
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label39.Location = new System.Drawing.Point(235, 36);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(450, 24);
-            this.label39.TabIndex = 2;
-            this.label39.Text = "Information: Press enter after changing the data";
+            this.admin_userEdit_btn.Animated = true;
+            this.admin_userEdit_btn.AutoRoundedCorners = true;
+            this.admin_userEdit_btn.BackColor = System.Drawing.Color.Transparent;
+            this.admin_userEdit_btn.BorderColor = System.Drawing.Color.White;
+            this.admin_userEdit_btn.BorderThickness = 1;
+            this.admin_userEdit_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.admin_userEdit_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.admin_userEdit_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.admin_userEdit_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.admin_userEdit_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.admin_userEdit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userEdit_btn.ForeColor = System.Drawing.Color.Black;
+            this.admin_userEdit_btn.Location = new System.Drawing.Point(445, 550);
+            this.admin_userEdit_btn.Name = "admin_userEdit_btn";
+            this.admin_userEdit_btn.Size = new System.Drawing.Size(180, 45);
+            this.admin_userEdit_btn.TabIndex = 10;
+            this.admin_userEdit_btn.Text = "Edit";
+            this.admin_userEdit_btn.UseTransparentBackground = true;
+            this.admin_userEdit_btn.Click += new System.EventHandler(this.admin_userEdit_btn_Click);
             // 
-            // admin_userManagerOtherUsers_pnl
+            // admin_userOccupation_lbl
             // 
-            this.admin_userManagerOtherUsers_pnl.Controls.Add(this.guna2Button5);
-            this.admin_userManagerOtherUsers_pnl.Controls.Add(this.label40);
-            this.admin_userManagerOtherUsers_pnl.Controls.Add(this.guna2DataGridView1);
-            this.admin_userManagerOtherUsers_pnl.Location = new System.Drawing.Point(63, 38);
-            this.admin_userManagerOtherUsers_pnl.Name = "admin_userManagerOtherUsers_pnl";
-            this.admin_userManagerOtherUsers_pnl.Size = new System.Drawing.Size(913, 455);
-            this.admin_userManagerOtherUsers_pnl.TabIndex = 13;
+            this.admin_userOccupation_lbl.AutoSize = true;
+            this.admin_userOccupation_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userOccupation_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userOccupation_lbl.Location = new System.Drawing.Point(579, 252);
+            this.admin_userOccupation_lbl.Name = "admin_userOccupation_lbl";
+            this.admin_userOccupation_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userOccupation_lbl.TabIndex = 9;
+            this.admin_userOccupation_lbl.Text = "N/A";
             // 
-            // guna2DataGridView1
+            // label38
             // 
-            dataGridViewCellStyle178.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle178;
-            dataGridViewCellStyle179.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle179.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle179.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle179.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle179.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle179.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle179.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle179;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle180.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle180.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle180.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle180.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle180.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle180.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle180.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle180;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(12, 91);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(887, 246);
-            this.guna2DataGridView1.TabIndex = 0;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label38.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label38.Location = new System.Drawing.Point(401, 248);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(138, 25);
+            this.label38.TabIndex = 8;
+            this.label38.Text = "Occupation:";
             // 
-            // label40
+            // admin_userPassword_lbl
             // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label40.Location = new System.Drawing.Point(248, 30);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(450, 24);
-            this.label40.TabIndex = 3;
-            this.label40.Text = "Information: Press enter after changing the data";
+            this.admin_userPassword_lbl.AutoSize = true;
+            this.admin_userPassword_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userPassword_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userPassword_lbl.Location = new System.Drawing.Point(579, 202);
+            this.admin_userPassword_lbl.Name = "admin_userPassword_lbl";
+            this.admin_userPassword_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userPassword_lbl.TabIndex = 7;
+            this.admin_userPassword_lbl.Text = "N/A";
             // 
-            // guna2Button5
+            // label37
             // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.AutoRoundedCorners = true;
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderColor = System.Drawing.Color.White;
-            this.guna2Button5.BorderThickness = 1;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(382, 376);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(208, 37);
-            this.guna2Button5.TabIndex = 4;
-            this.guna2Button5.Text = "Back";
-            this.guna2Button5.UseTransparentBackground = true;
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label37.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label37.Location = new System.Drawing.Point(418, 197);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(121, 25);
+            this.label37.TabIndex = 6;
+            this.label37.Text = "Password:";
+            // 
+            // admin_userUsername_lbl
+            // 
+            this.admin_userUsername_lbl.AutoSize = true;
+            this.admin_userUsername_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userUsername_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userUsername_lbl.Location = new System.Drawing.Point(579, 152);
+            this.admin_userUsername_lbl.Name = "admin_userUsername_lbl";
+            this.admin_userUsername_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userUsername_lbl.TabIndex = 5;
+            this.admin_userUsername_lbl.Text = "N/A";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label35.Location = new System.Drawing.Point(414, 148);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(125, 25);
+            this.label35.TabIndex = 4;
+            this.label35.Text = "Username:";
+            // 
+            // admin_user_Name_lbl
+            // 
+            this.admin_user_Name_lbl.AutoSize = true;
+            this.admin_user_Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_user_Name_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_user_Name_lbl.Location = new System.Drawing.Point(579, 106);
+            this.admin_user_Name_lbl.Name = "admin_user_Name_lbl";
+            this.admin_user_Name_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_user_Name_lbl.TabIndex = 3;
+            this.admin_user_Name_lbl.Text = "N/A";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label36.Location = new System.Drawing.Point(460, 98);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(79, 25);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "Name:";
+            // 
+            // admin_userAccountType_lbl
+            // 
+            this.admin_userAccountType_lbl.AutoSize = true;
+            this.admin_userAccountType_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userAccountType_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userAccountType_lbl.Location = new System.Drawing.Point(579, 54);
+            this.admin_userAccountType_lbl.Name = "admin_userAccountType_lbl";
+            this.admin_userAccountType_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userAccountType_lbl.TabIndex = 1;
+            this.admin_userAccountType_lbl.Text = "N/A";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label34.Location = new System.Drawing.Point(376, 49);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(163, 25);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Account Type:";
             // 
             // pictureBox1
             // 
@@ -2431,70 +2499,553 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2CustomGradientPanel1
+            // admin_userSecurityAnswer_lbl
             // 
-            this.guna2CustomGradientPanel1.AutoRoundedCorners = true;
-            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel1.BorderThickness = 2;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.admin_designation_lbl);
-            this.guna2CustomGradientPanel1.Controls.Add(this.admin_name_lbl);
-            this.guna2CustomGradientPanel1.Controls.Add(this.admin_accountType_lbl);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Gray;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Blue;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(21, 25);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(150, 139);
-            this.guna2CustomGradientPanel1.TabIndex = 15;
+            this.admin_userSecurityAnswer_lbl.AutoSize = true;
+            this.admin_userSecurityAnswer_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userSecurityAnswer_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userSecurityAnswer_lbl.Location = new System.Drawing.Point(579, 511);
+            this.admin_userSecurityAnswer_lbl.Name = "admin_userSecurityAnswer_lbl";
+            this.admin_userSecurityAnswer_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userSecurityAnswer_lbl.TabIndex = 33;
+            this.admin_userSecurityAnswer_lbl.Text = "N/A";
             // 
-            // guna2CirclePictureBox1
+            // admin_userSecurityQuestion_lbl
             // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(50, 12);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 53);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 4;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.admin_userSecurityQuestion_lbl.AutoSize = true;
+            this.admin_userSecurityQuestion_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userSecurityQuestion_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userSecurityQuestion_lbl.Location = new System.Drawing.Point(579, 459);
+            this.admin_userSecurityQuestion_lbl.Name = "admin_userSecurityQuestion_lbl";
+            this.admin_userSecurityQuestion_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userSecurityQuestion_lbl.TabIndex = 32;
+            this.admin_userSecurityQuestion_lbl.Text = "N/A";
             // 
-            // admin_designation_lbl
+            // admin_userEmail_lbl
             // 
-            this.admin_designation_lbl.AutoSize = true;
-            this.admin_designation_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_designation_lbl.Location = new System.Drawing.Point(57, 104);
-            this.admin_designation_lbl.Name = "admin_designation_lbl";
-            this.admin_designation_lbl.Size = new System.Drawing.Size(35, 16);
-            this.admin_designation_lbl.TabIndex = 3;
-            this.admin_designation_lbl.Text = "CEO";
-            this.admin_designation_lbl.Click += new System.EventHandler(this.admin_designation_lbl_Click);
+            this.admin_userEmail_lbl.AutoSize = true;
+            this.admin_userEmail_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userEmail_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userEmail_lbl.Location = new System.Drawing.Point(579, 403);
+            this.admin_userEmail_lbl.Name = "admin_userEmail_lbl";
+            this.admin_userEmail_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userEmail_lbl.TabIndex = 31;
+            this.admin_userEmail_lbl.Text = "N/A";
             // 
-            // admin_name_lbl
+            // admin_userCnic_lbl
             // 
-            this.admin_name_lbl.AutoSize = true;
-            this.admin_name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_name_lbl.ForeColor = System.Drawing.Color.Black;
-            this.admin_name_lbl.Location = new System.Drawing.Point(14, 86);
-            this.admin_name_lbl.Name = "admin_name_lbl";
-            this.admin_name_lbl.Size = new System.Drawing.Size(121, 16);
-            this.admin_name_lbl.TabIndex = 2;
-            this.admin_name_lbl.Text = "Muhammad Faizan\r\n";
-            this.admin_name_lbl.Click += new System.EventHandler(this.admin_name_lbl_Click);
+            this.admin_userCnic_lbl.AutoSize = true;
+            this.admin_userCnic_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userCnic_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userCnic_lbl.Location = new System.Drawing.Point(579, 350);
+            this.admin_userCnic_lbl.Name = "admin_userCnic_lbl";
+            this.admin_userCnic_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userCnic_lbl.TabIndex = 30;
+            this.admin_userCnic_lbl.Text = "N/A";
             // 
-            // admin_accountType_lbl
+            // admin_userPhone_lbl
             // 
-            this.admin_accountType_lbl.AutoSize = true;
-            this.admin_accountType_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_accountType_lbl.Location = new System.Drawing.Point(46, 66);
-            this.admin_accountType_lbl.Name = "admin_accountType_lbl";
-            this.admin_accountType_lbl.Size = new System.Drawing.Size(59, 20);
-            this.admin_accountType_lbl.TabIndex = 1;
-            this.admin_accountType_lbl.Text = "Admin";
-            this.admin_accountType_lbl.Click += new System.EventHandler(this.employee_accountType_lbl_Click);
+            this.admin_userPhone_lbl.AutoSize = true;
+            this.admin_userPhone_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_userPhone_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_userPhone_lbl.Location = new System.Drawing.Point(579, 300);
+            this.admin_userPhone_lbl.Name = "admin_userPhone_lbl";
+            this.admin_userPhone_lbl.Size = new System.Drawing.Size(35, 20);
+            this.admin_userPhone_lbl.TabIndex = 29;
+            this.admin_userPhone_lbl.Text = "N/A";
+            // 
+            // cnic_lbl
+            // 
+            this.cnic_lbl.AutoSize = true;
+            this.cnic_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.cnic_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cnic_lbl.Location = new System.Drawing.Point(473, 345);
+            this.cnic_lbl.Name = "cnic_lbl";
+            this.cnic_lbl.Size = new System.Drawing.Size(66, 25);
+            this.cnic_lbl.TabIndex = 28;
+            this.cnic_lbl.Text = "Cnic:";
+            // 
+            // phone_lbl
+            // 
+            this.phone_lbl.AutoSize = true;
+            this.phone_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.phone_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.phone_lbl.Location = new System.Drawing.Point(365, 296);
+            this.phone_lbl.Name = "phone_lbl";
+            this.phone_lbl.Size = new System.Drawing.Size(174, 25);
+            this.phone_lbl.TabIndex = 27;
+            this.phone_lbl.Text = "Phone Number:";
+            // 
+            // securityA_lbl
+            // 
+            this.securityA_lbl.AutoSize = true;
+            this.securityA_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.securityA_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.securityA_lbl.Location = new System.Drawing.Point(348, 507);
+            this.securityA_lbl.Name = "securityA_lbl";
+            this.securityA_lbl.Size = new System.Drawing.Size(189, 25);
+            this.securityA_lbl.TabIndex = 26;
+            this.securityA_lbl.Text = "Security Answer:";
+            // 
+            // email_lbl
+            // 
+            this.email_lbl.AutoSize = true;
+            this.email_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.email_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.email_lbl.Location = new System.Drawing.Point(460, 399);
+            this.email_lbl.Name = "email_lbl";
+            this.email_lbl.Size = new System.Drawing.Size(77, 25);
+            this.email_lbl.TabIndex = 25;
+            this.email_lbl.Text = "Email:";
+            // 
+            // securityQ_lbl
+            // 
+            this.securityQ_lbl.AutoSize = true;
+            this.securityQ_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.securityQ_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.securityQ_lbl.Location = new System.Drawing.Point(331, 454);
+            this.securityQ_lbl.Name = "securityQ_lbl";
+            this.securityQ_lbl.Size = new System.Drawing.Size(206, 25);
+            this.securityQ_lbl.TabIndex = 24;
+            this.securityQ_lbl.Text = "Security Question:";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.AutoRoundedCorners = true;
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.admin_financialReportProfit_lbl);
+            this.guna2Panel1.Controls.Add(this.label41);
+            this.guna2Panel1.FillColor = System.Drawing.Color.White;
+            this.guna2Panel1.Location = new System.Drawing.Point(166, 629);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(655, 77);
+            this.guna2Panel1.TabIndex = 6;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(93, 3);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(147, 21);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "This month profit:";
+            // 
+            // admin_financialReportProfit_lbl
+            // 
+            this.admin_financialReportProfit_lbl.AutoSize = true;
+            this.admin_financialReportProfit_lbl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_financialReportProfit_lbl.Location = new System.Drawing.Point(320, 40);
+            this.admin_financialReportProfit_lbl.Name = "admin_financialReportProfit_lbl";
+            this.admin_financialReportProfit_lbl.Size = new System.Drawing.Size(31, 17);
+            this.admin_financialReportProfit_lbl.TabIndex = 1;
+            this.admin_financialReportProfit_lbl.Text = "N/A";
+            this.admin_financialReportProfit_lbl.Click += new System.EventHandler(this.admin_financialReportProfit_lbl_Click);
+            // 
+            // admin_financialReportMonthSelection_cb
+            // 
+            this.admin_financialReportMonthSelection_cb.AutoRoundedCorners = true;
+            this.admin_financialReportMonthSelection_cb.BackColor = System.Drawing.Color.Transparent;
+            this.admin_financialReportMonthSelection_cb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.admin_financialReportMonthSelection_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.admin_financialReportMonthSelection_cb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.admin_financialReportMonthSelection_cb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.admin_financialReportMonthSelection_cb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.admin_financialReportMonthSelection_cb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.admin_financialReportMonthSelection_cb.ItemHeight = 30;
+            this.admin_financialReportMonthSelection_cb.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.admin_financialReportMonthSelection_cb.Location = new System.Drawing.Point(10, 650);
+            this.admin_financialReportMonthSelection_cb.Name = "admin_financialReportMonthSelection_cb";
+            this.admin_financialReportMonthSelection_cb.Size = new System.Drawing.Size(140, 36);
+            this.admin_financialReportMonthSelection_cb.TabIndex = 7;
+            this.admin_financialReportMonthSelection_cb.SelectedIndexChanged += new System.EventHandler(this.admin_financialReportMonthSelection_cb_SelectedIndexChanged);
+            // 
+            // admin_financialReportPrint_btn
+            // 
+            this.admin_financialReportPrint_btn.Animated = true;
+            this.admin_financialReportPrint_btn.AutoRoundedCorners = true;
+            this.admin_financialReportPrint_btn.BackColor = System.Drawing.Color.Transparent;
+            this.admin_financialReportPrint_btn.BorderColor = System.Drawing.Color.White;
+            this.admin_financialReportPrint_btn.BorderThickness = 1;
+            this.admin_financialReportPrint_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.admin_financialReportPrint_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.admin_financialReportPrint_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.admin_financialReportPrint_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.admin_financialReportPrint_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.admin_financialReportPrint_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_financialReportPrint_btn.ForeColor = System.Drawing.Color.Black;
+            this.admin_financialReportPrint_btn.Location = new System.Drawing.Point(876, 659);
+            this.admin_financialReportPrint_btn.Name = "admin_financialReportPrint_btn";
+            this.admin_financialReportPrint_btn.Size = new System.Drawing.Size(180, 35);
+            this.admin_financialReportPrint_btn.TabIndex = 8;
+            this.admin_financialReportPrint_btn.Text = "Print";
+            this.admin_financialReportPrint_btn.UseTransparentBackground = true;
+            this.admin_financialReportPrint_btn.Click += new System.EventHandler(this.admin_financialReportPrint_btn_Click);
+            // 
+            // addExpennse_pnl
+            // 
+            this.addExpennse_pnl.Controls.Add(this.expenseDiscription_tb);
+            this.addExpennse_pnl.Controls.Add(this.expenseAmount_tb);
+            this.addExpennse_pnl.Controls.Add(this.addExpenseBack_btn);
+            this.addExpennse_pnl.Location = new System.Drawing.Point(3, 9);
+            this.addExpennse_pnl.Name = "addExpennse_pnl";
+            this.addExpennse_pnl.Size = new System.Drawing.Size(1117, 709);
+            this.addExpennse_pnl.TabIndex = 9;
+            // 
+            // addExpenseBack_btn
+            // 
+            this.addExpenseBack_btn.Animated = true;
+            this.addExpenseBack_btn.AutoRoundedCorners = true;
+            this.addExpenseBack_btn.BackColor = System.Drawing.Color.Transparent;
+            this.addExpenseBack_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addExpenseBack_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addExpenseBack_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addExpenseBack_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addExpenseBack_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.addExpenseBack_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addExpenseBack_btn.ForeColor = System.Drawing.Color.Black;
+            this.addExpenseBack_btn.Location = new System.Drawing.Point(453, 400);
+            this.addExpenseBack_btn.Name = "addExpenseBack_btn";
+            this.addExpenseBack_btn.Size = new System.Drawing.Size(180, 45);
+            this.addExpenseBack_btn.TabIndex = 1;
+            this.addExpenseBack_btn.Text = "Done";
+            this.addExpenseBack_btn.UseTransparentBackground = true;
+            this.addExpenseBack_btn.Click += new System.EventHandler(this.addExpenseBack_btn_Click);
+            // 
+            // expenseAmount_tb
+            // 
+            this.expenseAmount_tb.Animated = true;
+            this.expenseAmount_tb.AutoRoundedCorners = true;
+            this.expenseAmount_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.expenseAmount_tb.DefaultText = "";
+            this.expenseAmount_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.expenseAmount_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.expenseAmount_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.expenseAmount_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.expenseAmount_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.expenseAmount_tb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expenseAmount_tb.ForeColor = System.Drawing.Color.Black;
+            this.expenseAmount_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.expenseAmount_tb.Location = new System.Drawing.Point(240, 130);
+            this.expenseAmount_tb.Name = "expenseAmount_tb";
+            this.expenseAmount_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.expenseAmount_tb.PlaceholderText = "Enter Amount";
+            this.expenseAmount_tb.SelectedText = "";
+            this.expenseAmount_tb.Size = new System.Drawing.Size(255, 95);
+            this.expenseAmount_tb.TabIndex = 2;
+            // 
+            // expenseDiscription_tb
+            // 
+            this.expenseDiscription_tb.Animated = true;
+            this.expenseDiscription_tb.AutoRoundedCorners = true;
+            this.expenseDiscription_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.expenseDiscription_tb.DefaultText = "";
+            this.expenseDiscription_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.expenseDiscription_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.expenseDiscription_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.expenseDiscription_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.expenseDiscription_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.expenseDiscription_tb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expenseDiscription_tb.ForeColor = System.Drawing.Color.Black;
+            this.expenseDiscription_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.expenseDiscription_tb.Location = new System.Drawing.Point(580, 130);
+            this.expenseDiscription_tb.Name = "expenseDiscription_tb";
+            this.expenseDiscription_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.expenseDiscription_tb.PlaceholderText = "Enter Discription";
+            this.expenseDiscription_tb.SelectedText = "";
+            this.expenseDiscription_tb.Size = new System.Drawing.Size(255, 95);
+            this.expenseDiscription_tb.TabIndex = 3;
+            // 
+            // addService_pnl
+            // 
+            this.addService_pnl.Controls.Add(this.addServiceBack_btn);
+            this.addService_pnl.Controls.Add(this.label44);
+            this.addService_pnl.Controls.Add(this.label43);
+            this.addService_pnl.Controls.Add(this.label42);
+            this.addService_pnl.Controls.Add(this.addServicePrice_tb);
+            this.addService_pnl.Controls.Add(this.addServiceDiscription_tb);
+            this.addService_pnl.Controls.Add(this.addServiceName_tb);
+            this.addService_pnl.Controls.Add(this.addServiceDone_btn);
+            this.addService_pnl.Location = new System.Drawing.Point(0, 88);
+            this.addService_pnl.Name = "addService_pnl";
+            this.addService_pnl.Size = new System.Drawing.Size(1145, 522);
+            this.addService_pnl.TabIndex = 5;
+            // 
+            // addServiceDone_btn
+            // 
+            this.addServiceDone_btn.Animated = true;
+            this.addServiceDone_btn.AutoRoundedCorners = true;
+            this.addServiceDone_btn.BackColor = System.Drawing.Color.Transparent;
+            this.addServiceDone_btn.BorderThickness = 1;
+            this.addServiceDone_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addServiceDone_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addServiceDone_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addServiceDone_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addServiceDone_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.addServiceDone_btn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.addServiceDone_btn.ForeColor = System.Drawing.Color.Black;
+            this.addServiceDone_btn.Location = new System.Drawing.Point(644, 403);
+            this.addServiceDone_btn.Name = "addServiceDone_btn";
+            this.addServiceDone_btn.Size = new System.Drawing.Size(180, 45);
+            this.addServiceDone_btn.TabIndex = 0;
+            this.addServiceDone_btn.Text = "Done";
+            this.addServiceDone_btn.UseTransparentBackground = true;
+            this.addServiceDone_btn.Click += new System.EventHandler(this.addServiceDone_btn_Click);
+            // 
+            // addServiceName_tb
+            // 
+            this.addServiceName_tb.Animated = true;
+            this.addServiceName_tb.AutoRoundedCorners = true;
+            this.addServiceName_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.addServiceName_tb.DefaultText = "";
+            this.addServiceName_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.addServiceName_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.addServiceName_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addServiceName_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addServiceName_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addServiceName_tb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.addServiceName_tb.ForeColor = System.Drawing.Color.Black;
+            this.addServiceName_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addServiceName_tb.Location = new System.Drawing.Point(105, 130);
+            this.addServiceName_tb.Name = "addServiceName_tb";
+            this.addServiceName_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.addServiceName_tb.PlaceholderText = "Enter Service Name";
+            this.addServiceName_tb.SelectedText = "";
+            this.addServiceName_tb.Size = new System.Drawing.Size(200, 36);
+            this.addServiceName_tb.TabIndex = 1;
+            // 
+            // addServiceDiscription_tb
+            // 
+            this.addServiceDiscription_tb.Animated = true;
+            this.addServiceDiscription_tb.AutoRoundedCorners = true;
+            this.addServiceDiscription_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.addServiceDiscription_tb.DefaultText = "";
+            this.addServiceDiscription_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.addServiceDiscription_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.addServiceDiscription_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addServiceDiscription_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addServiceDiscription_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addServiceDiscription_tb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addServiceDiscription_tb.ForeColor = System.Drawing.Color.Black;
+            this.addServiceDiscription_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addServiceDiscription_tb.Location = new System.Drawing.Point(466, 130);
+            this.addServiceDiscription_tb.Name = "addServiceDiscription_tb";
+            this.addServiceDiscription_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.addServiceDiscription_tb.PlaceholderText = "Enter Service Discription";
+            this.addServiceDiscription_tb.SelectedText = "";
+            this.addServiceDiscription_tb.Size = new System.Drawing.Size(200, 36);
+            this.addServiceDiscription_tb.TabIndex = 2;
+            // 
+            // addServicePrice_tb
+            // 
+            this.addServicePrice_tb.Animated = true;
+            this.addServicePrice_tb.AutoRoundedCorners = true;
+            this.addServicePrice_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.addServicePrice_tb.DefaultText = "";
+            this.addServicePrice_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.addServicePrice_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.addServicePrice_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addServicePrice_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addServicePrice_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addServicePrice_tb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addServicePrice_tb.ForeColor = System.Drawing.Color.Black;
+            this.addServicePrice_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addServicePrice_tb.Location = new System.Drawing.Point(825, 130);
+            this.addServicePrice_tb.Name = "addServicePrice_tb";
+            this.addServicePrice_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.addServicePrice_tb.PlaceholderText = "Enter Service Price";
+            this.addServicePrice_tb.SelectedText = "";
+            this.addServicePrice_tb.Size = new System.Drawing.Size(200, 36);
+            this.addServicePrice_tb.TabIndex = 3;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label42.Location = new System.Drawing.Point(865, 81);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(102, 39);
+            this.label42.TabIndex = 4;
+            this.label42.Text = "Price";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label43.Location = new System.Drawing.Point(468, 81);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(192, 39);
+            this.label43.TabIndex = 5;
+            this.label43.Text = "Discription";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label44.Location = new System.Drawing.Point(145, 81);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(114, 39);
+            this.label44.TabIndex = 6;
+            this.label44.Text = "Name";
+            // 
+            // addServiceBack_btn
+            // 
+            this.addServiceBack_btn.Animated = true;
+            this.addServiceBack_btn.AutoRoundedCorners = true;
+            this.addServiceBack_btn.BackColor = System.Drawing.Color.Transparent;
+            this.addServiceBack_btn.BorderThickness = 1;
+            this.addServiceBack_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addServiceBack_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addServiceBack_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addServiceBack_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addServiceBack_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.addServiceBack_btn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addServiceBack_btn.ForeColor = System.Drawing.Color.Black;
+            this.addServiceBack_btn.Location = new System.Drawing.Point(287, 403);
+            this.addServiceBack_btn.Name = "addServiceBack_btn";
+            this.addServiceBack_btn.Size = new System.Drawing.Size(180, 45);
+            this.addServiceBack_btn.TabIndex = 7;
+            this.addServiceBack_btn.Text = "Back";
+            this.addServiceBack_btn.UseTransparentBackground = true;
+            this.addServiceBack_btn.Click += new System.EventHandler(this.addServiceBack_btn_Click);
+            // 
+            // updateService_pnl
+            // 
+            this.updateService_pnl.Controls.Add(this.updateServicePrice_tb);
+            this.updateService_pnl.Controls.Add(this.updateServiceDiscription_tb);
+            this.updateService_pnl.Controls.Add(this.updateServiceName_tb);
+            this.updateService_pnl.Controls.Add(this.updateServiceDone_btn);
+            this.updateService_pnl.Controls.Add(this.guna2Button6);
+            this.updateService_pnl.Location = new System.Drawing.Point(0, 88);
+            this.updateService_pnl.Name = "updateService_pnl";
+            this.updateService_pnl.Size = new System.Drawing.Size(1145, 522);
+            this.updateService_pnl.TabIndex = 6;
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.Animated = true;
+            this.guna2Button6.AutoRoundedCorners = true;
+            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button6.BorderThickness = 1;
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button6.Location = new System.Drawing.Point(287, 352);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button6.TabIndex = 0;
+            this.guna2Button6.Text = "Back";
+            this.guna2Button6.UseTransparentBackground = true;
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
+            // updateServiceDone_btn
+            // 
+            this.updateServiceDone_btn.Animated = true;
+            this.updateServiceDone_btn.AutoRoundedCorners = true;
+            this.updateServiceDone_btn.BackColor = System.Drawing.Color.Transparent;
+            this.updateServiceDone_btn.BorderThickness = 1;
+            this.updateServiceDone_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.updateServiceDone_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.updateServiceDone_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.updateServiceDone_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.updateServiceDone_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.updateServiceDone_btn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateServiceDone_btn.ForeColor = System.Drawing.Color.Black;
+            this.updateServiceDone_btn.Location = new System.Drawing.Point(644, 352);
+            this.updateServiceDone_btn.Name = "updateServiceDone_btn";
+            this.updateServiceDone_btn.Size = new System.Drawing.Size(180, 45);
+            this.updateServiceDone_btn.TabIndex = 1;
+            this.updateServiceDone_btn.Text = "Done";
+            this.updateServiceDone_btn.UseTransparentBackground = true;
+            this.updateServiceDone_btn.Click += new System.EventHandler(this.updateServiceDone_btn_Click);
+            // 
+            // updateServiceName_tb
+            // 
+            this.updateServiceName_tb.Animated = true;
+            this.updateServiceName_tb.AutoRoundedCorners = true;
+            this.updateServiceName_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.updateServiceName_tb.DefaultText = "";
+            this.updateServiceName_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.updateServiceName_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.updateServiceName_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.updateServiceName_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.updateServiceName_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.updateServiceName_tb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateServiceName_tb.ForeColor = System.Drawing.Color.Black;
+            this.updateServiceName_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.updateServiceName_tb.Location = new System.Drawing.Point(105, 130);
+            this.updateServiceName_tb.Name = "updateServiceName_tb";
+            this.updateServiceName_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.updateServiceName_tb.PlaceholderText = "Enter Service Name";
+            this.updateServiceName_tb.SelectedText = "";
+            this.updateServiceName_tb.Size = new System.Drawing.Size(200, 36);
+            this.updateServiceName_tb.TabIndex = 2;
+            // 
+            // updateServiceDiscription_tb
+            // 
+            this.updateServiceDiscription_tb.Animated = true;
+            this.updateServiceDiscription_tb.AutoRoundedCorners = true;
+            this.updateServiceDiscription_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.updateServiceDiscription_tb.DefaultText = "";
+            this.updateServiceDiscription_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.updateServiceDiscription_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.updateServiceDiscription_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.updateServiceDiscription_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.updateServiceDiscription_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.updateServiceDiscription_tb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.updateServiceDiscription_tb.ForeColor = System.Drawing.Color.Black;
+            this.updateServiceDiscription_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.updateServiceDiscription_tb.Location = new System.Drawing.Point(467, 130);
+            this.updateServiceDiscription_tb.Name = "updateServiceDiscription_tb";
+            this.updateServiceDiscription_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.updateServiceDiscription_tb.PlaceholderText = "Enter Service Discription";
+            this.updateServiceDiscription_tb.SelectedText = "";
+            this.updateServiceDiscription_tb.Size = new System.Drawing.Size(199, 36);
+            this.updateServiceDiscription_tb.TabIndex = 3;
+            // 
+            // updateServicePrice_tb
+            // 
+            this.updateServicePrice_tb.Animated = true;
+            this.updateServicePrice_tb.AutoRoundedCorners = true;
+            this.updateServicePrice_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.updateServicePrice_tb.DefaultText = "";
+            this.updateServicePrice_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.updateServicePrice_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.updateServicePrice_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.updateServicePrice_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.updateServicePrice_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.updateServicePrice_tb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateServicePrice_tb.ForeColor = System.Drawing.Color.Black;
+            this.updateServicePrice_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.updateServicePrice_tb.Location = new System.Drawing.Point(824, 130);
+            this.updateServicePrice_tb.Name = "updateServicePrice_tb";
+            this.updateServicePrice_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.updateServicePrice_tb.PlaceholderText = "Enter Service Price";
+            this.updateServicePrice_tb.SelectedText = "";
+            this.updateServicePrice_tb.Size = new System.Drawing.Size(201, 36);
+            this.updateServicePrice_tb.TabIndex = 4;
             // 
             // admin
             // 
@@ -2522,6 +3073,9 @@
             this.Load += new System.EventHandler(this.admin_Load);
             this.admin_menu_pnl.ResumeLayout(false);
             this.admin_menu_pnl.PerformLayout();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.admin_dashboard_pnl.ResumeLayout(false);
             this.admin_dashboard_pnl.PerformLayout();
             this.admin_totalSalariesAndProfit_pnl.ResumeLayout(false);
@@ -2564,16 +3118,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.admin_appointmentTodayAppointment_gridView)).EndInit();
             this.admin_user_pnl.ResumeLayout(false);
             this.admin_user_pnl.PerformLayout();
+            this.admin_userManagerOtherUsers_pnl.ResumeLayout(false);
+            this.admin_userManagerOtherUsers_pnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.admin_editOtherUsers_gridView)).EndInit();
             this.admin_userEdit_pnl.ResumeLayout(false);
             this.admin_userEdit_pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.admin_userEdit_gridView)).EndInit();
-            this.admin_userManagerOtherUsers_pnl.ResumeLayout(false);
-            this.admin_userManagerOtherUsers_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.addExpennse_pnl.ResumeLayout(false);
+            this.addService_pnl.ResumeLayout(false);
+            this.addService_pnl.PerformLayout();
+            this.updateService_pnl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2656,9 +3213,6 @@
         private Guna.UI2.WinForms.Guna2Button admin_serviceAdd_btn;
         private System.Windows.Forms.Panel admin_clients_pnl;
         private System.Windows.Forms.Label label18;
-        private Guna.UI2.WinForms.Guna2Button admin_clientUpdate_btn;
-        private Guna.UI2.WinForms.Guna2Button admin_clientDelete_btn;
-        private Guna.UI2.WinForms.Guna2Button admin_clientAdd_btn;
         private Guna.UI2.WinForms.Guna2DataGridView admin_client_gridView;
         private System.Windows.Forms.Panel admin_schedule_pnl;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
@@ -2702,12 +3256,46 @@
         private Guna.UI2.WinForms.Guna2DataGridView admin_userEdit_gridView;
         private System.Windows.Forms.Panel admin_userManagerOtherUsers_pnl;
         private System.Windows.Forms.Label label40;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView admin_editOtherUsers_gridView;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Label admin_designation_lbl;
         private System.Windows.Forms.Label admin_name_lbl;
         private System.Windows.Forms.Label admin_accountType_lbl;
+        private System.Windows.Forms.Label admin_userSecurityAnswer_lbl;
+        private System.Windows.Forms.Label admin_userSecurityQuestion_lbl;
+        private System.Windows.Forms.Label admin_userEmail_lbl;
+        private System.Windows.Forms.Label admin_userCnic_lbl;
+        private System.Windows.Forms.Label admin_userPhone_lbl;
+        private System.Windows.Forms.Label cnic_lbl;
+        private System.Windows.Forms.Label phone_lbl;
+        private System.Windows.Forms.Label securityA_lbl;
+        private System.Windows.Forms.Label email_lbl;
+        private System.Windows.Forms.Label securityQ_lbl;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label admin_financialReportProfit_lbl;
+        private System.Windows.Forms.Label label41;
+        private Guna.UI2.WinForms.Guna2ComboBox admin_financialReportMonthSelection_cb;
+        private Guna.UI2.WinForms.Guna2Button admin_financialReportPrint_btn;
+        private Guna.UI2.WinForms.Guna2Panel addExpennse_pnl;
+        private Guna.UI2.WinForms.Guna2Button addExpenseBack_btn;
+        private Guna.UI2.WinForms.Guna2TextBox expenseDiscription_tb;
+        private Guna.UI2.WinForms.Guna2TextBox expenseAmount_tb;
+        private Guna.UI2.WinForms.Guna2Panel addService_pnl;
+        private Guna.UI2.WinForms.Guna2Button addServiceDone_btn;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private Guna.UI2.WinForms.Guna2TextBox addServicePrice_tb;
+        private Guna.UI2.WinForms.Guna2TextBox addServiceDiscription_tb;
+        private Guna.UI2.WinForms.Guna2TextBox addServiceName_tb;
+        private Guna.UI2.WinForms.Guna2Button addServiceBack_btn;
+        private Guna.UI2.WinForms.Guna2Panel updateService_pnl;
+        private Guna.UI2.WinForms.Guna2Button updateServiceDone_btn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2TextBox updateServicePrice_tb;
+        private Guna.UI2.WinForms.Guna2TextBox updateServiceDiscription_tb;
+        private Guna.UI2.WinForms.Guna2TextBox updateServiceName_tb;
     }
 }
