@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 //using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using FYP_PROJECT.Helpers.LoginHelpers;
 
 
 namespace FYP_PROJECT
@@ -36,6 +37,9 @@ namespace FYP_PROJECT
             forgotPassword_pnl.Visible = false;
             signup_admin_pnl.Visible = false;
             login_forgotPasswordPhoneCode_pnl.Visible = false;
+            employee_signup_pnl.Visible = false;
+            admin_login_btn.Visible = false;
+            employee_login_btn.Visible = false;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
 
@@ -406,6 +410,14 @@ namespace FYP_PROJECT
 
         private async void login_btn_Click_1(object sender, EventArgs e)
         {
+            admin_login_pnl.Hide();
+            employe_login_pnl.Hide();
+            await Task.WhenAll(
+           // Fade out sign-up elements
+           FadeHelper.FadeOutControl(signup_lbl),
+            FadeHelper.FadeOutControl(signup_admin_btn),
+            FadeHelper.FadeOutControl(signup_employe_btn)
+                );
             login_pnl.Visible = true;  // We're bringing login panel into view
                                        // ❌ No need to set signup_pnl.Visible = true here again
 
@@ -414,12 +426,18 @@ namespace FYP_PROJECT
 
             int signupFrom = signup_pnl.Left;  // Could already be off-screen or on-screen
             int signupTo = this.ClientSize.Width;  // Move it fully off-screen
-
             Task t1 = SlideAsync(login_pnl, loginFrom, loginTo);
             Task t2 = SlideAsync(signup_pnl, signupFrom, signupTo);
-
+            
             await Task.WhenAll(t1, t2);
+            
             signup_pnl.Visible = false;
+            await Task.WhenAll(
+              FadeHelper.FadeInLabel(label1),
+              FadeHelper.FadeInButton(admin_login_btn),
+              FadeHelper.FadeInButton(employee_login_btn)
+          );
+
             Employee emp = new Employee();
             emp.Hide();
             admin adm = new admin();
@@ -428,6 +446,11 @@ namespace FYP_PROJECT
 
         private async void signup_btn_Click_1(object sender, EventArgs e)
         {
+            await Task.WhenAll(
+           FadeHelper.FadeOutControl(label1),
+            FadeHelper.FadeOutControl(admin_login_btn),
+            FadeHelper.FadeOutControl(employee_login_btn)
+            );
             signup_pnl.Visible = true;
 
             int loginFrom = login_pnl.Left;  // Use its current position
@@ -440,7 +463,13 @@ namespace FYP_PROJECT
             Task t2 = SlideAsync(signup_pnl, signupFrom, signupTo);
 
             await Task.WhenAll(t1, t2);
+          
             login_pnl.Visible = false;
+            await Task.WhenAll(
+                  FadeHelper.FadeInLabel(signup_lbl),
+                  FadeHelper.FadeInButton(signup_admin_btn),
+                  FadeHelper.FadeInButton(signup_employe_btn)
+            );
             Employee emp = new Employee();
             emp.Hide();
             admin adm = new admin();
@@ -485,9 +514,12 @@ namespace FYP_PROJECT
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            admin_login_pnl.Hide();
+            employee_signup_pnl.Hide();
+            signup_admin_pnl.Hide();
+            employe_login_pnl.Hide();
             signup_btn.Show(); ;
             login_btn.Show();
-            login_pnl.Show();
             forgotPassword_pnl.Hide();
         }
         private void ShowFormWithFade(Form targetForm)
@@ -794,6 +826,10 @@ namespace FYP_PROJECT
                                 otpResendCount = 0;
                                 login_otpStatus_lbl.Visible = false;
                                 login_forgotPasswordPhoneCode_pnl.Hide();
+                                admin_login_pnl.Hide();
+                                employe_login_pnl.Hide();
+                                signup_admin_pnl.Hide();
+                                employee_signup_pnl.Hide();
                                 signup_btn.Show();
                                 login_btn.Show();
                             }
@@ -819,6 +855,83 @@ namespace FYP_PROJECT
         private void employe_login_pnl_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void admin_signupDone_btn_Click(object sender, EventArgs e)
+        {
+            string name = tb_admin_name.Text.Trim();
+            string username = tb_admin_username.Text.Trim();
+            string password = tb_admin_password.Text.Trim();
+            string email = tb_admin_email.Text.Trim();
+            string phone = tb_admin_phone.Text.Trim();
+            string cnic = tb_admin_cnic.Text.Trim();
+            string question = cb_admin_question.Text.Trim();
+            string answer = tb_admin_answer.Text.Trim();
+
+            // Optional: Basic validation
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(cnic) ||
+                string.IsNullOrWhiteSpace(question) || string.IsNullOrWhiteSpace(answer))
+            {
+                MessageBox.Show("Please fill in all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            bool success = AdminSignupHelper.RegisterAdmin(name, username, password, email, phone, cnic, question, answer);
+
+            if (success)
+            {
+                // Optional: clear fields after successful signup
+                tb_admin_name.Clear();
+                tb_admin_username.Clear();
+                tb_admin_password.Clear();
+                tb_admin_email.Clear();
+                tb_admin_phone.Clear();
+                tb_admin_cnic.Clear();
+                cb_admin_question.SelectedIndex = -1;
+                tb_admin_answer.Clear();
+
+                
+              
+            }
+        }
+
+        private void signup_employe_btn_Click(object sender, EventArgs e)
+        {
+            employee_signup_pnl.Show();
+        }
+
+        private void employee_signupDone_btn_Click(object sender, EventArgs e)
+        {
+            string name = tb_emp_name.Text.Trim();
+            string username = tb_emp_username.Text.Trim();
+            string password = tb_emp_password.Text.Trim();
+            string email = tb_emp_email.Text.Trim();
+            string phone = tb_emp_phone.Text.Trim();
+            string cnic = tb_emp_cnic.Text.Trim();
+            string question = cb_emp_question.Text.Trim();
+            string answer = tb_emp_answer.Text.Trim();
+
+            bool success = EmployeeSignupHelper.RegisterEmployee(
+                name, username, password, email, phone, cnic, question, answer);
+
+            if (success)
+            {
+                tb_emp_name.Clear();
+                tb_emp_username.Clear();
+                tb_emp_password.Clear();
+                tb_emp_email.Clear();
+                tb_emp_phone.Clear();
+                tb_emp_cnic.Clear();
+                cb_emp_question.SelectedIndex = -1;
+                tb_emp_answer.Clear();
+            }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            employee_signup_pnl.Hide();
         }
     }
 }

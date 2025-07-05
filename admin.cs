@@ -11,41 +11,40 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
 using System.Windows.Forms;
 using System.Xml;
+using FYP_PROJECT.Helpers.CommonHelpers;
+using FYP_PROJECT.Helpers.AdminHelpers;
+using System.Globalization;
+
 
 namespace FYP_PROJECT
 {
     public partial class admin : Form
     {
-        public admin()
-        {
-            InitializeComponent();
-
-            //hiding dashboard panel at startup
-            admin_dashboard_pnl.Visible = false;
-            admin_search_pnl.Visible = false;
-            admin_employee_pnl.Visible = false;
-            admin_service_pnl.Visible = false;
-            admin_clients_pnl.Visible = false;
-            admin_schedule_pnl.Visible = false;
-            admin_financialReport_pnl.Visible = false;
-            admin_appointment_pnl.Visible = false;
-            admin_user_pnl.Visible = false;
-            admin_userManagerOtherUsers_pnl.Visible = false;
-            admin_userEdit_pnl.Visible = false;
-            addExpennse_pnl.Visible = false;
-            addService_pnl.Visible = false;
-            updateService_pnl.Visible = false;
-            // 2 – Mark Welcome as the active choice
-            SetActiveButton(admin_welcomePage_btn);
-        }
+        // Create a CultureInfo for Pakistan
+        CultureInfo pakCulture = new CultureInfo("ur-PK");
+        private ButtonAnimationHelper animationHelper;
+        private ButtonAnimationHelper buttonAnimationHelper;
         Bitmap logoImage = Properties.Resources.pristine_shine_logo; // Replace with your actual logo resource
         private string selectedMonthForPrint = "";
         private DataTable incomeTable = new DataTable();
         private DataTable expenseTable = new DataTable();
         private decimal totalIncome = 0;
         private decimal totalExpense = 0;
+        public admin()
+        {
+            InitializeComponent();
+            // Format currency (optional usage)
+            decimal amount = 12345.67m;
+            string formattedAmount = amount.ToString("C", pakCulture);
+            // Set up animation helper once
+            buttonAnimationHelper = new ButtonAnimationHelper(admin_menu_pnl);
+            animationHelper = buttonAnimationHelper;
+            // Now initialize UI using helper
+            AdminUIInitializer.InitializeUI(this, animationHelper, admin_welcomePage_btn);
+        }
         private void admin_menu_pnl_Paint(object sender, PaintEventArgs e)
         {
             int borderRadius = 90;
@@ -70,130 +69,33 @@ namespace FYP_PROJECT
             panel.Region = new Region(path);
             e.Graphics.FillPath(new SolidBrush(panel.BackColor), path);
         }
-
-        //for animation and active state of button
-
-        private Dictionary<Guna.UI2.WinForms.Guna2Button, float> buttonFontSizes = new Dictionary<Guna.UI2.WinForms.Guna2Button, float>();
-        private Guna.UI2.WinForms.Guna2Button currentActiveButton = null;
-        private Timer fontAnimationTimer;
-        private float animationStep = 0.5f;
-        private void SetActiveButton(Guna.UI2.WinForms.Guna2Button activeBtn)
-        {
-            foreach (Control ctrl in admin_menu_pnl.Controls)
-            {
-                if (ctrl is Guna.UI2.WinForms.Guna2Button btn)
-                {
-                    if (!buttonFontSizes.ContainsKey(btn))
-                        buttonFontSizes[btn] = btn.Font.Size;
-
-                    btn.FillColor = Color.FromArgb(20, 20, 30);
-                    btn.ForeColor = Color.Gainsboro;
-                    btn.BorderRadius = 8;
-                    btn.TextAlign = HorizontalAlignment.Left;
-                    btn.Padding = new Padding(15, 0, 0, 0);
-                    btn.Font = new Font("Segoe UI", btn.Font.Size, FontStyle.Regular);
-
-                    btn.HoverState.FillColor = Color.FromArgb(50, 50, 100);
-                    btn.HoverState.ForeColor = Color.White;
-                    btn.HoverState.BorderColor = Color.FromArgb(128, 128, 255);
-                }
-            }
-
-            if (currentActiveButton != activeBtn)
-            {
-                AnimateFontSizeTransition(currentActiveButton, activeBtn);
-                currentActiveButton = activeBtn;
-            }
-
-            // Update colors immediately (optional)
-            activeBtn.FillColor = Color.FromArgb(128, 128, 255);
-            activeBtn.ForeColor = Color.White;
-        }
-
-        private void AnimateFontSizeTransition(Guna.UI2.WinForms.Guna2Button oldBtn, Guna.UI2.WinForms.Guna2Button newBtn)
-        {
-            float baseSizeOld = oldBtn != null && buttonFontSizes.ContainsKey(oldBtn) ? buttonFontSizes[oldBtn] : 10;
-            float baseSizeNew = newBtn != null && buttonFontSizes.ContainsKey(newBtn) ? buttonFontSizes[newBtn] : 10;
-
-            float targetSizeOld = baseSizeOld;
-            float targetSizeNew = baseSizeNew + 2; // Grow 4pt
-
-            fontAnimationTimer?.Stop();
-            fontAnimationTimer = new Timer();
-            fontAnimationTimer.Interval = 15;
-
-            fontAnimationTimer.Tick += (s, e) =>
-            {
-                bool allDone = true;
-
-                // Animate old (shrink)
-                if (oldBtn != null && oldBtn.Font.Size > targetSizeOld)
-                {
-                    float newSize = oldBtn.Font.Size - animationStep;
-                    if (newSize <= targetSizeOld)
-                    {
-                        newSize = targetSizeOld;
-                        oldBtn.Font = new Font("Segoe UI", newSize, FontStyle.Regular);
-                    }
-                    else
-                    {
-                        oldBtn.Font = new Font("Segoe UI", newSize, FontStyle.Regular);
-                        allDone = false;
-                    }
-                }
-
-                // Animate new (grow)
-                if (newBtn != null && newBtn.Font.Size < targetSizeNew)
-                {
-                    float newSize = newBtn.Font.Size + animationStep;
-                    if (newSize >= targetSizeNew)
-                    {
-                        newSize = targetSizeNew;
-                        newBtn.Font = new Font("Segoe UI", newSize, FontStyle.Bold);
-                    }
-                    else
-                    {
-                        newBtn.Font = new Font("Segoe UI", newSize, FontStyle.Bold);
-                        allDone = false;
-                    }
-                }
-
-                if (allDone)
-                    fontAnimationTimer.Stop();
-            };
-
-            fontAnimationTimer.Start();
-        }
-
-
-
-
-
         private void admin_Load(object sender, EventArgs e)
         {
             string currentMonth = DateTime.Now.ToString("MMMM");
-
             // Select current month in comboBox
             admin_financialReportMonthSelection_cb.SelectedItem = currentMonth;
-
+            admin_name_lbl.Text = Session.Name;               // Set name from session
+            admin_designation_lbl.Text = Session.Occupation; // Set role from session
             // Load current month's profit
             LoadMonthlyProfit(currentMonth);
+            //Initialize all required fields on load
+            UpdateDashboardLabels();
+            LoadEmployees();
             LoadAllServicesToGrid();
             LoadAllClientsToGrid();
-            LoadAlertAppointments();
+            int alertCount = AppointmentHelper.LoadAlertAppointments(admin_schedule_gridView);
+            admin_scheduleDueService_lbl.Text = alertCount.ToString();
             LoadExpenseData();
-            LoadIncomeData();
+            FinanceHelper.LoadIncomeData(admin_financialReportIncome_gridView);
             LoadCompletedAppointments();
             LoadAppointmentsThisMonth();
             LoadTodayAppointments();
             LoadAllUsersToGrid();
-            LoadLoggedInAdminToGrid();
             LoadAdminInfoToLabels();
         }
-
         private void admin_dashboard_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             admin_dashboard_pnl.Show();
             admin_search_pnl.Hide();
             admin_employee_pnl.Hide();
@@ -204,10 +106,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void admin_search_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Show();
             admin_employee_pnl.Hide();
@@ -218,10 +119,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void admin_employees_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Hide();
             admin_employee_pnl.Show();
@@ -232,10 +132,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void admin_service_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             LoadAllServicesToGrid();
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Hide();
@@ -247,10 +146,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void admin_client_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Hide();
             admin_employee_pnl.Hide();
@@ -261,10 +159,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void admin_schedule_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             LoadAlertAppointments();
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Hide();
@@ -276,10 +173,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void admin_financialReport_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             LoadExpenseData();
             LoadIncomeData();
             admin_dashboard_pnl.Hide();
@@ -292,10 +188,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void admin_appointment_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Hide();
             admin_employee_pnl.Hide();
@@ -309,11 +204,9 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Show();
             admin_user_pnl.Hide();
         }
-
         private void admin_user_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
-
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Hide();
             admin_employee_pnl.Hide();
@@ -325,73 +218,40 @@ namespace FYP_PROJECT
             admin_user_pnl.Show();
         }
         // for form animation to avoid flicker while changing the form
-        private void ShowFormWithFade(Form targetForm)
-        {
-            targetForm.Opacity = 0;
-            targetForm.Show();
-
-            Timer fadeIn = new Timer();
-            fadeIn.Interval = 1;
-            fadeIn.Tick += (s, e) =>
-            {
-                if (targetForm.Opacity >= 1)
-                {
-                    fadeIn.Stop();
-                    this.Hide(); // hide login form AFTER new form is visible
-                }
-                else
-                {
-                    targetForm.Opacity += 0.08;
-                }
-            };
-            fadeIn.Start();
-        }
         private void admin_logOut_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
 
             Login_form login
                 = new Login_form();
-            ShowFormWithFade(login);
+            UIHelper.ShowFormWithFade(this, login);
         }
-
+        // close applicaton button
         private void admin_closeApplication_btn_Click(object sender, EventArgs e)
         {
-
-
             DialogResult result = MessageBox.Show(
                 "Are you sure you want to close this application?",
                 "Confirm Exit",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
             );
-
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
             }
             // else do nothing (user clicked No)
         }
-
-
-        private void admin_accountType_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void admin_dashboard_pnl_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
-
         private void admin_welcomePage_btn_Click(object sender, EventArgs e)
         {
-            SetActiveButton((Guna.UI2.WinForms.Guna2Button)sender);
+            buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
             admin_dashboard_pnl.Hide();
             admin_search_pnl.Hide();
             admin_employee_pnl.Hide();
@@ -402,104 +262,25 @@ namespace FYP_PROJECT
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
         }
-
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
         private void LoadAlertAppointments()
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    a.Appointment_Id,
-                    a.Appointment_Date,
-                    a.Appointment_Total,
-                    a.Appointment_Grand_Total,
-                    a.Appointment_Pay_Method,
-                    a.Appointment_Status,
-                    c.Client_Name,
-                    c.Client_Phone,
-                    c.Client_Car_Number,
-                    c.Client_Car_Model,
-                    c.Client_Car_Make,
-                    c.Client_Car_Year
-                FROM 
-                    appointment a
-                INNER JOIN 
-                    clients c ON a.Appointment_Client_Id = c.Client_id
-                WHERE 
-                    a.Appointment_Alert = '1'";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        admin_schedule_gridView.DataSource = dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading alert appointments: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            int alertCount = AppointmentHelper.LoadAlertAppointments(admin_schedule_gridView);
+            admin_scheduleDueService_lbl.Text = alertCount.ToString();
         }
         private void LoadIncomeData()
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    a.Appointment_Id AS 'Appointment ID',
-                    c.Client_Name AS 'Client Name',
-                    a.Appointment_Date AS 'Date',
-                    a.Appointment_Grand_Total AS 'Grand Total',
-                    a.Appointment_Pay_Method AS 'Payment Method',
-                    a.Appointment_Status AS 'Status'
-                FROM appointment a
-                INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
-                WHERE a.Appointment_Grand_Total > 0";
-
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        admin_financialReportIncome_gridView.DataSource = dt;
-
-                        // Optional styling
-                        admin_financialReportIncome_gridView.Columns["Grand Total"].DefaultCellStyle.Format = "C0"; // Currency format
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading income data: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            FinanceHelper.LoadIncomeData(admin_financialReportIncome_gridView);
         }
-
-
-
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void admin_userEdit_btn_Click(object sender, EventArgs e)
-        {
+        { // Hide labels (optional UI logic)
             phone_lbl.Hide();
             admin_userPhone_lbl.Hide();
             cnic_lbl.Hide();
@@ -510,14 +291,32 @@ namespace FYP_PROJECT
             admin_userSecurityQuestion_lbl.Hide();
             securityA_lbl.Hide();
             admin_userSecurityAnswer_lbl.Hide();
-            LoadLoggedInAdminToGrid();
+            // Load data from Session into input controls (TextBoxes and ComboBox)
+            adminEditName_tb.Text = Session.Name;
+            adminEditUsername_tb.Text = Session.Username;
+            adminEditPassword_tb.Text = Session.Password;
+            adminEditEmail_tb.Text = Session.Email;
+            adminEditPhone_tb.Text = Session.PhoneNumber;
+            adminEditCnic_tb.Text = Session.Cnic;
+            adminEditOccupation_tb.Text = Session.Occupation;
+            adminEditSecurityAnswer_tb.Text = Session.SecurityAnswer;
+
+            // Set selected item for security question ComboBox
+            if (adminEditSecurityQuestion_cb.Items.Contains(Session.SecurityQuestion))
+            {
+                adminEditSecurityQuestion_cb.SelectedItem = Session.SecurityQuestion;
+            }
+            else
+            {
+                adminEditSecurityQuestion_cb.Text = Session.SecurityQuestion; // fallback in case it's not in the dropdown
+            }
+
+            // Finally show the edit panel
             admin_userEdit_pnl.Show();
         }
-
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             LoadAllUsersToGrid();
-            LoadLoggedInAdminToGrid();
             LoadAdminInfoToLabels();
             phone_lbl.Show();
             admin_userPhone_lbl.Show();
@@ -532,7 +331,6 @@ namespace FYP_PROJECT
             admin_userEdit_pnl.Hide();
             admin_userManagerOtherUsers_pnl.Hide();
         }
-
         private void admin_userManageOtherUsers_btn_Click(object sender, EventArgs e)
         {
             phone_lbl.Hide();
@@ -549,11 +347,9 @@ namespace FYP_PROJECT
             admin_userEdit_pnl.Hide();
             admin_userManagerOtherUsers_pnl.Show();
         }
-
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             LoadAllUsersToGrid();
-            LoadLoggedInAdminToGrid();
             LoadAdminInfoToLabels();
             phone_lbl.Show();
             admin_userPhone_lbl.Show();
@@ -568,204 +364,49 @@ namespace FYP_PROJECT
             admin_userEdit_pnl.Hide();
             admin_userManagerOtherUsers_pnl.Hide();
         }
-
         private void employee_accountType_lbl_Click(object sender, EventArgs e)
         {
 
         }
-
         private void admin_designation_lbl_Click(object sender, EventArgs e)
         {
 
         }
-
         private void admin_name_lbl_Click(object sender, EventArgs e)
         {
 
         }
-
         private void admin_appointmentCompletedToday_gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
         private void LoadCompletedAppointments()
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    a.Appointment_Id AS 'ID',
-                    c.Client_Name AS 'Client Name',
-                    a.Appointment_Date AS 'Date',
-                    a.Appointment_Total AS 'Total',
-                    a.Appointment_Discount AS 'Discount',
-                    a.Appointment_Grand_Total AS 'Grand Total',
-                    a.Appointment_Pay_Method AS 'Payment Method',
-                    a.Appointment_Status AS 'Status'
-                FROM appointment a
-                INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
-                WHERE a.Appointment_Status = 'Complete'
-                ORDER BY a.Appointment_Date DESC";
-
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        admin_appointmentCompletedToday_gridView.DataSource = dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading completed appointments:\n" + ex.Message,
-                        "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            AppointmentHelper.LoadCompletedAppointments(admin_appointmentCompletedToday_gridView);
         }
-
         private void admin_appointmentThisMonth_gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
         private void LoadAppointmentsThisMonth()
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    a.Appointment_Id AS 'ID',
-                    c.Client_Name AS 'Client Name',
-                    a.Appointment_Date AS 'Date',
-                    a.Appointment_Total AS 'Total',
-                    a.Appointment_Discount AS 'Discount',
-                    a.Appointment_Grand_Total AS 'Grand Total',
-                    a.Appointment_Pay_Method AS 'Payment Method',
-                    a.Appointment_Status AS 'Status'
-                FROM appointment a
-                INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
-                WHERE MONTH(a.Appointment_Date) = MONTH(CURDATE())
-                  AND YEAR(a.Appointment_Date) = YEAR(CURDATE())
-                ORDER BY a.Appointment_Date DESC";
-
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        admin_appointmentThisMonth_gridview.DataSource = dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading this month's appointments:\n" + ex.Message,
-                        "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            AppointmentHelper.LoadAppointmentsThisMonth(admin_appointmentThisMonth_gridview);
         }
-
         private void admin_appointmentTodayAppointment_gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
         private void LoadTodayAppointments()
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    a.Appointment_Id AS 'ID',
-                    c.Client_Name AS 'Client Name',
-                    a.Appointment_Date AS 'Date',
-                    a.Appointment_Total AS 'Total',
-                    a.Appointment_Discount AS 'Discount',
-                    a.Appointment_Grand_Total AS 'Grand Total',
-                    a.Appointment_Pay_Method AS 'Payment Method',
-                    a.Appointment_Status AS 'Status'
-                FROM appointment a
-                INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
-                WHERE DATE(a.Appointment_Date) = CURDATE()
-                ORDER BY a.Appointment_Date DESC";
-
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        admin_appointmentTodayAppointment_gridView.DataSource = dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading today's appointments:\n" + ex.Message,
-                        "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            AppointmentHelper.LoadTodayAppointments(admin_appointmentTodayAppointment_gridView);
         }
-
         private void admin_editOtherUsers_gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
         private void LoadAllUsersToGrid()
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    User_Employee_Id AS 'Employee ID',
-                    User_Account_Type AS 'Account Type',
-                    User_Name AS 'Name',
-                    User_UserName AS 'Username',
-                    User_Password AS 'Password',
-                    User_Occupation AS 'Occupation',
-                    User_Email AS 'Email',
-                    User_PhoneNumber AS 'Phone Number',
-                    User_Cnic AS 'CNIC',
-                    User_SecurityQuestions AS 'Security Question',
-                    User_SecurityAnswer AS 'Security Answer'
-                FROM users";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
-                            admin_editOtherUsers_gridView.DataSource = dt;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading users: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void admin_userEdit_gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            UserHelper.LoadAllUsersToGrid(admin_editOtherUsers_gridView);
         }
         private void LoadAdminInfoToLabels()
         {
@@ -780,97 +421,18 @@ namespace FYP_PROJECT
             admin_userSecurityQuestion_lbl.Text = Session.SecurityQuestion;
             admin_userSecurityAnswer_lbl.Text = Session.SecurityAnswer;
         }
-        private void LoadLoggedInAdminToGrid()
-        {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    User_Account_Type AS 'Account Type',
-                    User_Name AS 'Name',
-                    User_UserName AS 'Username',
-                    User_Password AS 'Password',
-                    User_Occupation AS 'Occupation',
-                    User_Email AS 'Email',
-                    User_PhoneNumber AS 'Phone Number',
-                    User_Cnic AS 'CNIC',
-                    User_SecurityQuestions AS 'Security Question',
-                    User_SecurityAnswer AS 'Security Answer'
-                FROM users 
-                WHERE User_Cnic = @cnic AND User_Account_Type = 'Admin'";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@cnic", Session.Cnic);
-
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
-                            admin_userEdit_gridView.DataSource = dt;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading logged-in admin data: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
         private void admin_financialReportExpenses_gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
         private void LoadExpenseData()
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = @"
-                SELECT 
-                    Expense_Id AS 'ID',
-                    Expense_Discription AS 'Description',
-                    Expense_Amount AS 'Amount (Rs)',
-                    Expense_Date AS 'Date'
-                FROM expenses
-                ORDER BY Expense_Date DESC";
-
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        admin_financialReportExpenses_gridView.DataSource = dt;
-
-                        // Optional styling
-                        admin_financialReportExpenses_gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                        admin_financialReportExpenses_gridView.DefaultCellStyle.Font = new Font("Segoe UI", 10);
-                        admin_financialReportExpenses_gridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading expense data: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            ExpenseHelper.LoadExpenseData(admin_financialReportExpenses_gridView);
         }
-
         private void admin_financialReportProfit_lbl_Click(object sender, EventArgs e)
         {
 
         }
-
         private void admin_financialReportMonthSelection_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (admin_financialReportMonthSelection_cb.SelectedItem != null)
@@ -881,55 +443,8 @@ namespace FYP_PROJECT
         }
         private void LoadMonthlyProfit(string monthName)
         {
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-            int selectedMonth = DateTime.ParseExact(monthName, "MMMM", null).Month;
-            int currentYear = DateTime.Now.Year;
-
-            decimal totalIncome = 0;
-            decimal totalExpense = 0;
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    // Total income for the selected month
-                    string incomeQuery = @"SELECT IFNULL(SUM(Income_Amount), 0) 
-                            FROM income 
-                            WHERE MONTH(Income_Date) = @month AND YEAR(Income_Date) = @year";
-
-                    using (MySqlCommand incomeCmd = new MySqlCommand(incomeQuery, conn))
-                    {
-                        incomeCmd.Parameters.AddWithValue("@month", selectedMonth);
-                        incomeCmd.Parameters.AddWithValue("@year", currentYear);
-                        totalIncome = Convert.ToDecimal(incomeCmd.ExecuteScalar());
-                    }
-
-                    // Total expense for the selected month
-                    string expenseQuery = @"SELECT IFNULL(SUM(Expense_Amount), 0) 
-                             FROM expenses 
-                             WHERE MONTH(Expense_Date) = @month AND YEAR(Expense_Date) = @year";
-
-                    using (MySqlCommand expenseCmd = new MySqlCommand(expenseQuery, conn))
-                    {
-                        expenseCmd.Parameters.AddWithValue("@month", selectedMonth);
-                        expenseCmd.Parameters.AddWithValue("@year", currentYear);
-                        totalExpense = Convert.ToDecimal(expenseCmd.ExecuteScalar());
-                    }
-
-
-                    // Calculate profit
-                    decimal profit = totalIncome - totalExpense;
-                    admin_financialReportProfit_lbl.Text = "Rs " + profit.ToString("N0"); // Format as thousands
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error calculating profit: " + ex.Message);
-                }
-            }
+            ProfitHelper.LoadMonthlyProfit(monthName, admin_financialReportProfit_lbl);
         }
-
         private void admin_financialReportPrint_btn_Click(object sender, EventArgs e)
         {
             if (admin_financialReportMonthSelection_cb.SelectedItem == null)
@@ -947,8 +462,7 @@ namespace FYP_PROJECT
             totalIncome = 0;
             totalExpense = 0;
 
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlConnection conn = DatabaseConnectionHelper.GetConnection())
             {
                 try
                 {
@@ -1023,8 +537,8 @@ namespace FYP_PROJECT
             // 1. Logo
             if (logoImage != null)
             {
-                int logoWidth = 120;
-                int logoHeight = 120;
+                int logoWidth = 240;
+                int logoHeight = 240;
                 int logoX = (pageWidth - logoWidth) / 2;
                 g.DrawImage(logoImage, new Rectangle(logoX, y, logoWidth, logoHeight));
                 y += logoHeight + 10;
@@ -1139,10 +653,7 @@ namespace FYP_PROJECT
             }
 
             string description = expenseDiscription_tb.Text.Trim();
-
-            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlConnection conn = DatabaseConnectionHelper.GetConnection())
             {
                 try
                 {
@@ -1511,6 +1022,7 @@ namespace FYP_PROJECT
 
         private void admin_serviceUpdate_btn_Click(object sender, EventArgs e)
         {
+            admin_serviceDelete_btn.Hide();
             if (admin_service_gridView.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a service to update.");
@@ -1532,7 +1044,9 @@ namespace FYP_PROJECT
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
+            admin_serviceDelete_btn.Show();
             updateService_pnl.Hide();
+
         }
 
         private void admin_serviceDelete_btn_Click(object sender, EventArgs e)
@@ -1582,6 +1096,1245 @@ namespace FYP_PROJECT
                     MessageBox.Show("Error deleting service: " + ex.Message);
                 }
             }
+        }
+
+        private void admin_employee_gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void LoadEmployees()
+        {
+            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+            string query = "SELECT Employee_id AS 'ID', Employee_Name AS 'Name', Employee_PhoneNumber AS 'Phone', " +
+                           "Employee_Email AS 'Email', Employee_Cnic AS 'CNIC', Employee_Role AS 'Role', " +
+                           "Employee_Salary AS 'Salary', Employee_Address AS 'Address' FROM employees";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+                    {
+                        DataTable employeeTable = new DataTable();
+                        adapter.Fill(employeeTable);
+                        admin_employee_gridView.DataSource = employeeTable;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading employee data: " + ex.Message);
+                }
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            employeeAdd_pnl.Show();
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeBack_btn_Click(object sender, EventArgs e)
+        {
+            employeeAdd_pnl.Hide();
+        }
+
+        private void addEmployeeDone_btn_Click(object sender, EventArgs e)
+        {
+            string name = addEmployeeName_tb.Text.Trim();
+            string phone = addEmployeeNumber_tb.Text.Trim();
+            string email = addEmployeeEmail_tb.Text.Trim();
+            string cnic = addEmployeeCnic_tb.Text.Trim();
+            string role = addEmployeeRole_tb.Text.Trim();
+            string salary = addEmployeeSalary_tb.Text.Trim();
+            string address = addEmployeeAddress_tb.Text.Trim();
+
+            // Basic validation
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(email) ||
+                string.IsNullOrEmpty(cnic) || string.IsNullOrEmpty(role) || string.IsNullOrEmpty(salary) ||
+                string.IsNullOrEmpty(address))
+            {
+                MessageBox.Show("Please fill all fields.");
+                return;
+            }
+
+            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+            string query = @"INSERT INTO employees 
+        (Employee_Name, Employee_PhoneNumber, Employee_Email, Employee_Cnic, Employee_Role, Employee_Salary, Employee_Address)
+        VALUES (@name, @phone, @email, @cnic, @role, @salary, @address)";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@name", name);
+                        cmd.Parameters.AddWithValue("@phone", phone);
+                        cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@cnic", cnic);
+                        cmd.Parameters.AddWithValue("@role", role);
+                        cmd.Parameters.AddWithValue("@salary", salary);
+                        cmd.Parameters.AddWithValue("@address", address);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Employee added successfully.");
+                            LoadEmployees(); // Refresh employee grid
+                            employeeAdd_pnl.Hide(); // Optionally hide panel
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add employee.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void updateEmployeeBack_btn_Click(object sender, EventArgs e)
+        {
+            employeeUpdate_pnl.Hide();
+        }
+
+        private void employeeUpdate_btn_Click(object sender, EventArgs e)
+        {
+            if (admin_employee_gridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select an employee to update.");
+                return;
+            }
+
+            DataGridViewRow selectedRow = admin_employee_gridView.SelectedRows[0];
+
+            // Populate textboxes with selected data
+            updateEmployeeName_tb.Text = selectedRow.Cells["Name"].Value.ToString();
+            updateEmployeeNumber_tb.Text = selectedRow.Cells["Phone"].Value.ToString();
+            updateEmployeeEmail_tb.Text = selectedRow.Cells["Email"].Value.ToString();
+            updateEmployeeCnic_tb.Text = selectedRow.Cells["Cnic"].Value.ToString();
+            updateEmployeeRole_tb.Text = selectedRow.Cells["Role"].Value.ToString();
+            updateEmployeeSalary_tb.Text = selectedRow.Cells["Salary"].Value.ToString();
+            updateEmployeeAddress_tb.Text = selectedRow.Cells["Address"].Value.ToString();
+
+            // Save the ID in Tag for later update
+            updateEmployeeDone_btn.Tag = selectedRow.Cells["id"].Value.ToString();
+
+            // Show update panel
+            employeeUpdate_pnl.Show();
+        }
+
+        private void updateEmployeeDone_btn_Click(object sender, EventArgs e)
+        {
+            if (updateEmployeeDone_btn.Tag == null)
+            {
+                MessageBox.Show("No employee selected.");
+                return;
+            }
+
+            int employeeId = Convert.ToInt32(updateEmployeeDone_btn.Tag);
+
+            string name = updateEmployeeName_tb.Text.Trim();
+            string phone = updateEmployeeNumber_tb.Text.Trim();
+            string email = updateEmployeeEmail_tb.Text.Trim();
+            string cnic = updateEmployeeCnic_tb.Text.Trim();
+            string role = updateEmployeeRole_tb.Text.Trim();
+            string salary = updateEmployeeSalary_tb.Text.Trim();
+            string address = updateEmployeeAddress_tb.Text.Trim();
+
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(email) ||
+                string.IsNullOrEmpty(cnic) || string.IsNullOrEmpty(role) || string.IsNullOrEmpty(salary) ||
+                string.IsNullOrEmpty(address))
+            {
+                MessageBox.Show("Please fill all fields.");
+                return;
+            }
+
+            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+            string query = @"UPDATE employees SET 
+                        Employee_Name = @name, 
+                        Employee_PhoneNumber = @phone, 
+                        Employee_Email = @email,
+                        Employee_Cnic = @cnic,
+                        Employee_Role = @role,
+                        Employee_Salary = @salary,
+                        Employee_Address = @address
+                     WHERE Employee_id = @id";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@name", name);
+                        cmd.Parameters.AddWithValue("@phone", phone);
+                        cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@cnic", cnic);
+                        cmd.Parameters.AddWithValue("@role", role);
+                        cmd.Parameters.AddWithValue("@salary", salary);
+                        cmd.Parameters.AddWithValue("@address", address);
+                        cmd.Parameters.AddWithValue("@id", employeeId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Employee updated successfully.");
+                            LoadEmployees(); // Refresh grid
+                            employeeUpdate_pnl.Hide(); // Hide update panel
+                        }
+                        else
+                        {
+                            MessageBox.Show("No changes were made.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating employee: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void employeeDelete_btn_Click(object sender, EventArgs e)
+        {
+            if (admin_employee_gridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select an employee to delete.");
+                return;
+            }
+
+            // Confirm delete
+            DialogResult confirmResult = MessageBox.Show("Are you sure you want to delete this employee?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirmResult != DialogResult.Yes)
+                return;
+
+            // Get Employee_id of selected row
+            DataGridViewRow selectedRow = admin_employee_gridView.SelectedRows[0];
+            int employeeId = Convert.ToInt32(selectedRow.Cells["id"].Value);
+
+            // Delete from database
+            string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string deleteQuery = "DELETE FROM employees WHERE Employee_id = @id";
+                    using (MySqlCommand cmd = new MySqlCommand(deleteQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", employeeId);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Employee deleted successfully.");
+                            LoadEmployees(); // Reload the employee grid view
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete employee.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        // Search Button
+        private void employee_searchBar_btn_Click(object sender, EventArgs e)
+        {
+
+            string input = employee_search_tb.Text.Trim();
+
+            if (string.IsNullOrEmpty(input))
+            {
+                MessageBox.Show("Please enter car number or CNIC.");
+                return;
+            }
+
+            CarSearchService searchService = new CarSearchService();
+            searchService.SearchAndDisplay(
+                input,
+                employee_carNumber_lbl,
+                employee_ownerName_lbl,
+                employee_address_lbl,
+                employee_phoneNumber_lbl,
+                employee_model_lbl,
+                employee_make_lbl,
+                employee_Year_lbl,
+                employee_color_lbl,
+                employee_servicesDone_lbl,
+                employee_searchGridView
+            );
+        }
+
+      
+        private void UpdateDashboardLabels()
+        {
+            try
+            {
+                DashboardSummary summary = DashboardHelper.GetDashboardSummary();
+
+                admin_monthIncome_lbl.Text = summary.ThisMonthIncome.ToString("C", pakCulture);  // Currency format
+                admin_yearIncome_lbl.Text = summary.ThisYearIncome.ToString("C", pakCulture);
+                admin_totalServiceDone_lbl.Text = summary.TotalServicesDone.ToString();
+                admin_totalEmployees_lbl.Text = summary.TotalEmployees.ToString();
+                admin_monthlySalaries_lbl.Text = summary.MonthlySalaries.ToString("C", pakCulture);
+                admin_totalProfit_lbl.Text = summary.TotalProfit.ToString("C", pakCulture);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to update dashboard: " + ex.Message);
+            }
+        }
+
+        private void admin_userEditDone_btn_Click(object sender, EventArgs e)
+        {
+            bool success = AdminUpdateHelper.UpdateAdminProfile(
+                adminEditName_tb.Text.Trim(),
+                adminEditUsername_tb.Text.Trim(),
+                adminEditPassword_tb.Text.Trim(),
+                adminEditEmail_tb.Text.Trim(),
+                adminEditPhone_tb.Text.Trim(),
+                adminEditSecurityQuestion_cb.Text.Trim(),
+                adminEditSecurityAnswer_tb.Text.Trim()
+            );
+
+            if (success)
+            {
+                MessageBox.Show("Admin profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                phone_lbl.Show();
+                admin_userPhone_lbl.Show();
+                cnic_lbl.Show();
+                admin_userCnic_lbl.Show();
+                email_lbl.Show();
+                admin_userEmail_lbl.Show();
+                securityQ_lbl.Show();
+                admin_userSecurityQuestion_lbl.Show();
+                securityA_lbl.Show();
+                admin_userSecurityAnswer_lbl.Show();
+                admin_userEdit_pnl.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No changes were made.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_totalSalariesAndProfit_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void admin_totalProfit_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_monthlySalaries_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_totalServiceAndEmployees_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void admin_totalEmployees_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_totalServiceDone_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_dashboard_income_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void admin_monthIncome_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_yearIncome_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_search_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void search_clear_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_searchGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void employee_color_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_Year_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_make_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_model_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void employee_phoneNumber_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_address_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_ownerName_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void employee_carNumber_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_servicesDone_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_search_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_employee_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void employeeUpdate_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateEmployeeAddress_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateEmployeeSalary_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateEmployeeEmail_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateEmployeeCnic_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateEmployeeRole_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateEmployeeNumber_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateEmployeeName_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeeAdd_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeAddress_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeSalary_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeEmail_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeRole_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeNumber_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeName_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_service_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addService_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addServicePrice_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addServiceDiscription_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addServiceName_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateService_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void updateServicePrice_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateServiceDiscription_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateServiceName_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_clients_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_schedule_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void admin_scheduleDueService_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_financialReport_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addExpennse_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void expenseDiscription_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void expenseAmount_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_appointment_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_user_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void admin_userSecurityAnswer_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userSecurityQuestion_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userEmail_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userManagerOtherUsers_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userCnic_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userPhone_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cnic_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phone_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void securityA_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void email_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void securityQ_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userEdit_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userOccupation_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userPassword_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userUsername_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_user_Name_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userAccountType_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_userManageOtherUsersEdit_btn_Click(object sender, EventArgs e)
+        {
+            if (admin_editOtherUsers_gridView.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = admin_editOtherUsers_gridView.SelectedRows[0];
+
+                editUserName_tb.Text = selectedRow.Cells["Name"].Value?.ToString();
+                editUserUsername_tb.Text = selectedRow.Cells["Username"].Value?.ToString();
+                editUserPassword_tb.Text = selectedRow.Cells["Password"].Value?.ToString();
+                editUserEmail_tb.Text = selectedRow.Cells["Email"].Value?.ToString();
+                editUserPhone_tb.Text = selectedRow.Cells["Phone Number"].Value?.ToString();
+                editUserCnic_tb.Text = selectedRow.Cells["Cnic"].Value?.ToString();
+                editUserOccupation_tb.Text = selectedRow.Cells["Occupation"].Value?.ToString();
+                editUserAccountType_tb.Text = selectedRow.Cells["Account Type"].Value?.ToString();
+
+                // Set combo box value
+                string question = selectedRow.Cells["Security Question"].Value?.ToString();
+                if (editUserSecurityQuestion_cb.Items.Contains(question))
+                {
+                    editUserSecurityQuestion_cb.SelectedItem = question;
+                }
+                else
+                {
+                    editUserSecurityQuestion_cb.Text = question;
+                }
+
+                editUserSecurityAnswer_tb.Text = selectedRow.Cells["Security Answer"].Value?.ToString();
+                manageOtherUserEdit_pnl.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a user row to edit.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            admin_userManagerOtherUsers_pnl.Show();
+            manageOtherUserEdit_pnl.Hide();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            if (admin_editOtherUsers_gridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a user to edit.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var row = admin_editOtherUsers_gridView.SelectedRows[0];
+
+            int userId = Convert.ToInt32(row.Cells["ID"].Value);
+            string oldCnic = row.Cells["Cnic"].Value?.ToString();
+            string oldEmail = row.Cells["Email"].Value?.ToString();
+            string oldUsername = row.Cells["Username"].Value?.ToString();
+            string oldPassword = row.Cells["Password"].Value?.ToString();
+            string oldAccountType = row.Cells["Account Type"].Value?.ToString();
+
+            // New values from TextBoxes / ComboBoxes
+            string newName = editUserName_tb.Text.Trim();
+            string newUsername = editUserUsername_tb.Text.Trim();
+            string newPassword = editUserPassword_tb.Text.Trim();
+            string newEmail = editUserEmail_tb.Text.Trim();
+            string newPhone = editUserPhone_tb.Text.Trim();
+            string newOccupation = editUserOccupation_tb.Text.Trim();
+            string newQuestion = editUserSecurityQuestion_cb.Text.Trim();
+            string newAnswer = editUserSecurityAnswer_tb.Text.Trim();
+            string newAccountType = editUserAccountType_tb.Text.Trim();
+            if (userId <= 0)
+            {
+                MessageBox.Show("Invalid user ID from grid. Please check column alias.");
+                return;
+            }
+            bool updated = UserUpdateHelper.UpdateUserFromGrid(
+                newName, newUsername, newPassword, newEmail,
+                newPhone, newOccupation, newQuestion, newAnswer,newAccountType,
+                userId
+            );
+
+            if (updated)
+            {
+                MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Optionally reload grid or refresh
+                LoadAllUsersToGrid();
+                manageOtherUserEdit_pnl.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No update occurred. Please verify the data.", "Not Updated", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditName_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditUsername_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditPassword_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditOccupation_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditEmail_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditPhone_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditCnic_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditSecurityAnswer_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminEditSecurityQuestion_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label47_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label48_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label49_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label50_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label51_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label52_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageOtherUserEdit_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label40_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label53_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label54_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label56_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label57_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label58_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label59_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserSecurityQuestion_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserSecurityAnswer_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserCnic_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserPhone_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserEmail_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserOccupation_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserPassword_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserUsername_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editUserName_tb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,22 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.employee_menu_pnl = new System.Windows.Forms.Panel();
             this.employee_aiDetection_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_welcomePage_btn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.employee_designation_lbl = new System.Windows.Forms.Label();
             this.employee_name_lbl = new System.Windows.Forms.Label();
             this.employee_accountType_lbl = new System.Windows.Forms.Label();
@@ -84,7 +80,6 @@
             this.employee_search_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.aiDetection_pnl = new System.Windows.Forms.Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.aiDetection_SuggestedServices_lbl = new System.Windows.Forms.Label();
@@ -94,7 +89,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.aiDetection_RunAi_btn = new Guna.UI2.WinForms.Guna2Button();
             this.aiDetection_UploadImage_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.aiDetection_pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.employee_schedule_pnl = new System.Windows.Forms.Panel();
             this.employee_scheduleMarkAsDone_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -183,7 +177,6 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.employee_userEdit_pnl = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
             this.employee_userEditBack_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_userEdit_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_userOccupation_lbl = new System.Windows.Forms.Label();
@@ -196,20 +189,24 @@
             this.label54 = new System.Windows.Forms.Label();
             this.employee_userAccountType_lbl = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.employee_userEdit_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.aiDetection_pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.employeeEditName_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeEditPassword_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeEditPhone_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeEditEmail_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employee_userEditDone_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_menu_pnl.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.employee_search_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).BeginInit();
             this.guna2CustomGradientPanel4.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.aiDetection_pnl.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).BeginInit();
             this.employee_schedule_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employee_schedule_gridView)).BeginInit();
             this.employee_appointment_pnl.SuspendLayout();
@@ -218,7 +215,9 @@
             this.employee_appointmentDetails_pnl.SuspendLayout();
             this.employee_user_pnl.SuspendLayout();
             this.employee_userEdit_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employee_userEdit_gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // employee_menu_pnl
@@ -314,43 +313,33 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(150, 139);
             this.guna2CustomGradientPanel1.TabIndex = 12;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(50, 12);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 53);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 4;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // employee_designation_lbl
             // 
+            this.employee_designation_lbl.AutoSize = true;
             this.employee_designation_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_designation_lbl.Location = new System.Drawing.Point(47, 102);
+            this.employee_designation_lbl.Location = new System.Drawing.Point(23, 101);
             this.employee_designation_lbl.Name = "employee_designation_lbl";
-            this.employee_designation_lbl.Size = new System.Drawing.Size(61, 16);
+            this.employee_designation_lbl.Size = new System.Drawing.Size(30, 16);
             this.employee_designation_lbl.TabIndex = 3;
-            this.employee_designation_lbl.Text = "Manager";
+            this.employee_designation_lbl.Text = "N/A";
             // 
             // employee_name_lbl
             // 
+            this.employee_name_lbl.AutoSize = true;
             this.employee_name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employee_name_lbl.ForeColor = System.Drawing.Color.Black;
-            this.employee_name_lbl.Location = new System.Drawing.Point(26, 86);
+            this.employee_name_lbl.Location = new System.Drawing.Point(23, 84);
             this.employee_name_lbl.Name = "employee_name_lbl";
-            this.employee_name_lbl.Size = new System.Drawing.Size(121, 16);
+            this.employee_name_lbl.Size = new System.Drawing.Size(30, 16);
             this.employee_name_lbl.TabIndex = 2;
-            this.employee_name_lbl.Text = "Muhammad Faizan\r\n";
+            this.employee_name_lbl.Text = "N/A";
             this.employee_name_lbl.Click += new System.EventHandler(this.employee_name_lbl_Click);
             // 
             // employee_accountType_lbl
             // 
             this.employee_accountType_lbl.AutoSize = true;
             this.employee_accountType_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_accountType_lbl.Location = new System.Drawing.Point(30, 66);
+            this.employee_accountType_lbl.Location = new System.Drawing.Point(22, 66);
             this.employee_accountType_lbl.Name = "employee_accountType_lbl";
             this.employee_accountType_lbl.Size = new System.Drawing.Size(87, 20);
             this.employee_accountType_lbl.TabIndex = 1;
@@ -494,7 +483,7 @@
             this.employee_search_pnl.Controls.Add(this.label9);
             this.employee_search_pnl.Controls.Add(this.employee_searchBar_btn);
             this.employee_search_pnl.Controls.Add(this.employee_search_tb);
-            this.employee_search_pnl.Location = new System.Drawing.Point(221, 1);
+            this.employee_search_pnl.Location = new System.Drawing.Point(221, 0);
             this.employee_search_pnl.Name = "employee_search_pnl";
             this.employee_search_pnl.Size = new System.Drawing.Size(1051, 751);
             this.employee_search_pnl.TabIndex = 6;
@@ -535,32 +524,32 @@
             // 
             this.employee_searchGridView.AllowUserToAddRows = false;
             this.employee_searchGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.employee_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employee_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.employee_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employee_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.employee_searchGridView.ColumnHeadersHeight = 40;
             this.employee_searchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employee_searchGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employee_searchGridView.DefaultCellStyle = dataGridViewCellStyle15;
             this.employee_searchGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.employee_searchGridView.Location = new System.Drawing.Point(16, 475);
+            this.employee_searchGridView.Location = new System.Drawing.Point(60, 469);
             this.employee_searchGridView.Name = "employee_searchGridView";
             this.employee_searchGridView.ReadOnly = true;
             this.employee_searchGridView.RowHeadersVisible = false;
-            this.employee_searchGridView.Size = new System.Drawing.Size(992, 250);
+            this.employee_searchGridView.Size = new System.Drawing.Size(944, 250);
             this.employee_searchGridView.TabIndex = 7;
             this.employee_searchGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.employee_searchGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -910,16 +899,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Welcome to the studio";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(221, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1038, 391);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // aiDetection_pnl
             // 
             this.aiDetection_pnl.BackColor = System.Drawing.Color.Transparent;
@@ -1037,18 +1016,6 @@
             this.aiDetection_UploadImage_btn.Text = "Upload Image";
             this.aiDetection_UploadImage_btn.Click += new System.EventHandler(this.aiDetection_UploadImage_btn_Click);
             // 
-            // aiDetection_pictureBox
-            // 
-            this.aiDetection_pictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.aiDetection_pictureBox.BorderRadius = 50;
-            this.aiDetection_pictureBox.FillColor = System.Drawing.Color.LightGray;
-            this.aiDetection_pictureBox.ImageRotate = 0F;
-            this.aiDetection_pictureBox.Location = new System.Drawing.Point(140, 91);
-            this.aiDetection_pictureBox.Name = "aiDetection_pictureBox";
-            this.aiDetection_pictureBox.Size = new System.Drawing.Size(757, 273);
-            this.aiDetection_pictureBox.TabIndex = 1;
-            this.aiDetection_pictureBox.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -1065,7 +1032,7 @@
             this.employee_schedule_pnl.Controls.Add(this.employee_scheduleMarkAsDone_btn);
             this.employee_schedule_pnl.Controls.Add(this.employee_schedule_gridView);
             this.employee_schedule_pnl.Controls.Add(this.label7);
-            this.employee_schedule_pnl.Location = new System.Drawing.Point(221, 1);
+            this.employee_schedule_pnl.Location = new System.Drawing.Point(221, 0);
             this.employee_schedule_pnl.Name = "employee_schedule_pnl";
             this.employee_schedule_pnl.Size = new System.Drawing.Size(1051, 752);
             this.employee_schedule_pnl.TabIndex = 8;
@@ -1095,28 +1062,28 @@
             // 
             this.employee_schedule_gridView.AllowUserToAddRows = false;
             this.employee_schedule_gridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.employee_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employee_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.employee_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employee_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.employee_schedule_gridView.ColumnHeadersHeight = 40;
             this.employee_schedule_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employee_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employee_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle18;
             this.employee_schedule_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.employee_schedule_gridView.Location = new System.Drawing.Point(66, 91);
+            this.employee_schedule_gridView.Location = new System.Drawing.Point(100, 91);
             this.employee_schedule_gridView.Name = "employee_schedule_gridView";
             this.employee_schedule_gridView.ReadOnly = true;
             this.employee_schedule_gridView.RowHeadersVisible = false;
@@ -1150,7 +1117,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(13, 25);
+            this.label7.Location = new System.Drawing.Point(22, 25);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 47);
             this.label7.TabIndex = 0;
@@ -2190,7 +2157,7 @@
             this.employee_user_pnl.Controls.Add(this.label54);
             this.employee_user_pnl.Controls.Add(this.employee_userAccountType_lbl);
             this.employee_user_pnl.Controls.Add(this.label55);
-            this.employee_user_pnl.Location = new System.Drawing.Point(221, 0);
+            this.employee_user_pnl.Location = new System.Drawing.Point(221, 1);
             this.employee_user_pnl.Name = "employee_user_pnl";
             this.employee_user_pnl.Size = new System.Drawing.Size(1148, 748);
             this.employee_user_pnl.TabIndex = 12;
@@ -2319,25 +2286,17 @@
             // 
             // employee_userEdit_pnl
             // 
-            this.employee_userEdit_pnl.Controls.Add(this.label39);
+            this.employee_userEdit_pnl.Controls.Add(this.employee_userEditDone_btn);
+            this.employee_userEdit_pnl.Controls.Add(this.employeeEditEmail_tb);
+            this.employee_userEdit_pnl.Controls.Add(this.employeeEditPhone_tb);
+            this.employee_userEdit_pnl.Controls.Add(this.employeeEditPassword_tb);
+            this.employee_userEdit_pnl.Controls.Add(this.employeeEditName_tb);
             this.employee_userEdit_pnl.Controls.Add(this.employee_userEditBack_btn);
-            this.employee_userEdit_pnl.Controls.Add(this.employee_userEdit_gridView);
             this.employee_userEdit_pnl.Location = new System.Drawing.Point(48, 94);
             this.employee_userEdit_pnl.Name = "employee_userEdit_pnl";
-            this.employee_userEdit_pnl.Size = new System.Drawing.Size(992, 562);
+            this.employee_userEdit_pnl.Size = new System.Drawing.Size(992, 512);
             this.employee_userEdit_pnl.TabIndex = 12;
             this.employee_userEdit_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.employee_userEdit_pnl_Paint);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label39.Location = new System.Drawing.Point(304, 24);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(450, 24);
-            this.label39.TabIndex = 2;
-            this.label39.Text = "Information: Press enter after changing the data";
             // 
             // employee_userEditBack_btn
             // 
@@ -2493,56 +2452,152 @@
             this.label55.TabIndex = 0;
             this.label55.Text = "Account Type:";
             // 
-            // employee_userEdit_gridView
+            // aiDetection_pictureBox
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.employee_userEdit_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employee_userEdit_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.employee_userEdit_gridView.ColumnHeadersHeight = 40;
-            this.employee_userEdit_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employee_userEdit_gridView.DefaultCellStyle = dataGridViewCellStyle9;
-            this.employee_userEdit_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.employee_userEdit_gridView.Location = new System.Drawing.Point(85, 54);
-            this.employee_userEdit_gridView.Name = "employee_userEdit_gridView";
-            this.employee_userEdit_gridView.RowHeadersVisible = false;
-            this.employee_userEdit_gridView.Size = new System.Drawing.Size(878, 326);
-            this.employee_userEdit_gridView.TabIndex = 0;
-            this.employee_userEdit_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.employee_userEdit_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.employee_userEdit_gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.employee_userEdit_gridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.employee_userEdit_gridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.employee_userEdit_gridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.employee_userEdit_gridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.employee_userEdit_gridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.employee_userEdit_gridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.employee_userEdit_gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_userEdit_gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.employee_userEdit_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.employee_userEdit_gridView.ThemeStyle.HeaderStyle.Height = 40;
-            this.employee_userEdit_gridView.ThemeStyle.ReadOnly = false;
-            this.employee_userEdit_gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.employee_userEdit_gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.employee_userEdit_gridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_userEdit_gridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.employee_userEdit_gridView.ThemeStyle.RowsStyle.Height = 22;
-            this.employee_userEdit_gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.employee_userEdit_gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.employee_userEdit_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employee_userEdit_gridView_CellContentClick);
+            this.aiDetection_pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.aiDetection_pictureBox.BorderRadius = 50;
+            this.aiDetection_pictureBox.FillColor = System.Drawing.Color.LightGray;
+            this.aiDetection_pictureBox.ImageRotate = 0F;
+            this.aiDetection_pictureBox.Location = new System.Drawing.Point(140, 91);
+            this.aiDetection_pictureBox.Name = "aiDetection_pictureBox";
+            this.aiDetection_pictureBox.Size = new System.Drawing.Size(757, 273);
+            this.aiDetection_pictureBox.TabIndex = 1;
+            this.aiDetection_pictureBox.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(221, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1038, 391);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(50, 12);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 53);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 4;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // employeeEditName_tb
+            // 
+            this.employeeEditName_tb.Animated = true;
+            this.employeeEditName_tb.AutoRoundedCorners = true;
+            this.employeeEditName_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditName_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditName_tb.DefaultText = "";
+            this.employeeEditName_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditName_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditName_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditName_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditName_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditName_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditName_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditName_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditName_tb.Location = new System.Drawing.Point(25, 129);
+            this.employeeEditName_tb.Name = "employeeEditName_tb";
+            this.employeeEditName_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditName_tb.PlaceholderText = "Name";
+            this.employeeEditName_tb.SelectedText = "";
+            this.employeeEditName_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditName_tb.TabIndex = 2;
+            // 
+            // employeeEditPassword_tb
+            // 
+            this.employeeEditPassword_tb.Animated = true;
+            this.employeeEditPassword_tb.AutoRoundedCorners = true;
+            this.employeeEditPassword_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditPassword_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditPassword_tb.DefaultText = "";
+            this.employeeEditPassword_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditPassword_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditPassword_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPassword_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPassword_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPassword_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditPassword_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditPassword_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPassword_tb.Location = new System.Drawing.Point(275, 128);
+            this.employeeEditPassword_tb.Name = "employeeEditPassword_tb";
+            this.employeeEditPassword_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditPassword_tb.PlaceholderText = "Password";
+            this.employeeEditPassword_tb.SelectedText = "";
+            this.employeeEditPassword_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditPassword_tb.TabIndex = 3;
+            // 
+            // employeeEditPhone_tb
+            // 
+            this.employeeEditPhone_tb.Animated = true;
+            this.employeeEditPhone_tb.AutoRoundedCorners = true;
+            this.employeeEditPhone_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditPhone_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditPhone_tb.DefaultText = "";
+            this.employeeEditPhone_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditPhone_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditPhone_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPhone_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPhone_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPhone_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditPhone_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditPhone_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPhone_tb.Location = new System.Drawing.Point(759, 126);
+            this.employeeEditPhone_tb.Name = "employeeEditPhone_tb";
+            this.employeeEditPhone_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditPhone_tb.PlaceholderText = "Phone";
+            this.employeeEditPhone_tb.SelectedText = "";
+            this.employeeEditPhone_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditPhone_tb.TabIndex = 4;
+            // 
+            // employeeEditEmail_tb
+            // 
+            this.employeeEditEmail_tb.Animated = true;
+            this.employeeEditEmail_tb.AutoRoundedCorners = true;
+            this.employeeEditEmail_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditEmail_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditEmail_tb.DefaultText = "";
+            this.employeeEditEmail_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditEmail_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditEmail_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditEmail_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditEmail_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditEmail_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditEmail_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditEmail_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditEmail_tb.Location = new System.Drawing.Point(509, 126);
+            this.employeeEditEmail_tb.Name = "employeeEditEmail_tb";
+            this.employeeEditEmail_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditEmail_tb.PlaceholderText = "Email";
+            this.employeeEditEmail_tb.SelectedText = "";
+            this.employeeEditEmail_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditEmail_tb.TabIndex = 5;
+            // 
+            // employee_userEditDone_btn
+            // 
+            this.employee_userEditDone_btn.Animated = true;
+            this.employee_userEditDone_btn.AutoRoundedCorners = true;
+            this.employee_userEditDone_btn.BackColor = System.Drawing.Color.Transparent;
+            this.employee_userEditDone_btn.BorderThickness = 1;
+            this.employee_userEditDone_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.employee_userEditDone_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.employee_userEditDone_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.employee_userEditDone_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.employee_userEditDone_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.employee_userEditDone_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_userEditDone_btn.ForeColor = System.Drawing.Color.Black;
+            this.employee_userEditDone_btn.Location = new System.Drawing.Point(431, 343);
+            this.employee_userEditDone_btn.Name = "employee_userEditDone_btn";
+            this.employee_userEditDone_btn.Size = new System.Drawing.Size(180, 39);
+            this.employee_userEditDone_btn.TabIndex = 6;
+            this.employee_userEditDone_btn.Text = "Done";
+            this.employee_userEditDone_btn.UseTransparentBackground = true;
+            this.employee_userEditDone_btn.Click += new System.EventHandler(this.employee_userEditDone_btn_Click);
             // 
             // Employee
             // 
@@ -2568,7 +2623,6 @@
             this.employee_menu_pnl.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.employee_search_pnl.ResumeLayout(false);
             this.employee_search_pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).EndInit();
@@ -2578,14 +2632,12 @@
             this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.aiDetection_pnl.ResumeLayout(false);
             this.aiDetection_pnl.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).EndInit();
             this.employee_schedule_pnl.ResumeLayout(false);
             this.employee_schedule_pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employee_schedule_gridView)).EndInit();
@@ -2600,8 +2652,9 @@
             this.employee_user_pnl.ResumeLayout(false);
             this.employee_user_pnl.PerformLayout();
             this.employee_userEdit_pnl.ResumeLayout(false);
-            this.employee_userEdit_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employee_userEdit_gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2743,7 +2796,6 @@
         private Guna.UI2.WinForms.Guna2Button search_clear_btn;
         private System.Windows.Forms.Panel employee_user_pnl;
         private System.Windows.Forms.Panel employee_userEdit_pnl;
-        private System.Windows.Forms.Label label39;
         private Guna.UI2.WinForms.Guna2Button employee_userEditBack_btn;
         private Guna.UI2.WinForms.Guna2Button employee_userEdit_btn;
         private System.Windows.Forms.Label employee_userOccupation_lbl;
@@ -2767,6 +2819,10 @@
         private System.Windows.Forms.Label employee_userEmail_lbl;
         private System.Windows.Forms.Label employee_userCnic_lbl;
         private System.Windows.Forms.Label employee_userPhone_lbl;
-        private Guna.UI2.WinForms.Guna2DataGridView employee_userEdit_gridView;
+        private Guna.UI2.WinForms.Guna2TextBox employeeEditEmail_tb;
+        private Guna.UI2.WinForms.Guna2TextBox employeeEditPhone_tb;
+        private Guna.UI2.WinForms.Guna2TextBox employeeEditPassword_tb;
+        private Guna.UI2.WinForms.Guna2TextBox employeeEditName_tb;
+        private Guna.UI2.WinForms.Guna2Button employee_userEditDone_btn;
     }
 }
