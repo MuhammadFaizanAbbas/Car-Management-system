@@ -57,12 +57,11 @@ public static class DashboardHelper
                 summary.TotalEmployees = Convert.ToInt32(cmd.ExecuteScalar());
             }
 
-            // Query 5: Monthly salaries (sum of salaries from employees table)
-            string queryMonthlySalaries = @"
-                SELECT IFNULL(SUM(Employee_Salary), 0)
+                // Query 5: Monthly salaries (sum of salaries from employees table)
+                string queryMonthlySalaries = @"
+                SELECT IFNULL(SUM(CAST(REPLACE(TRIM(Employee_Salary), ',', '') AS UNSIGNED)), 0)
                 FROM employees;";
-
-            using (MySqlCommand cmd = new MySqlCommand(queryMonthlySalaries, conn))
+                using (MySqlCommand cmd = new MySqlCommand(queryMonthlySalaries, conn))
             {
                 summary.MonthlySalaries = Convert.ToDecimal(cmd.ExecuteScalar());
             }

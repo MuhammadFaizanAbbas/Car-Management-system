@@ -21,11 +21,13 @@ namespace FYP_PROJECT
         private int loginTargetPosition;  // Target position for login panel (fully visible)
         private int signupTargetPosition;  // Target position for signup panel (fully visible)
         private int slideSpeed = 15;  // Speed of the animation (larger value = faster)
+        private string verifiedUsername = null;
         private string generatedOTP;
         private int otpResendCount = 0;
         private const int maxOtpResend = 3;
         private Timer resendTimer;
         private int resendCooldown = 30;
+        
         public Login_form()
         {
 
@@ -40,6 +42,7 @@ namespace FYP_PROJECT
             employee_signup_pnl.Visible = false;
             admin_login_btn.Visible = false;
             employee_login_btn.Visible = false;
+            main_gif_pb.SendToBack();
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
 
@@ -296,7 +299,7 @@ namespace FYP_PROJECT
 
         private void Login_form_Load(object sender, EventArgs e)
         {
-            
+            this.Icon = Properties.Resources.app_icon;
 
             employe_username_tb.MaxLength = 40;
             admin_userName_tb.MaxLength = 40;
@@ -592,11 +595,12 @@ namespace FYP_PROJECT
             string name = forgotPassword_Name.Text.Trim();
             string email = forgotPassword_email.Text.Trim();
             string phoneNumber = forgotPasswordPhoneNumber_tb.Text.Trim();
+            string username = forgotPassword_userName_tb.Text.Trim();
             string securityQuestion = forgotPasswordSecurity_comboBox.SelectedItem?.ToString() ?? "";
             string securityAnswer = forgotPassword_SecurityAnswer.Text.Trim();
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(phoneNumber) ||
-                string.IsNullOrEmpty(securityQuestion) || string.IsNullOrEmpty(securityAnswer))
+                string.IsNullOrEmpty(securityQuestion) || string.IsNullOrEmpty(securityAnswer) || string.IsNullOrEmpty(username))
             {
                 MessageBox.Show("Please fill all fields.");
                 return;
@@ -609,11 +613,12 @@ namespace FYP_PROJECT
                 {
                     conn.Open();
                     string query = @"SELECT * FROM users 
-                             WHERE User_Name = @name AND User_Email = @Email AND User_PhoneNumber = @Phone 
+                             WHERE User_UserName = @username AND User_Name = @name AND User_Email = @Email AND User_PhoneNumber = @Phone 
                              AND User_SecurityQuestions = @Question AND User_SecurityAnswer = @Answer";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
+                        cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@name", name);
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Phone", phoneNumber);
@@ -622,9 +627,12 @@ namespace FYP_PROJECT
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            if (reader.HasRows)
+                            if (reader.HasRows && reader.Read())
                             {
-                                // ✅ All user details matched, send OTP
+                                // ✅ Store verified username for password update
+                                verifiedUsername = reader["User_UserName"].ToString();
+
+                                // ✅ Send OTP
                                 generatedOTP = new Random().Next(100000, 999999).ToString();
                                 string message = $"Your password reset code is: {generatedOTP}";
                                 string error;
@@ -771,61 +779,62 @@ namespace FYP_PROJECT
         private void login_forgotPasswordChangePass_btn_Click(object sender, EventArgs e)
         {
             string enteredOTP = login_forgotPasswordPhoneCode_tb.Text.Trim();
-            string phoneNumber = login_forgotPasswordPhone_lbl.Text.Trim(); // stored when OTP was sent
-            string newPassword = forgotPassword_NewPassword.Text.Trim();   // new password field
+            string phoneNumber = login_forgotPasswordPhone_lbl.Text.Trim(); // only for SMS
+            string newPassword = forgotPassword_NewPassword.Text.Trim();
 
-            // Step 1: Check if OTP is empty
             if (string.IsNullOrEmpty(enteredOTP))
             {
                 MessageBox.Show("Please enter the OTP.", "Missing OTP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Step 2: Check if new password is empty
             if (string.IsNullOrEmpty(newPassword))
             {
                 MessageBox.Show("Please enter a new password.", "Missing Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Step 3: Match OTP
             if (enteredOTP == generatedOTP)
             {
-                // Step 4: Update password in the database
+                if (string.IsNullOrEmpty(verifiedUsername))
+                {
+                    MessageBox.Show("User verification data is missing. Please restart the password reset process.");
+                    return;
+                }
+
                 string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     try
                     {
                         conn.Open();
-                        string updateQuery = "UPDATE users SET User_Password  = @newPassword WHERE User_PhoneNumber = @phone";
+                        string updateQuery = "UPDATE users SET User_Password = @newPassword WHERE User_UserName = @username";
 
                         using (MySqlCommand cmd = new MySqlCommand(updateQuery, conn))
                         {
                             cmd.Parameters.AddWithValue("@newPassword", newPassword);
-                            cmd.Parameters.AddWithValue("@phone", phoneNumber);
+                            cmd.Parameters.AddWithValue("@username", verifiedUsername);
 
                             int rowsAffected = cmd.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Password changed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                // Optionally send confirmation SMS
+                                // Send confirmation SMS
                                 string message = "Your password has been successfully changed.";
                                 string error;
+                                SendSms(phoneNumber, message, out error); // ignore if failed
 
-                                if (!SendSms(phoneNumber, message, out error))
-                                {
-                                    MessageBox.Show("Failed to send confirmation SMS:\n" + error, "SMS Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-
-                                // Reset fields
+                                // Reset UI
                                 login_forgotPasswordPhoneCode_tb.Clear();
                                 forgotPassword_NewPassword.Clear();
                                 generatedOTP = null;
+                                verifiedUsername = null;
                                 otpResendCount = 0;
                                 login_otpStatus_lbl.Visible = false;
                                 login_forgotPasswordPhoneCode_pnl.Hide();
+
+                                // Show login
                                 admin_login_pnl.Hide();
                                 employe_login_pnl.Hide();
                                 signup_admin_pnl.Hide();
@@ -849,7 +858,6 @@ namespace FYP_PROJECT
             {
                 MessageBox.Show("Incorrect OTP. Please try again.", "Invalid Code", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void employe_login_pnl_Paint(object sender, PaintEventArgs e)
@@ -932,6 +940,11 @@ namespace FYP_PROJECT
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             employee_signup_pnl.Hide();
+        }
+
+        private void main_gif_pb_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

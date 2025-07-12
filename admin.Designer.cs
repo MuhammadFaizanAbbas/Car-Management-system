@@ -1,4 +1,8 @@
-﻿namespace FYP_PROJECT
+﻿using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using System;
+
+namespace FYP_PROJECT
 {
     partial class admin
     {
@@ -13,12 +17,26 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing)
             {
-                components.Dispose();
+                // Clear datasets first – stops background rendering queues
+                gunaChart1?.Datasets.Clear();
+                gunaChart2?.Datasets.Clear();
+                gunaChart3?.Datasets.Clear();
+                gunaChart4?.Datasets.Clear();
+
+                // Dispose the charts themselves
+                gunaChart1?.Dispose();
+                gunaChart2?.Dispose();
+                gunaChart3?.Dispose();
+                gunaChart4?.Dispose();
+
+                // Now dispose the component container
+                components?.Dispose();
             }
             base.Dispose(disposing);
         }
+
 
         #region Windows Form Designer generated code
 
@@ -29,39 +47,102 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle113 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle114 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle115 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle116 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle117 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle118 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle119 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle120 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle121 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle122 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle123 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle124 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle125 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle126 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle127 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle128 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle129 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle130 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle131 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle132 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont17 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont18 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont19 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont20 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid7 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick7 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont21 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid8 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick8 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont22 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid9 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel3 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont23 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick9 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont24 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont25 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont26 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont27 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont28 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid10 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick10 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont29 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid11 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick11 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont30 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid12 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel4 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont31 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick12 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont32 = new Guna.Charts.WinForms.ChartFont();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.admin_menu_pnl = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -84,47 +165,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.admin_dashboard_pnl = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.admin_totalSalariesAndProfit_pnl = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.admin_totalProfit_lbl = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.admin_monthlySalaries_lbl = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.admin_totalServiceAndEmployees_pnl = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.admin_totalEmployees_lbl = new System.Windows.Forms.Label();
-            this.admin_totalServiceDone_lbl = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.admin_dashboard_income_pnl = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.admin_monthIncome_lbl = new System.Windows.Forms.Label();
-            this.admin_yearIncome_lbl = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.admin_totalProfit_lbl = new System.Windows.Forms.Label();
+            this.gunaChart4 = new Guna.Charts.WinForms.GunaChart();
+            this.admin_totalEmployees_lbl = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.admin_totalServiceDone_lbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.gunaChart3 = new Guna.Charts.WinForms.GunaChart();
+            this.admin_monthIncome_lbl = new System.Windows.Forms.Label();
+            this.gunaChart2 = new Guna.Charts.WinForms.GunaChart();
+            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            this.admin_yearIncome_lbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.admin_search_pnl = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.employee_searchCarDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.search_clear_btn = new Guna.UI2.WinForms.Guna2Button();
             this.label9 = new System.Windows.Forms.Label();
             this.employee_searchGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.employee_color_lbl = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.employee_Year_lbl = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.employee_make_lbl = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.employee_model_lbl = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.employee_phoneNumber_lbl = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.employee_address_lbl = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.employee_ownerName_lbl = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.employee_carNumber_lbl = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.employee_servicesDone_lbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.employee_lastServiceDate_lbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.employee_searchBar_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -286,13 +353,10 @@
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.admin_dashboard_pnl.SuspendLayout();
-            this.admin_totalSalariesAndProfit_pnl.SuspendLayout();
-            this.admin_totalServiceAndEmployees_pnl.SuspendLayout();
-            this.admin_dashboard_income_pnl.SuspendLayout();
-            this.admin_search_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).BeginInit();
-            this.guna2CustomGradientPanel4.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
+            this.admin_search_pnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_searchCarDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.admin_employee_pnl.SuspendLayout();
             this.employeeUpdate_pnl.SuspendLayout();
@@ -707,15 +771,304 @@
             // admin_dashboard_pnl
             // 
             this.admin_dashboard_pnl.BackColor = System.Drawing.Color.Black;
+            this.admin_dashboard_pnl.Controls.Add(this.label7);
+            this.admin_dashboard_pnl.Controls.Add(this.guna2CustomGradientPanel3);
+            this.admin_dashboard_pnl.Controls.Add(this.gunaChart4);
+            this.admin_dashboard_pnl.Controls.Add(this.admin_totalEmployees_lbl);
+            this.admin_dashboard_pnl.Controls.Add(this.label19);
+            this.admin_dashboard_pnl.Controls.Add(this.label6);
+            this.admin_dashboard_pnl.Controls.Add(this.admin_totalServiceDone_lbl);
+            this.admin_dashboard_pnl.Controls.Add(this.label5);
+            this.admin_dashboard_pnl.Controls.Add(this.gunaChart3);
+            this.admin_dashboard_pnl.Controls.Add(this.admin_monthIncome_lbl);
+            this.admin_dashboard_pnl.Controls.Add(this.gunaChart2);
+            this.admin_dashboard_pnl.Controls.Add(this.gunaChart1);
+            this.admin_dashboard_pnl.Controls.Add(this.admin_yearIncome_lbl);
             this.admin_dashboard_pnl.Controls.Add(this.label4);
-            this.admin_dashboard_pnl.Controls.Add(this.admin_totalSalariesAndProfit_pnl);
-            this.admin_dashboard_pnl.Controls.Add(this.admin_totalServiceAndEmployees_pnl);
-            this.admin_dashboard_pnl.Controls.Add(this.admin_dashboard_income_pnl);
             this.admin_dashboard_pnl.Location = new System.Drawing.Point(221, 3);
             this.admin_dashboard_pnl.Name = "admin_dashboard_pnl";
             this.admin_dashboard_pnl.Size = new System.Drawing.Size(1150, 751);
             this.admin_dashboard_pnl.TabIndex = 4;
             this.admin_dashboard_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.admin_dashboard_pnl_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(747, 353);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 24);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "TotalEmployees";
+            // 
+            // guna2CustomGradientPanel3
+            // 
+            this.guna2CustomGradientPanel3.AutoRoundedCorners = true;
+            this.guna2CustomGradientPanel3.Controls.Add(this.label8);
+            this.guna2CustomGradientPanel3.Controls.Add(this.admin_totalProfit_lbl);
+            this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.LightGray;
+            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.LightGray;
+            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.LightGray;
+            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.LightGray;
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(24, 614);
+            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(512, 75);
+            this.guna2CustomGradientPanel3.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(197, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(109, 24);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Total Profit";
+            // 
+            // admin_totalProfit_lbl
+            // 
+            this.admin_totalProfit_lbl.AutoSize = true;
+            this.admin_totalProfit_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.admin_totalProfit_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_totalProfit_lbl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.admin_totalProfit_lbl.Location = new System.Drawing.Point(208, 33);
+            this.admin_totalProfit_lbl.Name = "admin_totalProfit_lbl";
+            this.admin_totalProfit_lbl.Size = new System.Drawing.Size(20, 24);
+            this.admin_totalProfit_lbl.TabIndex = 3;
+            this.admin_totalProfit_lbl.Text = "0";
+            this.admin_totalProfit_lbl.Click += new System.EventHandler(this.admin_totalProfit_lbl_Click);
+            // 
+            // gunaChart4
+            // 
+            this.gunaChart4.BackColor = System.Drawing.Color.Black;
+            chartFont1.FontName = "Arial";
+            this.gunaChart4.Legend.LabelFont = chartFont1;
+            this.gunaChart4.Location = new System.Drawing.Point(562, 381);
+            this.gunaChart4.Name = "gunaChart4";
+            this.gunaChart4.Size = new System.Drawing.Size(580, 287);
+            this.gunaChart4.TabIndex = 10;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart4.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            this.gunaChart4.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart4.Tooltips.TitleFont = chartFont4;
+            this.gunaChart4.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            this.gunaChart4.XAxes.Ticks = tick1;
+            this.gunaChart4.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            this.gunaChart4.YAxes.Ticks = tick2;
+            this.gunaChart4.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            this.gunaChart4.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            this.gunaChart4.ZAxes.Ticks = tick3;
+            // 
+            // admin_totalEmployees_lbl
+            // 
+            this.admin_totalEmployees_lbl.AutoSize = true;
+            this.admin_totalEmployees_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.admin_totalEmployees_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_totalEmployees_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_totalEmployees_lbl.Location = new System.Drawing.Point(792, 671);
+            this.admin_totalEmployees_lbl.Name = "admin_totalEmployees_lbl";
+            this.admin_totalEmployees_lbl.Size = new System.Drawing.Size(20, 24);
+            this.admin_totalEmployees_lbl.TabIndex = 3;
+            this.admin_totalEmployees_lbl.Text = "0";
+            this.admin_totalEmployees_lbl.Click += new System.EventHandler(this.admin_totalEmployees_lbl_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(166, 353);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(225, 24);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Monthly Services Done";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(720, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 24);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Monthly Income";
+            // 
+            // admin_totalServiceDone_lbl
+            // 
+            this.admin_totalServiceDone_lbl.AutoSize = true;
+            this.admin_totalServiceDone_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.admin_totalServiceDone_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_totalServiceDone_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_totalServiceDone_lbl.Location = new System.Drawing.Point(212, 570);
+            this.admin_totalServiceDone_lbl.Name = "admin_totalServiceDone_lbl";
+            this.admin_totalServiceDone_lbl.Size = new System.Drawing.Size(20, 24);
+            this.admin_totalServiceDone_lbl.TabIndex = 2;
+            this.admin_totalServiceDone_lbl.Text = "0";
+            this.admin_totalServiceDone_lbl.Click += new System.EventHandler(this.admin_totalServiceDone_lbl_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(203, 102);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Yearly Income";
+            // 
+            // gunaChart3
+            // 
+            this.gunaChart3.BackColor = System.Drawing.Color.Black;
+            chartFont9.FontName = "Arial";
+            this.gunaChart3.Legend.LabelFont = chartFont9;
+            this.gunaChart3.Location = new System.Drawing.Point(24, 382);
+            this.gunaChart3.Name = "gunaChart3";
+            this.gunaChart3.Size = new System.Drawing.Size(512, 185);
+            this.gunaChart3.TabIndex = 6;
+            chartFont10.FontName = "Arial";
+            chartFont10.Size = 12;
+            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart3.Title.Font = chartFont10;
+            chartFont11.FontName = "Arial";
+            this.gunaChart3.Tooltips.BodyFont = chartFont11;
+            chartFont12.FontName = "Arial";
+            chartFont12.Size = 9;
+            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart3.Tooltips.TitleFont = chartFont12;
+            this.gunaChart3.XAxes.GridLines = grid4;
+            chartFont13.FontName = "Arial";
+            tick4.Font = chartFont13;
+            this.gunaChart3.XAxes.Ticks = tick4;
+            this.gunaChart3.YAxes.GridLines = grid5;
+            chartFont14.FontName = "Arial";
+            tick5.Font = chartFont14;
+            this.gunaChart3.YAxes.Ticks = tick5;
+            this.gunaChart3.ZAxes.GridLines = grid6;
+            chartFont15.FontName = "Arial";
+            pointLabel2.Font = chartFont15;
+            this.gunaChart3.ZAxes.PointLabels = pointLabel2;
+            chartFont16.FontName = "Arial";
+            tick6.Font = chartFont16;
+            this.gunaChart3.ZAxes.Ticks = tick6;
+            // 
+            // admin_monthIncome_lbl
+            // 
+            this.admin_monthIncome_lbl.AutoSize = true;
+            this.admin_monthIncome_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.admin_monthIncome_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_monthIncome_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_monthIncome_lbl.Location = new System.Drawing.Point(808, 329);
+            this.admin_monthIncome_lbl.Name = "admin_monthIncome_lbl";
+            this.admin_monthIncome_lbl.Size = new System.Drawing.Size(20, 24);
+            this.admin_monthIncome_lbl.TabIndex = 3;
+            this.admin_monthIncome_lbl.Text = "0";
+            this.admin_monthIncome_lbl.Click += new System.EventHandler(this.admin_monthIncome_lbl_Click);
+            // 
+            // gunaChart2
+            // 
+            this.gunaChart2.BackColor = System.Drawing.Color.Black;
+            chartFont17.FontName = "Arial";
+            this.gunaChart2.Legend.LabelFont = chartFont17;
+            this.gunaChart2.Location = new System.Drawing.Point(565, 141);
+            this.gunaChart2.Name = "gunaChart2";
+            this.gunaChart2.Size = new System.Drawing.Size(577, 185);
+            this.gunaChart2.TabIndex = 5;
+            chartFont18.FontName = "Arial";
+            chartFont18.Size = 12;
+            chartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart2.Title.Font = chartFont18;
+            chartFont19.FontName = "Arial";
+            this.gunaChart2.Tooltips.BodyFont = chartFont19;
+            chartFont20.FontName = "Arial";
+            chartFont20.Size = 9;
+            chartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart2.Tooltips.TitleFont = chartFont20;
+            this.gunaChart2.XAxes.GridLines = grid7;
+            chartFont21.FontName = "Arial";
+            tick7.Font = chartFont21;
+            this.gunaChart2.XAxes.Ticks = tick7;
+            this.gunaChart2.YAxes.GridLines = grid8;
+            chartFont22.FontName = "Arial";
+            tick8.Font = chartFont22;
+            this.gunaChart2.YAxes.Ticks = tick8;
+            this.gunaChart2.ZAxes.GridLines = grid9;
+            chartFont23.FontName = "Arial";
+            pointLabel3.Font = chartFont23;
+            this.gunaChart2.ZAxes.PointLabels = pointLabel3;
+            chartFont24.FontName = "Arial";
+            tick9.Font = chartFont24;
+            this.gunaChart2.ZAxes.Ticks = tick9;
+            // 
+            // gunaChart1
+            // 
+            this.gunaChart1.BackColor = System.Drawing.Color.Black;
+            chartFont25.FontName = "Arial";
+            this.gunaChart1.Legend.LabelFont = chartFont25;
+            this.gunaChart1.Location = new System.Drawing.Point(24, 141);
+            this.gunaChart1.Name = "gunaChart1";
+            this.gunaChart1.Size = new System.Drawing.Size(512, 185);
+            this.gunaChart1.TabIndex = 4;
+            chartFont26.FontName = "Arial";
+            chartFont26.Size = 12;
+            chartFont26.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart1.Title.Font = chartFont26;
+            chartFont27.FontName = "Arial";
+            this.gunaChart1.Tooltips.BodyFont = chartFont27;
+            chartFont28.FontName = "Arial";
+            chartFont28.Size = 9;
+            chartFont28.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart1.Tooltips.TitleFont = chartFont28;
+            this.gunaChart1.XAxes.GridLines = grid10;
+            chartFont29.FontName = "Arial";
+            tick10.Font = chartFont29;
+            this.gunaChart1.XAxes.Ticks = tick10;
+            this.gunaChart1.YAxes.GridLines = grid11;
+            chartFont30.FontName = "Arial";
+            tick11.Font = chartFont30;
+            this.gunaChart1.YAxes.Ticks = tick11;
+            this.gunaChart1.ZAxes.GridLines = grid12;
+            chartFont31.FontName = "Arial";
+            pointLabel4.Font = chartFont31;
+            this.gunaChart1.ZAxes.PointLabels = pointLabel4;
+            chartFont32.FontName = "Arial";
+            tick12.Font = chartFont32;
+            this.gunaChart1.ZAxes.Ticks = tick12;
+            this.gunaChart1.Load += new System.EventHandler(this.gunaChart1_Load);
+            // 
+            // admin_yearIncome_lbl
+            // 
+            this.admin_yearIncome_lbl.AutoSize = true;
+            this.admin_yearIncome_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.admin_yearIncome_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_yearIncome_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.admin_yearIncome_lbl.Location = new System.Drawing.Point(212, 329);
+            this.admin_yearIncome_lbl.Name = "admin_yearIncome_lbl";
+            this.admin_yearIncome_lbl.Size = new System.Drawing.Size(20, 24);
+            this.admin_yearIncome_lbl.TabIndex = 2;
+            this.admin_yearIncome_lbl.Text = "0";
+            this.admin_yearIncome_lbl.Click += new System.EventHandler(this.admin_yearIncome_lbl_Click);
             // 
             // label4
             // 
@@ -730,218 +1083,85 @@
             this.label4.Text = "Dashboard";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // admin_totalSalariesAndProfit_pnl
-            // 
-            this.admin_totalSalariesAndProfit_pnl.AutoRoundedCorners = true;
-            this.admin_totalSalariesAndProfit_pnl.Controls.Add(this.admin_totalProfit_lbl);
-            this.admin_totalSalariesAndProfit_pnl.Controls.Add(this.label13);
-            this.admin_totalSalariesAndProfit_pnl.Controls.Add(this.admin_monthlySalaries_lbl);
-            this.admin_totalSalariesAndProfit_pnl.Controls.Add(this.label11);
-            this.admin_totalSalariesAndProfit_pnl.FillColor = System.Drawing.Color.LightGray;
-            this.admin_totalSalariesAndProfit_pnl.FillColor2 = System.Drawing.Color.LightGray;
-            this.admin_totalSalariesAndProfit_pnl.FillColor3 = System.Drawing.Color.LightGray;
-            this.admin_totalSalariesAndProfit_pnl.FillColor4 = System.Drawing.Color.LightGray;
-            this.admin_totalSalariesAndProfit_pnl.Location = new System.Drawing.Point(56, 566);
-            this.admin_totalSalariesAndProfit_pnl.Name = "admin_totalSalariesAndProfit_pnl";
-            this.admin_totalSalariesAndProfit_pnl.Size = new System.Drawing.Size(1013, 132);
-            this.admin_totalSalariesAndProfit_pnl.TabIndex = 2;
-            this.admin_totalSalariesAndProfit_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.admin_totalSalariesAndProfit_pnl_Paint);
-            // 
-            // admin_totalProfit_lbl
-            // 
-            this.admin_totalProfit_lbl.AutoSize = true;
-            this.admin_totalProfit_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.admin_totalProfit_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_totalProfit_lbl.Location = new System.Drawing.Point(775, 61);
-            this.admin_totalProfit_lbl.Name = "admin_totalProfit_lbl";
-            this.admin_totalProfit_lbl.Size = new System.Drawing.Size(20, 24);
-            this.admin_totalProfit_lbl.TabIndex = 3;
-            this.admin_totalProfit_lbl.Text = "0";
-            this.admin_totalProfit_lbl.Click += new System.EventHandler(this.admin_totalProfit_lbl_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(728, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 24);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Total Profit";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // admin_monthlySalaries_lbl
-            // 
-            this.admin_monthlySalaries_lbl.AutoSize = true;
-            this.admin_monthlySalaries_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.admin_monthlySalaries_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_monthlySalaries_lbl.Location = new System.Drawing.Point(196, 61);
-            this.admin_monthlySalaries_lbl.Name = "admin_monthlySalaries_lbl";
-            this.admin_monthlySalaries_lbl.Size = new System.Drawing.Size(20, 24);
-            this.admin_monthlySalaries_lbl.TabIndex = 1;
-            this.admin_monthlySalaries_lbl.Text = "0";
-            this.admin_monthlySalaries_lbl.Click += new System.EventHandler(this.admin_monthlySalaries_lbl_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(127, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(163, 24);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Monthly Salaries";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // admin_totalServiceAndEmployees_pnl
-            // 
-            this.admin_totalServiceAndEmployees_pnl.AutoRoundedCorners = true;
-            this.admin_totalServiceAndEmployees_pnl.Controls.Add(this.admin_totalEmployees_lbl);
-            this.admin_totalServiceAndEmployees_pnl.Controls.Add(this.admin_totalServiceDone_lbl);
-            this.admin_totalServiceAndEmployees_pnl.Controls.Add(this.label8);
-            this.admin_totalServiceAndEmployees_pnl.Controls.Add(this.label7);
-            this.admin_totalServiceAndEmployees_pnl.FillColor = System.Drawing.Color.LightGray;
-            this.admin_totalServiceAndEmployees_pnl.FillColor2 = System.Drawing.Color.LightGray;
-            this.admin_totalServiceAndEmployees_pnl.FillColor3 = System.Drawing.Color.LightGray;
-            this.admin_totalServiceAndEmployees_pnl.FillColor4 = System.Drawing.Color.LightGray;
-            this.admin_totalServiceAndEmployees_pnl.Location = new System.Drawing.Point(56, 331);
-            this.admin_totalServiceAndEmployees_pnl.Name = "admin_totalServiceAndEmployees_pnl";
-            this.admin_totalServiceAndEmployees_pnl.Size = new System.Drawing.Size(1013, 132);
-            this.admin_totalServiceAndEmployees_pnl.TabIndex = 1;
-            this.admin_totalServiceAndEmployees_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.admin_totalServiceAndEmployees_pnl_Paint);
-            // 
-            // admin_totalEmployees_lbl
-            // 
-            this.admin_totalEmployees_lbl.AutoSize = true;
-            this.admin_totalEmployees_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.admin_totalEmployees_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_totalEmployees_lbl.Location = new System.Drawing.Point(775, 67);
-            this.admin_totalEmployees_lbl.Name = "admin_totalEmployees_lbl";
-            this.admin_totalEmployees_lbl.Size = new System.Drawing.Size(20, 24);
-            this.admin_totalEmployees_lbl.TabIndex = 3;
-            this.admin_totalEmployees_lbl.Text = "0";
-            this.admin_totalEmployees_lbl.Click += new System.EventHandler(this.admin_totalEmployees_lbl_Click);
-            // 
-            // admin_totalServiceDone_lbl
-            // 
-            this.admin_totalServiceDone_lbl.AutoSize = true;
-            this.admin_totalServiceDone_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.admin_totalServiceDone_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_totalServiceDone_lbl.Location = new System.Drawing.Point(196, 67);
-            this.admin_totalServiceDone_lbl.Name = "admin_totalServiceDone_lbl";
-            this.admin_totalServiceDone_lbl.Size = new System.Drawing.Size(20, 24);
-            this.admin_totalServiceDone_lbl.TabIndex = 2;
-            this.admin_totalServiceDone_lbl.Text = "0";
-            this.admin_totalServiceDone_lbl.Click += new System.EventHandler(this.admin_totalServiceDone_lbl_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(701, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 24);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Total Employees";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(127, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(198, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Total Services Done";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // admin_dashboard_income_pnl
-            // 
-            this.admin_dashboard_income_pnl.AutoRoundedCorners = true;
-            this.admin_dashboard_income_pnl.Controls.Add(this.admin_monthIncome_lbl);
-            this.admin_dashboard_income_pnl.Controls.Add(this.admin_yearIncome_lbl);
-            this.admin_dashboard_income_pnl.Controls.Add(this.label6);
-            this.admin_dashboard_income_pnl.Controls.Add(this.label5);
-            this.admin_dashboard_income_pnl.FillColor = System.Drawing.Color.LightGray;
-            this.admin_dashboard_income_pnl.FillColor2 = System.Drawing.Color.LightGray;
-            this.admin_dashboard_income_pnl.FillColor3 = System.Drawing.Color.LightGray;
-            this.admin_dashboard_income_pnl.FillColor4 = System.Drawing.Color.LightGray;
-            this.admin_dashboard_income_pnl.Location = new System.Drawing.Point(56, 107);
-            this.admin_dashboard_income_pnl.Name = "admin_dashboard_income_pnl";
-            this.admin_dashboard_income_pnl.Size = new System.Drawing.Size(1013, 132);
-            this.admin_dashboard_income_pnl.TabIndex = 0;
-            this.admin_dashboard_income_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.admin_dashboard_income_pnl_Paint);
-            // 
-            // admin_monthIncome_lbl
-            // 
-            this.admin_monthIncome_lbl.AutoSize = true;
-            this.admin_monthIncome_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.admin_monthIncome_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_monthIncome_lbl.Location = new System.Drawing.Point(775, 60);
-            this.admin_monthIncome_lbl.Name = "admin_monthIncome_lbl";
-            this.admin_monthIncome_lbl.Size = new System.Drawing.Size(20, 24);
-            this.admin_monthIncome_lbl.TabIndex = 3;
-            this.admin_monthIncome_lbl.Text = "0";
-            this.admin_monthIncome_lbl.Click += new System.EventHandler(this.admin_monthIncome_lbl_Click);
-            // 
-            // admin_yearIncome_lbl
-            // 
-            this.admin_yearIncome_lbl.AutoSize = true;
-            this.admin_yearIncome_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.admin_yearIncome_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_yearIncome_lbl.Location = new System.Drawing.Point(196, 60);
-            this.admin_yearIncome_lbl.Name = "admin_yearIncome_lbl";
-            this.admin_yearIncome_lbl.Size = new System.Drawing.Size(20, 24);
-            this.admin_yearIncome_lbl.TabIndex = 2;
-            this.admin_yearIncome_lbl.Text = "0";
-            this.admin_yearIncome_lbl.Click += new System.EventHandler(this.admin_yearIncome_lbl_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(678, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(189, 24);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "This Month Income";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(127, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(180, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "This Year Income ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // admin_search_pnl
             // 
+            this.admin_search_pnl.Controls.Add(this.label15);
+            this.admin_search_pnl.Controls.Add(this.employee_searchCarDataGridView);
             this.admin_search_pnl.Controls.Add(this.search_clear_btn);
             this.admin_search_pnl.Controls.Add(this.label9);
             this.admin_search_pnl.Controls.Add(this.employee_searchGridView);
-            this.admin_search_pnl.Controls.Add(this.guna2CustomGradientPanel4);
-            this.admin_search_pnl.Controls.Add(this.guna2CustomGradientPanel3);
             this.admin_search_pnl.Controls.Add(this.guna2CustomGradientPanel2);
             this.admin_search_pnl.Controls.Add(this.label10);
             this.admin_search_pnl.Controls.Add(this.label44);
             this.admin_search_pnl.Controls.Add(this.employee_searchBar_btn);
             this.admin_search_pnl.Controls.Add(this.employee_search_tb);
-            this.admin_search_pnl.Location = new System.Drawing.Point(221, 0);
+            this.admin_search_pnl.Location = new System.Drawing.Point(206, 698);
             this.admin_search_pnl.Name = "admin_search_pnl";
             this.admin_search_pnl.Size = new System.Drawing.Size(1151, 751);
             this.admin_search_pnl.TabIndex = 5;
             this.admin_search_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.admin_search_pnl_Paint);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label15.Location = new System.Drawing.Point(115, 257);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 24);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "CAR DATA";
+            // 
+            // employee_searchCarDataGridView
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employee_searchCarDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.employee_searchCarDataGridView.ColumnHeadersHeight = 40;
+            this.employee_searchCarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employee_searchCarDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.employee_searchCarDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.Location = new System.Drawing.Point(113, 300);
+            this.employee_searchCarDataGridView.Name = "employee_searchCarDataGridView";
+            this.employee_searchCarDataGridView.RowHeadersVisible = false;
+            this.employee_searchCarDataGridView.Size = new System.Drawing.Size(944, 169);
+            this.employee_searchCarDataGridView.TabIndex = 20;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.employee_searchCarDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.Height = 40;
+            this.employee_searchCarDataGridView.ThemeStyle.ReadOnly = false;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.Height = 22;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // search_clear_btn
             // 
@@ -968,7 +1188,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(68, 427);
+            this.label9.Location = new System.Drawing.Point(115, 476);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(219, 24);
             this.label9.TabIndex = 18;
@@ -979,32 +1199,32 @@
             // 
             this.employee_searchGridView.AllowUserToAddRows = false;
             this.employee_searchGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle100.BackColor = System.Drawing.Color.White;
-            this.employee_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle100;
-            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle101.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle101.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle101.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle101.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employee_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle101;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.employee_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employee_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.employee_searchGridView.ColumnHeadersHeight = 40;
             this.employee_searchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle102.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle102.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle102.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employee_searchGridView.DefaultCellStyle = dataGridViewCellStyle102;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employee_searchGridView.DefaultCellStyle = dataGridViewCellStyle6;
             this.employee_searchGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.employee_searchGridView.Location = new System.Drawing.Point(113, 458);
+            this.employee_searchGridView.Location = new System.Drawing.Point(113, 512);
             this.employee_searchGridView.Name = "employee_searchGridView";
             this.employee_searchGridView.ReadOnly = true;
             this.employee_searchGridView.RowHeadersVisible = false;
-            this.employee_searchGridView.Size = new System.Drawing.Size(944, 250);
+            this.employee_searchGridView.Size = new System.Drawing.Size(944, 184);
             this.employee_searchGridView.TabIndex = 17;
             this.employee_searchGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.employee_searchGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1029,243 +1249,18 @@
             this.employee_searchGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.employee_searchGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employee_searchGridView_CellContentClick);
             // 
-            // guna2CustomGradientPanel4
-            // 
-            this.guna2CustomGradientPanel4.AutoRoundedCorners = true;
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_color_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label29);
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_Year_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label27);
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_make_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label25);
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_model_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label23);
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(113, 348);
-            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(944, 60);
-            this.guna2CustomGradientPanel4.TabIndex = 16;
-            this.guna2CustomGradientPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel4_Paint);
-            // 
-            // employee_color_lbl
-            // 
-            this.employee_color_lbl.AutoSize = true;
-            this.employee_color_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_color_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_color_lbl.Location = new System.Drawing.Point(805, 33);
-            this.employee_color_lbl.Name = "employee_color_lbl";
-            this.employee_color_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_color_lbl.TabIndex = 7;
-            this.employee_color_lbl.Text = "N/A";
-            this.employee_color_lbl.Click += new System.EventHandler(this.employee_color_lbl_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(804, 2);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(51, 20);
-            this.label29.TabIndex = 6;
-            this.label29.Text = "Color";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
-            // 
-            // employee_Year_lbl
-            // 
-            this.employee_Year_lbl.AutoSize = true;
-            this.employee_Year_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_Year_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_Year_lbl.Location = new System.Drawing.Point(616, 33);
-            this.employee_Year_lbl.Name = "employee_Year_lbl";
-            this.employee_Year_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_Year_lbl.TabIndex = 5;
-            this.employee_Year_lbl.Text = "N/A";
-            this.employee_Year_lbl.Click += new System.EventHandler(this.employee_Year_lbl_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(615, 2);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(47, 20);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Year";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
-            // 
-            // employee_make_lbl
-            // 
-            this.employee_make_lbl.AutoSize = true;
-            this.employee_make_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_make_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_make_lbl.Location = new System.Drawing.Point(303, 33);
-            this.employee_make_lbl.Name = "employee_make_lbl";
-            this.employee_make_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_make_lbl.TabIndex = 3;
-            this.employee_make_lbl.Text = "N/A";
-            this.employee_make_lbl.Click += new System.EventHandler(this.employee_make_lbl_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(302, 2);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(57, 20);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "Make ";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
-            // 
-            // employee_model_lbl
-            // 
-            this.employee_model_lbl.AutoSize = true;
-            this.employee_model_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_model_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_model_lbl.Location = new System.Drawing.Point(107, 33);
-            this.employee_model_lbl.Name = "employee_model_lbl";
-            this.employee_model_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_model_lbl.TabIndex = 1;
-            this.employee_model_lbl.Text = "N/A";
-            this.employee_model_lbl.Click += new System.EventHandler(this.employee_model_lbl_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(89, 2);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(57, 20);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Model";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.AutoRoundedCorners = true;
-            this.guna2CustomGradientPanel3.Controls.Add(this.employee_phoneNumber_lbl);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label21);
-            this.guna2CustomGradientPanel3.Controls.Add(this.employee_address_lbl);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label19);
-            this.guna2CustomGradientPanel3.Controls.Add(this.employee_ownerName_lbl);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label17);
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(113, 272);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(944, 60);
-            this.guna2CustomGradientPanel3.TabIndex = 15;
-            this.guna2CustomGradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel3_Paint);
-            // 
-            // employee_phoneNumber_lbl
-            // 
-            this.employee_phoneNumber_lbl.AutoSize = true;
-            this.employee_phoneNumber_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_phoneNumber_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_phoneNumber_lbl.Location = new System.Drawing.Point(775, 33);
-            this.employee_phoneNumber_lbl.Name = "employee_phoneNumber_lbl";
-            this.employee_phoneNumber_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_phoneNumber_lbl.TabIndex = 5;
-            this.employee_phoneNumber_lbl.Text = "N/A";
-            this.employee_phoneNumber_lbl.Click += new System.EventHandler(this.employee_phoneNumber_lbl_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(772, 4);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(127, 20);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "Phone Number";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
-            // 
-            // employee_address_lbl
-            // 
-            this.employee_address_lbl.AutoSize = true;
-            this.employee_address_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_address_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_address_lbl.Location = new System.Drawing.Point(456, 33);
-            this.employee_address_lbl.Name = "employee_address_lbl";
-            this.employee_address_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_address_lbl.TabIndex = 3;
-            this.employee_address_lbl.Text = "N/A";
-            this.employee_address_lbl.Click += new System.EventHandler(this.employee_address_lbl_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(455, 4);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(75, 20);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Address";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
-            // employee_ownerName_lbl
-            // 
-            this.employee_ownerName_lbl.AutoSize = true;
-            this.employee_ownerName_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_ownerName_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_ownerName_lbl.Location = new System.Drawing.Point(107, 33);
-            this.employee_ownerName_lbl.Name = "employee_ownerName_lbl";
-            this.employee_ownerName_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_ownerName_lbl.TabIndex = 1;
-            this.employee_ownerName_lbl.Text = "N/A";
-            this.employee_ownerName_lbl.Click += new System.EventHandler(this.employee_ownerName_lbl_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(88, 4);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 20);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Owner Name";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.AutoRoundedCorners = true;
-            this.guna2CustomGradientPanel2.Controls.Add(this.employee_carNumber_lbl);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label15);
             this.guna2CustomGradientPanel2.Controls.Add(this.employee_servicesDone_lbl);
             this.guna2CustomGradientPanel2.Controls.Add(this.label12);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label17);
+            this.guna2CustomGradientPanel2.Controls.Add(this.employee_lastServiceDate_lbl);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(113, 186);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(944, 60);
             this.guna2CustomGradientPanel2.TabIndex = 14;
             this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel2_Paint);
-            // 
-            // employee_carNumber_lbl
-            // 
-            this.employee_carNumber_lbl.AutoSize = true;
-            this.employee_carNumber_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_carNumber_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_carNumber_lbl.Location = new System.Drawing.Point(775, 31);
-            this.employee_carNumber_lbl.Name = "employee_carNumber_lbl";
-            this.employee_carNumber_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_carNumber_lbl.TabIndex = 3;
-            this.employee_carNumber_lbl.Text = "N/A";
-            this.employee_carNumber_lbl.Click += new System.EventHandler(this.employee_carNumber_lbl_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(772, 4);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(138, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "License Number";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // employee_servicesDone_lbl
             // 
@@ -1290,6 +1285,30 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Services Done";
             this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(737, 4);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 20);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Last Service Date";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // employee_lastServiceDate_lbl
+            // 
+            this.employee_lastServiceDate_lbl.AutoSize = true;
+            this.employee_lastServiceDate_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.employee_lastServiceDate_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_lastServiceDate_lbl.Location = new System.Drawing.Point(738, 31);
+            this.employee_lastServiceDate_lbl.Name = "employee_lastServiceDate_lbl";
+            this.employee_lastServiceDate_lbl.Size = new System.Drawing.Size(30, 16);
+            this.employee_lastServiceDate_lbl.TabIndex = 1;
+            this.employee_lastServiceDate_lbl.Text = "N/A";
+            this.employee_lastServiceDate_lbl.Click += new System.EventHandler(this.employee_ownerName_lbl_Click);
             // 
             // label10
             // 
@@ -1350,7 +1369,7 @@
             this.employee_search_tb.Location = new System.Drawing.Point(193, 46);
             this.employee_search_tb.Name = "employee_search_tb";
             this.employee_search_tb.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.employee_search_tb.PlaceholderText = "Enter Car Number";
+            this.employee_search_tb.PlaceholderText = "Enter Car Number or Cnic";
             this.employee_search_tb.SelectedText = "";
             this.employee_search_tb.Size = new System.Drawing.Size(647, 41);
             this.employee_search_tb.TabIndex = 10;
@@ -1365,7 +1384,7 @@
             this.admin_employee_pnl.Controls.Add(this.guna2Button1);
             this.admin_employee_pnl.Controls.Add(this.admin_employee_gridView);
             this.admin_employee_pnl.Controls.Add(this.label14);
-            this.admin_employee_pnl.Location = new System.Drawing.Point(220, 0);
+            this.admin_employee_pnl.Location = new System.Drawing.Point(206, 701);
             this.admin_employee_pnl.Name = "admin_employee_pnl";
             this.admin_employee_pnl.Size = new System.Drawing.Size(1151, 748);
             this.admin_employee_pnl.TabIndex = 4;
@@ -1901,26 +1920,26 @@
             // 
             // admin_employee_gridView
             // 
-            dataGridViewCellStyle103.BackColor = System.Drawing.Color.White;
-            this.admin_employee_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle103;
-            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle104.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle104.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_employee_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle104;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.admin_employee_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_employee_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.admin_employee_gridView.ColumnHeadersHeight = 40;
             this.admin_employee_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle105.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle105.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle105.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle105.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle105.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle105.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_employee_gridView.DefaultCellStyle = dataGridViewCellStyle105;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_employee_gridView.DefaultCellStyle = dataGridViewCellStyle9;
             this.admin_employee_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_employee_gridView.Location = new System.Drawing.Point(3, 114);
             this.admin_employee_gridView.Name = "admin_employee_gridView";
@@ -1972,7 +1991,7 @@
             this.admin_service_pnl.Controls.Add(this.admin_serviceAdd_btn);
             this.admin_service_pnl.Controls.Add(this.label16);
             this.admin_service_pnl.Controls.Add(this.admin_service_gridView);
-            this.admin_service_pnl.Location = new System.Drawing.Point(220, 1);
+            this.admin_service_pnl.Location = new System.Drawing.Point(206, 702);
             this.admin_service_pnl.Name = "admin_service_pnl";
             this.admin_service_pnl.Size = new System.Drawing.Size(1145, 750);
             this.admin_service_pnl.TabIndex = 6;
@@ -2307,26 +2326,26 @@
             // 
             // admin_service_gridView
             // 
-            dataGridViewCellStyle106.BackColor = System.Drawing.Color.White;
-            this.admin_service_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle106;
-            dataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle107.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle107.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle107.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle107.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_service_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle107;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.admin_service_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_service_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.admin_service_gridView.ColumnHeadersHeight = 40;
             this.admin_service_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle108.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle108.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle108.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle108.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle108.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle108.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_service_gridView.DefaultCellStyle = dataGridViewCellStyle108;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_service_gridView.DefaultCellStyle = dataGridViewCellStyle12;
             this.admin_service_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_service_gridView.Location = new System.Drawing.Point(3, 114);
             this.admin_service_gridView.Name = "admin_service_gridView";
@@ -2360,7 +2379,7 @@
             // 
             this.admin_clients_pnl.Controls.Add(this.admin_client_gridView);
             this.admin_clients_pnl.Controls.Add(this.label18);
-            this.admin_clients_pnl.Location = new System.Drawing.Point(219, 0);
+            this.admin_clients_pnl.Location = new System.Drawing.Point(206, 707);
             this.admin_clients_pnl.Name = "admin_clients_pnl";
             this.admin_clients_pnl.Size = new System.Drawing.Size(1148, 751);
             this.admin_clients_pnl.TabIndex = 7;
@@ -2368,26 +2387,26 @@
             // 
             // admin_client_gridView
             // 
-            dataGridViewCellStyle109.BackColor = System.Drawing.Color.White;
-            this.admin_client_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle109;
-            dataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle110.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle110.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle110.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle110.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_client_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle110;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.admin_client_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_client_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.admin_client_gridView.ColumnHeadersHeight = 40;
             this.admin_client_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle111.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle111.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle111.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle111.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle111.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_client_gridView.DefaultCellStyle = dataGridViewCellStyle111;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_client_gridView.DefaultCellStyle = dataGridViewCellStyle15;
             this.admin_client_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_client_gridView.Location = new System.Drawing.Point(3, 114);
             this.admin_client_gridView.Name = "admin_client_gridView";
@@ -2437,7 +2456,7 @@
             this.admin_schedule_pnl.Controls.Add(this.label20);
             this.admin_schedule_pnl.Controls.Add(this.admin_schedule_gridView);
             this.admin_schedule_pnl.Controls.Add(this.guna2CustomGradientPanel5);
-            this.admin_schedule_pnl.Location = new System.Drawing.Point(218, 1);
+            this.admin_schedule_pnl.Location = new System.Drawing.Point(206, 717);
             this.admin_schedule_pnl.Name = "admin_schedule_pnl";
             this.admin_schedule_pnl.Size = new System.Drawing.Size(1151, 751);
             this.admin_schedule_pnl.TabIndex = 8;
@@ -2502,31 +2521,31 @@
             // 
             // admin_schedule_gridView
             // 
-            dataGridViewCellStyle112.BackColor = System.Drawing.Color.White;
-            this.admin_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle112;
-            dataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle113.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle113.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle113.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle113.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle113.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle113.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle113;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.admin_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.admin_schedule_gridView.ColumnHeadersHeight = 40;
             this.admin_schedule_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle114.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle114.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle114.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle114.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle114.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle114;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle18;
             this.admin_schedule_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_schedule_gridView.Location = new System.Drawing.Point(3, 104);
             this.admin_schedule_gridView.Name = "admin_schedule_gridView";
             this.admin_schedule_gridView.RowHeadersVisible = false;
-            this.admin_schedule_gridView.Size = new System.Drawing.Size(1121, 336);
+            this.admin_schedule_gridView.Size = new System.Drawing.Size(1121, 365);
             this.admin_schedule_gridView.TabIndex = 1;
             this.admin_schedule_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.admin_schedule_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -2602,7 +2621,7 @@
             this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportExpenses_gridView);
             this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportIncome_gridView);
             this.admin_financialReport_pnl.Controls.Add(this.label24);
-            this.admin_financialReport_pnl.Location = new System.Drawing.Point(217, 0);
+            this.admin_financialReport_pnl.Location = new System.Drawing.Point(206, 723);
             this.admin_financialReport_pnl.Name = "admin_financialReport_pnl";
             this.admin_financialReport_pnl.Size = new System.Drawing.Size(1151, 748);
             this.admin_financialReport_pnl.TabIndex = 9;
@@ -2613,9 +2632,9 @@
             this.addExpennse_pnl.Controls.Add(this.expenseDiscription_tb);
             this.addExpennse_pnl.Controls.Add(this.expenseAmount_tb);
             this.addExpennse_pnl.Controls.Add(this.addExpenseBack_btn);
-            this.addExpennse_pnl.Location = new System.Drawing.Point(3, 0);
+            this.addExpennse_pnl.Location = new System.Drawing.Point(0, 101);
             this.addExpennse_pnl.Name = "addExpennse_pnl";
-            this.addExpennse_pnl.Size = new System.Drawing.Size(1144, 751);
+            this.addExpennse_pnl.Size = new System.Drawing.Size(1157, 751);
             this.addExpennse_pnl.TabIndex = 9;
             this.addExpennse_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.addExpennse_pnl_Paint);
             // 
@@ -2821,26 +2840,26 @@
             // 
             // admin_financialReportExpenses_gridView
             // 
-            dataGridViewCellStyle115.BackColor = System.Drawing.Color.White;
-            this.admin_financialReportExpenses_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle115;
-            dataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle116.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle116.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle116.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle116.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle116.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle116.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_financialReportExpenses_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle116;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.admin_financialReportExpenses_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_financialReportExpenses_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.admin_financialReportExpenses_gridView.ColumnHeadersHeight = 40;
             this.admin_financialReportExpenses_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle117.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle117.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle117.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle117.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle117.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_financialReportExpenses_gridView.DefaultCellStyle = dataGridViewCellStyle117;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_financialReportExpenses_gridView.DefaultCellStyle = dataGridViewCellStyle21;
             this.admin_financialReportExpenses_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_financialReportExpenses_gridView.Location = new System.Drawing.Point(591, 172);
             this.admin_financialReportExpenses_gridView.Name = "admin_financialReportExpenses_gridView";
@@ -2872,26 +2891,26 @@
             // 
             // admin_financialReportIncome_gridView
             // 
-            dataGridViewCellStyle118.BackColor = System.Drawing.Color.White;
-            this.admin_financialReportIncome_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle118;
-            dataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle119.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle119.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle119.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle119.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle119.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle119.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_financialReportIncome_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle119;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            this.admin_financialReportIncome_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_financialReportIncome_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.admin_financialReportIncome_gridView.ColumnHeadersHeight = 40;
             this.admin_financialReportIncome_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle120.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle120.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle120.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle120.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle120.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle120.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_financialReportIncome_gridView.DefaultCellStyle = dataGridViewCellStyle120;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_financialReportIncome_gridView.DefaultCellStyle = dataGridViewCellStyle24;
             this.admin_financialReportIncome_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_financialReportIncome_gridView.Location = new System.Drawing.Point(66, 172);
             this.admin_financialReportIncome_gridView.Name = "admin_financialReportIncome_gridView";
@@ -2943,7 +2962,7 @@
             this.admin_appointment_pnl.Controls.Add(this.admin_appointmentTodayAppointment_gridView);
             this.admin_appointment_pnl.Controls.Add(this.label31);
             this.admin_appointment_pnl.Controls.Add(this.label30);
-            this.admin_appointment_pnl.Location = new System.Drawing.Point(216, 0);
+            this.admin_appointment_pnl.Location = new System.Drawing.Point(206, 740);
             this.admin_appointment_pnl.Name = "admin_appointment_pnl";
             this.admin_appointment_pnl.Size = new System.Drawing.Size(1148, 751);
             this.admin_appointment_pnl.TabIndex = 10;
@@ -2953,26 +2972,26 @@
             // 
             this.admin_appointmentCompletedToday_gridView.AllowUserToAddRows = false;
             this.admin_appointmentCompletedToday_gridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle121.BackColor = System.Drawing.Color.White;
-            this.admin_appointmentCompletedToday_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle121;
-            dataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle122.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle122.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle122.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle122.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle122.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle122.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_appointmentCompletedToday_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle122;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            this.admin_appointmentCompletedToday_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_appointmentCompletedToday_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.admin_appointmentCompletedToday_gridView.ColumnHeadersHeight = 40;
             this.admin_appointmentCompletedToday_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle123.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle123.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle123.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle123.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle123.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_appointmentCompletedToday_gridView.DefaultCellStyle = dataGridViewCellStyle123;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_appointmentCompletedToday_gridView.DefaultCellStyle = dataGridViewCellStyle27;
             this.admin_appointmentCompletedToday_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentCompletedToday_gridView.Location = new System.Drawing.Point(3, 550);
             this.admin_appointmentCompletedToday_gridView.Name = "admin_appointmentCompletedToday_gridView";
@@ -3018,26 +3037,26 @@
             // 
             // admin_appointmentThisMonth_gridview
             // 
-            dataGridViewCellStyle124.BackColor = System.Drawing.Color.White;
-            this.admin_appointmentThisMonth_gridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle124;
-            dataGridViewCellStyle125.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle125.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle125.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle125.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle125.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle125.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle125.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_appointmentThisMonth_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle125;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
+            this.admin_appointmentThisMonth_gridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_appointmentThisMonth_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.admin_appointmentThisMonth_gridview.ColumnHeadersHeight = 40;
             this.admin_appointmentThisMonth_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle126.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle126.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle126.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle126.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle126.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_appointmentThisMonth_gridview.DefaultCellStyle = dataGridViewCellStyle126;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_appointmentThisMonth_gridview.DefaultCellStyle = dataGridViewCellStyle30;
             this.admin_appointmentThisMonth_gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentThisMonth_gridview.Location = new System.Drawing.Point(3, 343);
             this.admin_appointmentThisMonth_gridview.Name = "admin_appointmentThisMonth_gridview";
@@ -3082,26 +3101,26 @@
             // 
             // admin_appointmentTodayAppointment_gridView
             // 
-            dataGridViewCellStyle127.BackColor = System.Drawing.Color.White;
-            this.admin_appointmentTodayAppointment_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle127;
-            dataGridViewCellStyle128.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle128.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle128.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle128.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle128.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle128.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle128.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_appointmentTodayAppointment_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle128;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
+            this.admin_appointmentTodayAppointment_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_appointmentTodayAppointment_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.admin_appointmentTodayAppointment_gridView.ColumnHeadersHeight = 40;
             this.admin_appointmentTodayAppointment_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle129.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle129.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle129.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle129.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle129.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle129.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_appointmentTodayAppointment_gridView.DefaultCellStyle = dataGridViewCellStyle129;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_appointmentTodayAppointment_gridView.DefaultCellStyle = dataGridViewCellStyle33;
             this.admin_appointmentTodayAppointment_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_appointmentTodayAppointment_gridView.Location = new System.Drawing.Point(3, 144);
             this.admin_appointmentTodayAppointment_gridView.Name = "admin_appointmentTodayAppointment_gridView";
@@ -3184,7 +3203,7 @@
             this.admin_user_pnl.Controls.Add(this.label36);
             this.admin_user_pnl.Controls.Add(this.admin_userAccountType_lbl);
             this.admin_user_pnl.Controls.Add(this.label34);
-            this.admin_user_pnl.Location = new System.Drawing.Point(216, 0);
+            this.admin_user_pnl.Location = new System.Drawing.Point(206, 726);
             this.admin_user_pnl.Name = "admin_user_pnl";
             this.admin_user_pnl.Size = new System.Drawing.Size(1148, 748);
             this.admin_user_pnl.TabIndex = 11;
@@ -3717,26 +3736,26 @@
             // 
             // admin_editOtherUsers_gridView
             // 
-            dataGridViewCellStyle130.BackColor = System.Drawing.Color.White;
-            this.admin_editOtherUsers_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle130;
-            dataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle131.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle131.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle131.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle131.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle131.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle131.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.admin_editOtherUsers_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle131;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
+            this.admin_editOtherUsers_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.admin_editOtherUsers_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.admin_editOtherUsers_gridView.ColumnHeadersHeight = 40;
             this.admin_editOtherUsers_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle132.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle132.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle132.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle132.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle132.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle132.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle132.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.admin_editOtherUsers_gridView.DefaultCellStyle = dataGridViewCellStyle132;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.admin_editOtherUsers_gridView.DefaultCellStyle = dataGridViewCellStyle36;
             this.admin_editOtherUsers_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.admin_editOtherUsers_gridView.Location = new System.Drawing.Point(6, 88);
             this.admin_editOtherUsers_gridView.Name = "admin_editOtherUsers_gridView";
@@ -4443,6 +4462,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.admin_menu_pnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "admin";
             this.Text = "admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -4454,19 +4474,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.admin_dashboard_pnl.ResumeLayout(false);
             this.admin_dashboard_pnl.PerformLayout();
-            this.admin_totalSalariesAndProfit_pnl.ResumeLayout(false);
-            this.admin_totalSalariesAndProfit_pnl.PerformLayout();
-            this.admin_totalServiceAndEmployees_pnl.ResumeLayout(false);
-            this.admin_totalServiceAndEmployees_pnl.PerformLayout();
-            this.admin_dashboard_income_pnl.ResumeLayout(false);
-            this.admin_dashboard_income_pnl.PerformLayout();
-            this.admin_search_pnl.ResumeLayout(false);
-            this.admin_search_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).EndInit();
-            this.guna2CustomGradientPanel4.ResumeLayout(false);
-            this.guna2CustomGradientPanel4.PerformLayout();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
+            this.admin_search_pnl.ResumeLayout(false);
+            this.admin_search_pnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_searchCarDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             this.admin_employee_pnl.ResumeLayout(false);
@@ -4534,22 +4547,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel admin_dashboard_pnl;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel admin_dashboard_income_pnl;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel admin_totalServiceAndEmployees_pnl;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel admin_totalSalariesAndProfit_pnl;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label admin_monthIncome_lbl;
         private System.Windows.Forms.Label admin_yearIncome_lbl;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label admin_totalProfit_lbl;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label admin_monthlySalaries_lbl;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label admin_totalEmployees_lbl;
         private System.Windows.Forms.Label admin_totalServiceDone_lbl;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel admin_search_pnl;
         private System.Windows.Forms.Panel admin_employee_pnl;
         private System.Windows.Forms.Label label14;
@@ -4669,25 +4671,9 @@
         private Guna.UI2.WinForms.Guna2Button search_clear_btn;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2DataGridView employee_searchGridView;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private System.Windows.Forms.Label employee_color_lbl;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label employee_Year_lbl;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label employee_make_lbl;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label employee_model_lbl;
-        private System.Windows.Forms.Label label23;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private System.Windows.Forms.Label employee_phoneNumber_lbl;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label employee_address_lbl;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label employee_ownerName_lbl;
+        private System.Windows.Forms.Label employee_lastServiceDate_lbl;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.Label employee_carNumber_lbl;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label employee_servicesDone_lbl;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
@@ -4737,5 +4723,18 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2TextBox editUserAccountType_tb;
         private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2DataGridView employee_searchCarDataGridView;
+        private Guna.Charts.WinForms.GunaChart gunaChart1;
+        private Guna.Charts.WinForms.GunaChart gunaChart2;
+        private Guna.Charts.WinForms.GunaChart gunaChart3;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private Guna.Charts.WinForms.GunaChart gunaChart4;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label admin_totalProfit_lbl;
+        private System.Windows.Forms.Label label7;
     }
 }

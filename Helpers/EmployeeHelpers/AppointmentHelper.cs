@@ -25,11 +25,9 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
                         a.Appointment_Discount,
                         a.Appointment_Grand_Total,
                         a.Appointment_Pay_Method,
-                        a.Appointment_Status,
-                        s.Service_Name AS Service
+                        a.Appointment_Status
                      FROM appointment a
                      INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
-                     LEFT JOIN services s ON a.Appointment_Service_Id = s.Service_Id
                      WHERE a.Appointment_Status = 'Pending'";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
@@ -45,6 +43,7 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
                 }
             }
         }
+
         public static void LoadServices(
            CheckedListBox serviceCheckListBox,
            Dictionary<string, int> serviceMap)
@@ -78,6 +77,7 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
                 }
             }
         }
+
         public static decimal CalculateTotalFromSelectedServices(CheckedListBox serviceList)
         {
             decimal total = 0;
@@ -103,6 +103,7 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
 
             return total;
         }
+
         public static void SaveAppointment(
             string ownerName,
             string cnic,
@@ -121,8 +122,7 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
             string bookedBy,
             string assignedEmployeeName,
             List<string> serviceNames,
-            Label employeeNameLabel // for showing who booked
-            )
+            Label employeeNameLabel)
         {
             using (MySqlConnection conn = DatabaseConnectionHelper.GetConnection())
             {
@@ -130,11 +130,11 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
                 {
                     conn.Open();
 
-                    // 1. Insert client and get clientId
+                    // 1. Insert client
                     string insertClient = @"INSERT INTO clients 
-    (Client_Name, Client_CNIC, Client_Phone, Client_Address, Client_Car_Number, Client_Car_Make, Client_Car_Model, Client_Car_Color, Client_Car_Year)
-    VALUES (@name, @cnic, @phone, @address, @carNumber, @make, @model, @color, @year);
-    SELECT LAST_INSERT_ID();";
+(Client_Name, Client_CNIC, Client_Phone, Client_Address, Client_Car_Number, Client_Car_Make, Client_Car_Model, Client_Car_Color, Client_Car_Year)
+VALUES (@name, @cnic, @phone, @address, @carNumber, @make, @model, @color, @year);
+SELECT LAST_INSERT_ID();";
 
                     int clientId;
                     using (MySqlCommand cmd = new MySqlCommand(insertClient, conn))
@@ -152,7 +152,7 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
                         clientId = Convert.ToInt32(cmd.ExecuteScalar());
                     }
 
-                    // 2. Get Employee_Id for assigned employee (if any)
+                    // 2. Get assigned employee ID (optional)
                     int employeeId = -1;
                     if (!string.IsNullOrEmpty(assignedEmployeeName))
                     {
@@ -166,8 +166,31 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
                         }
                     }
 
-                    // 3. Get service IDs
-                    List<int> serviceIds = new List<int>();
+                    // 3. Insert one appointment (without service ID)
+                    int appointmentId;
+                    string insertAppointment = @"INSERT INTO appointment
+(Appointment_Client_Id, Appointment_Employee_Id, Appointment_Date, Appointment_Total, Appointment_Discount, Appointment_Grand_Total, Appointment_Pay_Method, Appointment_Booked_By, Appointment_Alert, Appointment_Status)
+VALUES
+(@clientId, @employeeId, @date, @total, @discount, @grandTotal, @payment, @bookedBy, @alert, @status);
+SELECT LAST_INSERT_ID();";
+
+                    using (MySqlCommand appointCmd = new MySqlCommand(insertAppointment, conn))
+                    {
+                        appointCmd.Parameters.AddWithValue("@clientId", clientId);
+                        appointCmd.Parameters.AddWithValue("@employeeId", employeeId);
+                        appointCmd.Parameters.AddWithValue("@date", appointmentDate);
+                        appointCmd.Parameters.AddWithValue("@total", total);
+                        appointCmd.Parameters.AddWithValue("@discount", discount);
+                        appointCmd.Parameters.AddWithValue("@grandTotal", grandTotal);
+                        appointCmd.Parameters.AddWithValue("@payment", paymentMethod);
+                        appointCmd.Parameters.AddWithValue("@bookedBy", bookedBy);
+                        appointCmd.Parameters.AddWithValue("@alert", true);
+                        appointCmd.Parameters.AddWithValue("@status", "Pending");
+
+                        appointmentId = Convert.ToInt32(appointCmd.ExecuteScalar());
+                    }
+
+                    // 4. Insert into appointment_services table for each selected service
                     foreach (var serviceName in serviceNames)
                     {
                         string getServiceId = "SELECT Service_Id FROM services WHERE Service_Name = @name";
@@ -176,37 +199,22 @@ namespace FYP_PROJECT.Helpers.EmployeeHelpers
                             svcCmd.Parameters.AddWithValue("@name", serviceName);
                             object svcIdObj = svcCmd.ExecuteScalar();
                             if (svcIdObj != null)
-                                serviceIds.Add(Convert.ToInt32(svcIdObj));
+                            {
+                                int serviceId = Convert.ToInt32(svcIdObj);
+
+                                string insertLink = @"INSERT INTO appointment_services (Appointment_Id, Service_Id)
+                                              VALUES (@appointmentId, @serviceId)";
+                                using (MySqlCommand linkCmd = new MySqlCommand(insertLink, conn))
+                                {
+                                    linkCmd.Parameters.AddWithValue("@appointmentId", appointmentId);
+                                    linkCmd.Parameters.AddWithValue("@serviceId", serviceId);
+                                    linkCmd.ExecuteNonQuery();
+                                }
+                            }
                         }
                     }
 
-                    // 4. Insert appointment for each service
-                    foreach (int serviceId in serviceIds)
-                    {
-                        string insertAppointment = @"INSERT INTO appointment
-            (Appointment_Client_Id, Appointment_Service_Id, Appointment_Employee_Id, Appointment_Date, Appointment_Total, Appointment_Discount, Appointment_Grand_Total, Appointment_Pay_Method, Appointment_Booked_By, Appointment_Alert, Appointment_Status)
-            VALUES
-            (@clientId, @serviceId, @employeeId, @date, @total, @discount, @grandTotal, @payment, @bookedBy, @alert, @status);";
-
-                        using (MySqlCommand appointCmd = new MySqlCommand(insertAppointment, conn))
-                        {
-                            appointCmd.Parameters.AddWithValue("@clientId", clientId);
-                            appointCmd.Parameters.AddWithValue("@serviceId", serviceId);
-                            appointCmd.Parameters.AddWithValue("@employeeId", employeeId);
-                            appointCmd.Parameters.AddWithValue("@date", appointmentDate);
-                            appointCmd.Parameters.AddWithValue("@total", total);
-                            appointCmd.Parameters.AddWithValue("@discount", discount);
-                            appointCmd.Parameters.AddWithValue("@grandTotal", grandTotal);
-                            appointCmd.Parameters.AddWithValue("@payment", paymentMethod);
-                            appointCmd.Parameters.AddWithValue("@bookedBy", bookedBy);
-                            appointCmd.Parameters.AddWithValue("@alert", true);
-                            appointCmd.Parameters.AddWithValue("@status", "Pending");
-
-                            appointCmd.ExecuteNonQuery();
-                        }
-                    }
-
-                    MessageBox.Show("Appointment and client saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Appointment and services saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {

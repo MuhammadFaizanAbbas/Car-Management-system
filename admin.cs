@@ -17,7 +17,8 @@ using System.Xml;
 using FYP_PROJECT.Helpers.CommonHelpers;
 using FYP_PROJECT.Helpers.AdminHelpers;
 using System.Globalization;
-
+using Guna.Charts.WinForms;
+using Guna.Charts.Interfaces;
 
 namespace FYP_PROJECT
 {
@@ -69,8 +70,44 @@ namespace FYP_PROJECT
             panel.Region = new Region(path);
             e.Graphics.FillPath(new SolidBrush(panel.BackColor), path);
         }
+        private void LoadEmployeeRolePieChart()
+        {
+            // 1) Get data  ──────────────────────────────
+            var roleCounts = EmployeeHelper.GetEmployeeCountByRole();
+            if (roleCounts.Count == 0)
+            {
+                MessageBox.Show("No employee records found.");
+                return;
+            }
+
+            // 2) Build dataset  ─────────────────────────
+            var ds = new GunaPieDataset
+            {
+                Label = "Employees by Role",
+                FillColors = new ColorCollection
+        {
+            Color.MediumSeaGreen, Color.CornflowerBlue, Color.OrangeRed,
+            Color.MediumPurple,  Color.Goldenrod,      Color.Teal,
+            Color.SandyBrown,    Color.DarkCyan
+        }
+            };
+
+            foreach (var kv in roleCounts)          // kv.Key = role, kv.Value = count
+                ds.DataPoints.Add(kv.Key, kv.Value);
+
+            // 3) Push to chart  ─────────────────────────
+            gunaChart4.Datasets.Clear();
+            gunaChart4.Datasets.Add(ds);
+
+            gunaChart4.Legend.Position = LegendPosition.Right;
+            gunaChart4.ForeColor = Color.White;   // labels / legend text
+            gunaChart4.BackColor = Color.Black;   // match your black panel
+
+            gunaChart4.Update();
+        }
         private void admin_Load(object sender, EventArgs e)
         {
+            this.Icon = Properties.Resources.app_icon;
             string currentMonth = DateTime.Now.ToString("MMMM");
             // Select current month in comboBox
             admin_financialReportMonthSelection_cb.SelectedItem = currentMonth;
@@ -92,10 +129,56 @@ namespace FYP_PROJECT
             LoadTodayAppointments();
             LoadAllUsersToGrid();
             LoadAdminInfoToLabels();
+         
+
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.GridLines.Display = false;
+           
+            
+            gunaChart2.XAxes.GridLines.Display = false;
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.Ticks.Font.Size = 10;
+           
+            
+            BuildLast30DaysIncomeBar();   
+            LoadIncomePieChart();
+            BuildServicesDoneThisMonthBar();
+            LoadEmployeeRolePieChart();
+
+
+        }
+        private bool _isClosing = false;
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            _isClosing = true;              // tell all code to stop touching UI
+            base.OnFormClosing(e);
+        }
+        private void SafeUpdateChart(Guna.Charts.WinForms.GunaChart chart)
+        {
+            if (_isClosing) return;                     // skip if the form is closing
+
+            if (chart.InvokeRequired)
+                chart.Invoke((MethodInvoker)(() => chart.Update()));
+            else
+                chart.Update();
         }
         private void admin_dashboard_btn_Click(object sender, EventArgs e)
         {
             buttonAnimationHelper.SetActiveButton((Guna2Button)sender);
+            gunaChart2.BackColor = Color.Black;
+            gunaChart2.ForeColor = Color.White;
+
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.GridLines.Display = false;
+
+
+            gunaChart2.XAxes.GridLines.Display = false;
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.Ticks.Font.Size = 10;
+            BuildLast30DaysIncomeBar();
+            LoadIncomePieChart();
+            BuildServicesDoneThisMonthBar();
             admin_dashboard_pnl.Show();
             admin_search_pnl.Hide();
             admin_employee_pnl.Hide();
@@ -105,6 +188,127 @@ namespace FYP_PROJECT
             admin_financialReport_pnl.Hide();
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
+        }
+
+        private void BuildLast30DaysIncomeBar()
+        {
+            var data = IncomeHelper.GetLast30DaysIncome(); // label => amount
+            if (data.Count == 0)
+            {
+                MessageBox.Show("No income found for the last 30 days.");
+                return;
+            }
+
+            // 1) Slim bar dataset – looks like candle stems
+            var ds = new GunaBarDataset
+            {
+                Label = "Last 30 Days Income",
+                BarPercentage = 0.15 // super-thin bars for candle style
+            };
+
+            // Add data points
+            foreach (var kv in data) // kv.Key = "Jul 11", kv.Value = amount
+                ds.DataPoints.Add(kv.Key, kv.Value);
+
+            // Set bar colors (optional)
+                ds.FillColors = new Guna.Charts.WinForms.ColorCollection
+                {
+                    Color.DarkOrange, Color.OrangeRed, Color.MediumVioletRed,
+                    Color.LightSalmon, Color.Firebrick, Color.Tomato,
+                    Color.Crimson, Color.IndianRed
+                };
+
+            // 2) Chart styling
+            gunaChart2.Datasets.Clear();
+            gunaChart2.Datasets.Add(ds);
+
+          
+            gunaChart2.Legend.Position = Guna.Charts.WinForms.LegendPosition.Bottom;
+
+            gunaChart2.XAxes.GridLines.Display = false;
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.Ticks.Font.Size = 10;
+            gunaChart2.XAxes.Ticks.Font.Name = "Segoe UI";
+            gunaChart2.YAxes.Ticks.Font.Size = 10;
+            gunaChart2.YAxes.Ticks.Font.Name = "Segoe UI";
+
+            gunaChart2.Update();
+        }
+        private void BuildServicesDoneThisMonthBar()
+        {
+            var data = IncomeHelper.GetServicesDoneThisMonth(); // Fully qualified static call
+
+            if (data.Count == 0)
+            {
+                MessageBox.Show("No service records found for this month.");
+                return;
+            }
+
+            var ds = new GunaBarDataset
+            {
+                Label = "Services Done This Month",
+                BarPercentage = 0.15
+            };
+
+            foreach (var kv in data)
+                ds.DataPoints.Add(kv.Key, kv.Value);
+
+            ds.FillColors = new Guna.Charts.WinForms.ColorCollection
+    {
+        Color.MediumSeaGreen, Color.SeaGreen, Color.ForestGreen,
+        Color.LightGreen, Color.DarkOliveGreen, Color.OliveDrab,
+        Color.YellowGreen, Color.DarkGreen
+    };
+
+            gunaChart3.Datasets.Clear();
+            gunaChart3.Datasets.Add(ds);
+          
+            gunaChart3.Legend.Position = Guna.Charts.WinForms.LegendPosition.Bottom;
+
+            gunaChart3.XAxes.GridLines.Display = false;
+            gunaChart3.YAxes.GridLines.Display = false;
+            gunaChart3.XAxes.Ticks.Font.Size = 10;
+            gunaChart3.XAxes.Ticks.Font.Name = "Segoe UI";
+            gunaChart3.YAxes.Ticks.Font.Size = 10;
+            gunaChart3.YAxes.Ticks.Font.Name = "Segoe UI";
+
+            gunaChart3.Update();
+        }
+
+        private void LoadIncomePieChart()
+        {
+            var incomeData = IncomeHelper.GetYearlyIncomeByMonth();
+            double totalIncome = incomeData.Values.Sum();
+
+            if (totalIncome == 0)
+            {
+                MessageBox.Show("No income data for this year.");
+                return;
+            }
+
+            var dataset = new GunaPieDataset
+            {
+                Label = "Monthly Income % (This Year)",
+                FillColors = new Guna.Charts.WinForms.ColorCollection
+        {
+            Color.DarkOrange, Color.OrangeRed, Color.MediumVioletRed,
+            Color.LightSalmon, Color.Firebrick, Color.Tomato,
+            Color.Crimson, Color.IndianRed, Color.IndianRed,
+            Color.LightCoral, Color.Salmon, Color.Peru
+        }
+            };
+
+            foreach (var entry in incomeData)
+            {
+                double percent = Math.Round((entry.Value / totalIncome) * 100, 2);
+                dataset.DataPoints.Add(entry.Key, percent);
+            }
+
+            gunaChart1.Datasets.Clear();
+            gunaChart1.Datasets.Add(dataset);
+            gunaChart1.Legend.Position = LegendPosition.Right;
+                         // white labels/legend
+            gunaChart1.Update();
         }
         private void admin_search_btn_Click(object sender, EventArgs e)
         {
@@ -1188,6 +1392,14 @@ namespace FYP_PROJECT
                             MessageBox.Show("Employee added successfully.");
                             LoadEmployees(); // Refresh employee grid
                             employeeAdd_pnl.Hide(); // Optionally hide panel
+                             // ✅ Clear all input fields
+                            addEmployeeName_tb.Text = "";
+                            addEmployeeNumber_tb.Text = "";
+                            addEmployeeEmail_tb.Text = "";
+                            addEmployeeCnic_tb.Text = "";
+                            addEmployeeRole_tb.Text = "";
+                            addEmployeeSalary_tb.Text = "";
+                            addEmployeeAddress_tb.Text = "";
                         }
                         else
                         {
@@ -1357,7 +1569,6 @@ namespace FYP_PROJECT
         // Search Button
         private void employee_searchBar_btn_Click(object sender, EventArgs e)
         {
-
             string input = employee_search_tb.Text.Trim();
 
             if (string.IsNullOrEmpty(input))
@@ -1369,15 +1580,9 @@ namespace FYP_PROJECT
             CarSearchService searchService = new CarSearchService();
             searchService.SearchAndDisplay(
                 input,
-                employee_carNumber_lbl,
-                employee_ownerName_lbl,
-                employee_address_lbl,
-                employee_phoneNumber_lbl,
-                employee_model_lbl,
-                employee_make_lbl,
-                employee_Year_lbl,
-                employee_color_lbl,
                 employee_servicesDone_lbl,
+                employee_lastServiceDate_lbl,
+                employee_searchCarDataGridView,
                 employee_searchGridView
             );
         }
@@ -1393,7 +1598,7 @@ namespace FYP_PROJECT
                 admin_yearIncome_lbl.Text = summary.ThisYearIncome.ToString("C", pakCulture);
                 admin_totalServiceDone_lbl.Text = summary.TotalServicesDone.ToString();
                 admin_totalEmployees_lbl.Text = summary.TotalEmployees.ToString();
-                admin_monthlySalaries_lbl.Text = summary.MonthlySalaries.ToString("C", pakCulture);
+                
                 admin_totalProfit_lbl.Text = summary.TotalProfit.ToString("C", pakCulture);
             }
             catch (Exception ex)
@@ -1538,6 +1743,22 @@ namespace FYP_PROJECT
         private void search_clear_btn_Click(object sender, EventArgs e)
         {
 
+            // Clear the two labels used for search results
+            employee_servicesDone_lbl.Text = "";
+            employee_lastServiceDate_lbl.Text = "";
+
+            // Clear the two DataGridViews
+            employee_searchCarDataGridView.DataSource = null;
+            employee_searchGridView.DataSource = null;
+
+            // Clear search textbox (if any)
+            employee_search_tb.Text = "";
+
+            // Optional: Reset other UI controls like dropdowns, radio buttons if present
+            // e.g., search_type_comboBox.SelectedIndex = -1;
+
+            // Optional: Hide any error or info labels if shown previously
+            // errorLabel.Visible = false;
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -2333,6 +2554,11 @@ namespace FYP_PROJECT
         }
 
         private void editUserName_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaChart1_Load(object sender, EventArgs e)
         {
 
         }

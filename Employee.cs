@@ -15,6 +15,10 @@ using System.Drawing.Printing;
 using FYP_PROJECT.Helpers.CommonHelpers;
 using FYP_PROJECT.Helpers.EmployeeHelpers;
 using Guna.UI2.WinForms;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 
 namespace FYP_PROJECT
@@ -40,6 +44,8 @@ namespace FYP_PROJECT
             animationHelper.SetActiveButton(employee_welcomePage_btn); // or employee_welcomePage_btn
             logoImage = Image.FromFile(@"C:\Users\abbas\OneDrive\Desktop\FYP_PROJECT\Image\pristine_shine_logo.png");
             printDocument1.PrintPage += PrintDocument1_PrintPage;
+            employee_appointmentDiscount_tb.TextChanged += employee_appointmentDiscount_tb_TextChanged;
+
         }
         //for animation and active state of button
         private ButtonAnimationHelper buttonAnimator;
@@ -99,6 +105,7 @@ namespace FYP_PROJECT
         }
         private void Empoyee_Load(object sender, EventArgs e)
         {
+            this.Icon = Properties.Resources.app_icon;
             LoadServices();
             LoadAssignableEmployees();
             LoadPendingAppointments();
@@ -171,6 +178,14 @@ namespace FYP_PROJECT
                 decimal total = AppointmentHelper.CalculateTotalFromSelectedServices(employee_appointmentServices_checkListBox);
                 employee_appointmentTotal_tb.Text = total.ToString("0.00");
 
+                // Set default discount
+                employee_appointmentDiscount_tb.Text = "0.00";
+
+                // Calculate and set grand total
+                decimal discount = 0;
+                decimal grandTotal = total - discount;
+                employee_appointment_GrandTotal_tb.Text = grandTotal.ToString("0.00");
+
                 employee_appointmentPayment_pnl.Show();
                 employee_appointmentDetails_pnl.Hide();
             }
@@ -182,8 +197,29 @@ namespace FYP_PROJECT
         private void guna2TextBox8_TextChanged(object sender, EventArgs e)
         {
 
-
         }
+        private void employee_appointmentDiscount_tb_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal total = 0;
+                decimal.TryParse(employee_appointmentTotal_tb.Text, out total);
+
+                decimal discount = 0;
+                decimal.TryParse(employee_appointmentDiscount_tb.Text, out discount);
+
+                if (discount < 0) discount = 0;
+                if (discount > total) discount = total;
+
+                decimal grandTotal = total - discount;
+                employee_appointment_GrandTotal_tb.Text = grandTotal.ToString("0.00");
+            }
+            catch
+            {
+                employee_appointment_GrandTotal_tb.Text = "0.00";
+            }
+        }
+
         private void employee_appointmentDone_btn_Click(object sender, EventArgs e)
         {
             // Set summary labels like before (optional, for UI update)
@@ -386,15 +422,9 @@ namespace FYP_PROJECT
             CarSearchService searchService = new CarSearchService();
             searchService.SearchAndDisplay(
                 input,
-                employee_carNumber_lbl,
-                employee_ownerName_lbl,
-                employee_address_lbl,
-                employee_phoneNumber_lbl,
-                employee_model_lbl,
-                employee_make_lbl,
-                employee_Year_lbl,
-                employee_color_lbl,
                 employee_servicesDone_lbl,
+                employee_lastServiceDate_lbl,
+                employee_searchCarDataGridView,
                 employee_searchGridView
             );
         }
@@ -402,67 +432,35 @@ namespace FYP_PROJECT
         {
 
         }
-        private void SaveAiDetection(string issue, string suggestion)
+        private async void aiDetection_RunAi_btn_Click(object sender, EventArgs e)
         {
-            AiDetectionService aiService = new AiDetectionService();
-            if (aiService.SaveDetection(issue, suggestion, out string resultMessage))
+            if (aiDetection_pictureBox.Image == null)
             {
-                MessageBox.Show(resultMessage);
-            }
-            else
-            {
-                MessageBox.Show(resultMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void aiDetection_RunAi_btn_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty( aiImagePath))
-            {
-                MessageBox.Show("Please upload an image.");
+                MessageBox.Show("Please select an image first.");
                 return;
             }
 
-            var (issue, suggestion) = RunAiModel(aiImagePath);
+            Image resizedImage = ImageAndAIHelpers.ResizeImage(aiDetection_pictureBox.Image, 150, 150);
+            string base64Image = ImageAndAIHelpers.ImageToBase64(resizedImage, ImageFormat.Jpeg);
 
-            aiDetection_DetectedIssues_lbl.Text = issue;
-            aiDetection_SuggestedServices_lbl.Text = suggestion;
+            string apiKey = "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";  // Use your real key here!
 
-            SaveAiDetection(issue, suggestion);
-        }
-        private (string issue, string suggestion) RunAiModel(string imagePath)
-        {
-            string pythonExe = @"C:\Program Files\Python310\python.exe"; // Update this path
-            string scriptPath = @"C:\Users\abbas\OneDrive\Desktop\FYP_PROJECT\Ai Script\predict_car_damage.py"; // Update this path
+            OpenAIResponse result = await OpenAIHelper.GetCarDetailingSuggestionsAsync(base64Image, apiKey);
 
-            ProcessStartInfo start = new ProcessStartInfo
+            if (result != null)
             {
-                FileName = pythonExe,
-                Arguments = $"\"{scriptPath}\" \"{imagePath}\"",
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                CreateNoWindow = true
-            };
-            using (Process process = Process.Start(start))
+                aiDetection_DetectedIssues_lbl.Text = "Detected Issues:\n" + result.DetectedIssues;
+                aiDetection_SuggestedServices_lbl.Text = "Suggested Services:\n" + result.SuggestedServices;
+
+                // Save to database
+                DatabaseHelper.SaveAIResultToDatabase(result.DetectedIssues, result.SuggestedServices);
+            }
+            else
             {
-                process.WaitForExit();  // Wait for python to finish
-
-                string error = process.StandardError.ReadToEnd();
-                if (!string.IsNullOrEmpty(error))
-                {
-                    MessageBox.Show("Python error: " + error);
-                    return ("Error", "Error");
-                }
-
-                string resultJson = process.StandardOutput.ReadToEnd();
-
-                var jsonDoc = JsonDocument.Parse(resultJson);
-                string issue = jsonDoc.RootElement.GetProperty("issue").GetString();
-                string suggestion = jsonDoc.RootElement.GetProperty("suggestion").GetString();
-
-                return (issue, suggestion);
+                MessageBox.Show("Failed to get response from AI.");
             }
         }
+
         private void employee_appointmentPrint_btn_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
@@ -500,27 +498,21 @@ namespace FYP_PROJECT
         }
         private void search_clear_btn_Click(object sender, EventArgs e)
         {
-            // Clear all client detail labels
-            employee_carNumber_lbl.Text = "";
-            employee_ownerName_lbl.Text = "";
-            employee_address_lbl.Text = "";
-            employee_phoneNumber_lbl.Text = "";
-            employee_model_lbl.Text = "";
-            employee_make_lbl.Text = "";
-            employee_Year_lbl.Text = "";
-            employee_color_lbl.Text = "";
+            // Clear the two labels used for search results
             employee_servicesDone_lbl.Text = "";
+            employee_lastServiceDate_lbl.Text = "";
 
-            // Clear DataGridView
+            // Clear the two DataGridViews
+            employee_searchCarDataGridView.DataSource = null;
             employee_searchGridView.DataSource = null;
 
-            // Optional: if you have a TextBox for entering search input, clear that too
+            // Clear search textbox (if any)
             employee_search_tb.Text = "";
 
-            // Optional: if you have any radio buttons, dropdowns, etc., reset them here
+            // Optional: Reset other UI controls like dropdowns, radio buttons if present
             // e.g., search_type_comboBox.SelectedIndex = -1;
 
-            // Optional: Hide error messages or alerts if shown previously
+            // Optional: Hide any error or info labels if shown previously
             // errorLabel.Visible = false;
         }
         private void employee_userEdit_btn_Click(object sender, EventArgs e)
@@ -696,5 +688,9 @@ namespace FYP_PROJECT
             }
         }
 
+        private void aiDetection_pictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

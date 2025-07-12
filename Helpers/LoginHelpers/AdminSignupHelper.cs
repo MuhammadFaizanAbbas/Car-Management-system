@@ -11,7 +11,7 @@ namespace FYP_PROJECT.Helpers.LoginHelpers
         private static readonly string[] AllowedDesignations =
         {
             "CEO", "Manager", "Supervisor", "Head", "Lead",
-            "Assistant Manager", "Coordinator"
+            "Assistant Manager", "Owner","Admin Staff","Operations Lead","Receptionist Manager","Inventory Manager","Accoutant"
         };
         public static bool RegisterAdmin(
             string name, string username, string password, string email,

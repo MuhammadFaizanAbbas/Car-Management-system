@@ -1,27 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace FYP_PROJECT.Helpers.CommonHelpers
 {
     public class CarSearchService
     {
-        
-
         public void SearchAndDisplay(
             string searchInput,
-            Label carNumberLbl,
-            Label ownerNameLbl,
-            Label addressLbl,
-            Label phoneLbl,
-            Label modelLbl,
-            Label makeLbl,
-            Label yearLbl,
-            Label colorLbl,
             Label servicesDoneLbl,
-            DataGridView resultGridView
+            Label lastServiceDateLbl,
+            DataGridView carGridView,
+            DataGridView appointmentGridView
         )
         {
             using (MySqlConnection conn = DatabaseConnectionHelper.GetConnection())
@@ -30,95 +22,134 @@ namespace FYP_PROJECT.Helpers.CommonHelpers
                 {
                     conn.Open();
 
-                    string clientQuery = @"
-                    SELECT 
-                        Client_Id,
-                        Client_Name,
-                        Client_Address,
-                        Client_Phone,
-                        Client_Car_Number,
-                        Client_Car_Model,
-                        Client_Car_Make,
-                        Client_Car_Year,
-                        Client_Car_Color
-                    FROM clients
-                    WHERE Client_Car_Number = @input OR Client_CNIC = @input";
+                    bool isCarNumber = IsCarNumber(searchInput);
 
-                    List<int> clientIds = new List<int>();
-
-                    using (MySqlCommand cmd = new MySqlCommand(clientQuery, conn))
+                    if (isCarNumber)
                     {
-                        cmd.Parameters.AddWithValue("@input", searchInput);
+                        string carQuery = @"
+                        SELECT Client_Car_Number, Client_Car_Model, Client_Car_Make, Client_Car_Year, Client_Car_Color
+                        FROM clients
+                        WHERE REPLACE(Client_Car_Number, ' ', '') = REPLACE(@input, ' ', '')
+                        LIMIT 1;";
 
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        using (MySqlCommand cmdCar = new MySqlCommand(carQuery, conn))
                         {
-                            if (reader.HasRows)
+                            cmdCar.Parameters.AddWithValue("@input", searchInput);
+                            using (MySqlDataAdapter carAdapter = new MySqlDataAdapter(cmdCar))
                             {
-                                while (reader.Read())
-                                {
-                                    if (clientIds.Count == 0)
-                                    {
-                                        carNumberLbl.Text = reader["Client_Car_Number"].ToString();
-                                        ownerNameLbl.Text = reader["Client_Name"].ToString();
-                                        addressLbl.Text = reader["Client_Address"].ToString();
-                                        phoneLbl.Text = reader["Client_Phone"].ToString();
-                                        modelLbl.Text = reader["Client_Car_Model"].ToString();
-                                        makeLbl.Text = reader["Client_Car_Make"].ToString();
-                                        yearLbl.Text = reader["Client_Car_Year"].ToString();
-                                        colorLbl.Text = reader["Client_Car_Color"].ToString();
-                                    }
-
-                                    clientIds.Add(Convert.ToInt32(reader["Client_Id"]));
-                                }
+                                DataTable carTable = new DataTable();
+                                carAdapter.Fill(carTable);
+                                carGridView.DataSource = carTable;
                             }
-                            else
-                            {
-                                MessageBox.Show("No client found with that car number or CNIC.");
+                        }
 
-                                carNumberLbl.Text = "";
-                                ownerNameLbl.Text = "";
-                                addressLbl.Text = "";
-                                phoneLbl.Text = "";
-                                modelLbl.Text = "";
-                                makeLbl.Text = "";
-                                yearLbl.Text = "";
-                                colorLbl.Text = "";
-                                servicesDoneLbl.Text = "";
-                                resultGridView.DataSource = null;
-                                return;
+                        // Appointments for this car number
+                        string appointmentQuery = @"
+                            SELECT 
+                                c.Client_Name,
+                                a.Appointment_Date,
+                                a.Appointment_Status,
+                                a.Appointment_Grand_Total
+                            FROM appointment a
+                            INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
+                            WHERE c.Client_Car_Number = @input
+                            ORDER BY a.Appointment_Date DESC;";
+                        using (MySqlCommand cmdApp = new MySqlCommand(appointmentQuery, conn))
+                        {
+                            cmdApp.Parameters.AddWithValue("@input", searchInput);
+                            using (MySqlDataAdapter appAdapter = new MySqlDataAdapter(cmdApp))
+                            {
+                                DataTable appointmentTable = new DataTable();
+                                appAdapter.Fill(appointmentTable);
+                                appointmentGridView.DataSource = appointmentTable;
+
+                                servicesDoneLbl.Text = $"Total Appointments: {appointmentTable.Rows.Count}";
+
+                                if (appointmentTable.Rows.Count > 0)
+                                {
+                                    lastServiceDateLbl.Text = Convert.ToDateTime(appointmentTable.Rows[0]["Appointment_Date"]).ToString("dd MMM yyyy");
+                                }
+                                else
+                                {
+                                    lastServiceDateLbl.Text = "N/A";
+                                }
                             }
                         }
                     }
-
-                    // Fetch appointments
-                    string appointmentQuery = @"
-                    SELECT 
-                        a.Appointment_Id,
-                        c.Client_Name,
-                        a.Appointment_Date,
-                        a.Appointment_Total,
-                        a.Appointment_Discount,
-                        a.Appointment_Grand_Total,
-                        a.Appointment_Pay_Method,
-                        a.Appointment_Status
-                    FROM appointment a
-                    INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
-                    WHERE a.Appointment_Client_Id IN (" + string.Join(",", clientIds) + ")";
-
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(appointmentQuery, conn))
+                    else
                     {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        resultGridView.DataSource = dt;
+                        // All cars for this CNIC
+                        string carsQuery = @"
+                        SELECT 
+                            Client_Car_Number,
+                            MAX(Client_Car_Model) AS Client_Car_Model,
+                            MAX(Client_Car_Make) AS Client_Car_Make,
+                            MAX(Client_Car_Year) AS Client_Car_Year,
+                            MAX(Client_Car_Color) AS Client_Car_Color
+                        FROM clients
+                        WHERE Client_CNIC = @input
+                        GROUP BY Client_Car_Number;";
 
-                        servicesDoneLbl.Text = dt.Rows.Count.ToString();
+                        using (MySqlCommand cmdCars = new MySqlCommand(carsQuery, conn))
+                        {
+                            cmdCars.Parameters.AddWithValue("@input", searchInput);
+                            using (MySqlDataAdapter carsAdapter = new MySqlDataAdapter(cmdCars))
+                            {
+                                DataTable carsTable = new DataTable();
+                                carsAdapter.Fill(carsTable);
+                                carGridView.DataSource = carsTable;
+
+                                servicesDoneLbl.Text = $"Total Cars: {carsTable.Rows.Count}";
+                            }
+                        }
+
+                        // Appointments for this CNIC (all cars)
+                        string appointmentQuery = @"
+                        SELECT 
+                            c.Client_Name,
+                            a.Appointment_Date,
+                            a.Appointment_Status,
+                            a.Appointment_Grand_Total
+                        FROM appointment a
+                        INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_Id
+                        WHERE c.Client_CNIC = @input
+                        ORDER BY a.Appointment_Date DESC;";
+
+                        using (MySqlCommand cmdApp = new MySqlCommand(appointmentQuery, conn))
+                        {
+                            cmdApp.Parameters.AddWithValue("@input", searchInput);
+                            using (MySqlDataAdapter appAdapter = new MySqlDataAdapter(cmdApp))
+                            {
+                                DataTable appointmentTable = new DataTable();
+                                appAdapter.Fill(appointmentTable);
+                                appointmentGridView.DataSource = appointmentTable;
+
+                                if (appointmentTable.Rows.Count > 0)
+                                {
+                                    lastServiceDateLbl.Text = Convert.ToDateTime(appointmentTable.Rows[0]["Appointment_Date"]).ToString("dd MMM yyyy");
+                                }
+                                else
+                                {
+                                    lastServiceDateLbl.Text = "N/A";
+                                }
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error searching: " + ex.Message);
+                    MessageBox.Show("Search error: " + ex.Message);
                 }
             }
+        }
+
+        // Helper method
+        private bool IsCarNumber(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return false;
+
+            // Treat any input with 8 characters or less as a car number
+            return input.Trim().Length <= 8;
         }
     }
 }

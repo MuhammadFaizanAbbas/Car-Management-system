@@ -7,11 +7,28 @@
     <ProjectGuid>{D43A8191-F81C-4448-B0C4-AAD5D5737F9A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FYP_PROJECT</RootNamespace>
-    <AssemblyName>FYP_PROJECT</AssemblyName>
+    <AssemblyName>PristineShine</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\abbas\OneDrive\Desktop\project\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/FYP_PROJECT/</UpdateUrl>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,12 +49,40 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_icon1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>22BCC79EFA3A57C69022222CE225322480135571</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FYP_PROJECT_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="FastReport.Compat, Version=2025.2.6.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8, processorArchitecture=MSIL">
+      <HintPath>packages\FastReport.Compat.2025.2.6\lib\net462\FastReport.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.DataVisualization, Version=2025.2.6.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8, processorArchitecture=MSIL">
+      <HintPath>packages\FastReport.DataVisualization.2025.2.6\lib\net462\FastReport.DataVisualization.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.30.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.30.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.1.0\lib\net48\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
@@ -147,6 +192,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
     <Reference Include="Twilio, Version=7.11.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Twilio.7.11.3\lib\net462\Twilio.dll</HintPath>
     </Reference>
@@ -164,15 +212,19 @@
     <Compile Include="DashboardSummary.cs" />
     <Compile Include="Helpers\AdminHelpers\AdminUIInitializer.cs" />
     <Compile Include="Helpers\AdminHelpers\AppointmentHelper.cs" />
+    <Compile Include="Helpers\AdminHelpers\EmployeeHelper.cs" />
     <Compile Include="Helpers\AdminHelpers\ExpenseHelper.cs" />
     <Compile Include="Helpers\AdminHelpers\FinanceHelper.cs" />
     <Compile Include="Helpers\AdminHelpers\FinanceReportHelper.cs" />
+    <Compile Include="Helpers\AdminHelpers\IncomeHelper.cs" />
     <Compile Include="Helpers\AdminHelpers\ProfitHelper.cs" />
     <Compile Include="Helpers\AdminHelpers\UserHelper.cs" />
     <Compile Include="Helpers\CommonHelpers\DatabaseConnectionHelper.cs" />
+    <Compile Include="Helpers\EmployeeHelpers\DatabaseHelper.cs" />
+    <Compile Include="Helpers\EmployeeHelpers\ImageAndAIHelpers.cs" />
+    <Compile Include="Helpers\EmployeeHelpers\OpenAIHelper.cs" />
     <Compile Include="Helpers\LoginHelpers\AdminSignupHelper.cs" />
     <Compile Include="Helpers\AdminHelpers\AdminUpdateHelper.cs" />
-    <Compile Include="Helpers\EmployeeHelpers\AiDetectionService.cs" />
     <Compile Include="Helpers\EmployeeHelpers\AppointmentHelper.cs" />
     <Compile Include="Helpers\EmployeeHelpers\AppointmentService.cs" />
     <Compile Include="Helpers\CommonHelpers\ButtonAnimationHelper.cs" />
@@ -228,6 +280,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="FYP_PROJECT_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -275,6 +328,30 @@
   <ItemGroup>
     <None Include="Resources\occupation.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="app_icon.ico" />
+    <Content Include="app_icon1.ico" />
+    <Content Include="ChatGPT Image Jul 6, 2025, 10_30_40 PM.ico" />
+    <None Include="Resources\10002065961.png" />
+    <None Include="Resources\pristine_shine-removebg-preview1.png" />
+    <None Include="Resources\f002a213-5e35-49e7-b81c-15c161d96421_rw_1200.gif" />
+    <None Include="Resources\1000206596.png" />
+    <None Include="Resources\porsche-911-carrera-t-yellow-running-86xqc82tl6thu9bh.gif" />
+    <None Include="icon\app_icon.ico" />
+    <None Include="Resources\ChatGPT Image Jul 6, 2025, 10_30_40 PM.ico" />
+    <None Include="Resources\pristine_shine-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

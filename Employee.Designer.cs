@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.employee_menu_pnl = new System.Windows.Forms.Panel();
             this.employee_aiDetection_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_welcomePage_btn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.employee_designation_lbl = new System.Windows.Forms.Label();
             this.employee_name_lbl = new System.Windows.Forms.Label();
             this.employee_accountType_lbl = new System.Windows.Forms.Label();
@@ -50,30 +54,16 @@
             this.employee_appointment_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_schedule_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_search_pnl = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.employee_searchCarDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.search_clear_btn = new Guna.UI2.WinForms.Guna2Button();
             this.label37 = new System.Windows.Forms.Label();
             this.employee_searchGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.employee_color_lbl = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.employee_Year_lbl = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.employee_make_lbl = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.employee_model_lbl = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.employee_phoneNumber_lbl = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.employee_address_lbl = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.employee_ownerName_lbl = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.employee_carNumber_lbl = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.employee_servicesDone_lbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.employee_lastServiceDate_lbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.employee_searchBar_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -89,6 +79,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.aiDetection_RunAi_btn = new Guna.UI2.WinForms.Guna2Button();
             this.aiDetection_UploadImage_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.aiDetection_pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.employee_schedule_pnl = new System.Windows.Forms.Panel();
             this.employee_scheduleMarkAsDone_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -177,6 +168,11 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.employee_userEdit_pnl = new System.Windows.Forms.Panel();
+            this.employee_userEditDone_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.employeeEditEmail_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeEditPhone_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeEditPassword_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeEditName_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.employee_userEditBack_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_userEdit_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_userOccupation_lbl = new System.Windows.Forms.Label();
@@ -189,24 +185,18 @@
             this.label54 = new System.Windows.Forms.Label();
             this.employee_userAccountType_lbl = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.aiDetection_pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.employeeEditName_tb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.employeeEditPassword_tb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.employeeEditPhone_tb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.employeeEditEmail_tb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.employee_userEditDone_btn = new Guna.UI2.WinForms.Guna2Button();
             this.employee_menu_pnl.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.employee_search_pnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_searchCarDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).BeginInit();
-            this.guna2CustomGradientPanel4.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.aiDetection_pnl.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).BeginInit();
             this.employee_schedule_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employee_schedule_gridView)).BeginInit();
             this.employee_appointment_pnl.SuspendLayout();
@@ -215,9 +205,7 @@
             this.employee_appointmentDetails_pnl.SuspendLayout();
             this.employee_user_pnl.SuspendLayout();
             this.employee_userEdit_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // employee_menu_pnl
@@ -312,6 +300,18 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(150, 139);
             this.guna2CustomGradientPanel1.TabIndex = 12;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(50, 12);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 53);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 4;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // employee_designation_lbl
             // 
@@ -473,11 +473,11 @@
             // 
             // employee_search_pnl
             // 
+            this.employee_search_pnl.Controls.Add(this.label15);
+            this.employee_search_pnl.Controls.Add(this.employee_searchCarDataGridView);
             this.employee_search_pnl.Controls.Add(this.search_clear_btn);
             this.employee_search_pnl.Controls.Add(this.label37);
             this.employee_search_pnl.Controls.Add(this.employee_searchGridView);
-            this.employee_search_pnl.Controls.Add(this.guna2CustomGradientPanel4);
-            this.employee_search_pnl.Controls.Add(this.guna2CustomGradientPanel3);
             this.employee_search_pnl.Controls.Add(this.guna2CustomGradientPanel2);
             this.employee_search_pnl.Controls.Add(this.label10);
             this.employee_search_pnl.Controls.Add(this.label9);
@@ -488,6 +488,68 @@
             this.employee_search_pnl.Size = new System.Drawing.Size(1051, 751);
             this.employee_search_pnl.TabIndex = 6;
             this.employee_search_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.employee_search_pnl_Paint);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label15.Location = new System.Drawing.Point(61, 284);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 24);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "CAR DATA";
+            // 
+            // employee_searchCarDataGridView
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employee_searchCarDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.employee_searchCarDataGridView.ColumnHeadersHeight = 40;
+            this.employee_searchCarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employee_searchCarDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.employee_searchCarDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.Location = new System.Drawing.Point(59, 327);
+            this.employee_searchCarDataGridView.Name = "employee_searchCarDataGridView";
+            this.employee_searchCarDataGridView.RowHeadersVisible = false;
+            this.employee_searchCarDataGridView.Size = new System.Drawing.Size(944, 169);
+            this.employee_searchCarDataGridView.TabIndex = 10;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.employee_searchCarDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.employee_searchCarDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.employee_searchCarDataGridView.ThemeStyle.HeaderStyle.Height = 40;
+            this.employee_searchCarDataGridView.ThemeStyle.ReadOnly = false;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.Height = 22;
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.employee_searchCarDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // search_clear_btn
             // 
@@ -514,7 +576,7 @@
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label37.Location = new System.Drawing.Point(15, 438);
+            this.label37.Location = new System.Drawing.Point(61, 499);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(219, 24);
             this.label37.TabIndex = 8;
@@ -524,32 +586,32 @@
             // 
             this.employee_searchGridView.AllowUserToAddRows = false;
             this.employee_searchGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.employee_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employee_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.employee_searchGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employee_searchGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.employee_searchGridView.ColumnHeadersHeight = 40;
             this.employee_searchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employee_searchGridView.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employee_searchGridView.DefaultCellStyle = dataGridViewCellStyle6;
             this.employee_searchGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.employee_searchGridView.Location = new System.Drawing.Point(60, 469);
+            this.employee_searchGridView.Location = new System.Drawing.Point(60, 535);
             this.employee_searchGridView.Name = "employee_searchGridView";
             this.employee_searchGridView.ReadOnly = true;
             this.employee_searchGridView.RowHeadersVisible = false;
-            this.employee_searchGridView.Size = new System.Drawing.Size(944, 250);
+            this.employee_searchGridView.Size = new System.Drawing.Size(944, 184);
             this.employee_searchGridView.TabIndex = 7;
             this.employee_searchGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.employee_searchGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -574,224 +636,17 @@
             this.employee_searchGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.employee_searchGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employee_searchGridView_CellContentClick);
             // 
-            // guna2CustomGradientPanel4
-            // 
-            this.guna2CustomGradientPanel4.AutoRoundedCorners = true;
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_color_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label29);
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_Year_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label27);
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_make_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label25);
-            this.guna2CustomGradientPanel4.Controls.Add(this.employee_model_lbl);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label23);
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(60, 359);
-            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(944, 60);
-            this.guna2CustomGradientPanel4.TabIndex = 6;
-            // 
-            // employee_color_lbl
-            // 
-            this.employee_color_lbl.AutoSize = true;
-            this.employee_color_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_color_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_color_lbl.Location = new System.Drawing.Point(805, 33);
-            this.employee_color_lbl.Name = "employee_color_lbl";
-            this.employee_color_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_color_lbl.TabIndex = 7;
-            this.employee_color_lbl.Text = "N/A";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(804, 2);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(51, 20);
-            this.label29.TabIndex = 6;
-            this.label29.Text = "Color";
-            // 
-            // employee_Year_lbl
-            // 
-            this.employee_Year_lbl.AutoSize = true;
-            this.employee_Year_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_Year_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_Year_lbl.Location = new System.Drawing.Point(616, 33);
-            this.employee_Year_lbl.Name = "employee_Year_lbl";
-            this.employee_Year_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_Year_lbl.TabIndex = 5;
-            this.employee_Year_lbl.Text = "N/A";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(615, 2);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(47, 20);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Year";
-            // 
-            // employee_make_lbl
-            // 
-            this.employee_make_lbl.AutoSize = true;
-            this.employee_make_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_make_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_make_lbl.Location = new System.Drawing.Point(303, 33);
-            this.employee_make_lbl.Name = "employee_make_lbl";
-            this.employee_make_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_make_lbl.TabIndex = 3;
-            this.employee_make_lbl.Text = "N/A";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(302, 2);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(57, 20);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "Make ";
-            // 
-            // employee_model_lbl
-            // 
-            this.employee_model_lbl.AutoSize = true;
-            this.employee_model_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_model_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_model_lbl.Location = new System.Drawing.Point(107, 33);
-            this.employee_model_lbl.Name = "employee_model_lbl";
-            this.employee_model_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_model_lbl.TabIndex = 1;
-            this.employee_model_lbl.Text = "N/A";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(89, 2);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(57, 20);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Model";
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.AutoRoundedCorners = true;
-            this.guna2CustomGradientPanel3.Controls.Add(this.employee_phoneNumber_lbl);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label21);
-            this.guna2CustomGradientPanel3.Controls.Add(this.employee_address_lbl);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label19);
-            this.guna2CustomGradientPanel3.Controls.Add(this.employee_ownerName_lbl);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label17);
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(60, 283);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(944, 60);
-            this.guna2CustomGradientPanel3.TabIndex = 5;
-            // 
-            // employee_phoneNumber_lbl
-            // 
-            this.employee_phoneNumber_lbl.AutoSize = true;
-            this.employee_phoneNumber_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_phoneNumber_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_phoneNumber_lbl.Location = new System.Drawing.Point(775, 33);
-            this.employee_phoneNumber_lbl.Name = "employee_phoneNumber_lbl";
-            this.employee_phoneNumber_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_phoneNumber_lbl.TabIndex = 5;
-            this.employee_phoneNumber_lbl.Text = "N/A";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(772, 4);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(127, 20);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "Phone Number";
-            // 
-            // employee_address_lbl
-            // 
-            this.employee_address_lbl.AutoSize = true;
-            this.employee_address_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_address_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_address_lbl.Location = new System.Drawing.Point(456, 33);
-            this.employee_address_lbl.Name = "employee_address_lbl";
-            this.employee_address_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_address_lbl.TabIndex = 3;
-            this.employee_address_lbl.Text = "N/A";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(455, 4);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(75, 20);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Address";
-            // 
-            // employee_ownerName_lbl
-            // 
-            this.employee_ownerName_lbl.AutoSize = true;
-            this.employee_ownerName_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_ownerName_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_ownerName_lbl.Location = new System.Drawing.Point(107, 33);
-            this.employee_ownerName_lbl.Name = "employee_ownerName_lbl";
-            this.employee_ownerName_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_ownerName_lbl.TabIndex = 1;
-            this.employee_ownerName_lbl.Text = "N/A";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(88, 4);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 20);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Owner Name";
-            // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.AutoRoundedCorners = true;
-            this.guna2CustomGradientPanel2.Controls.Add(this.employee_carNumber_lbl);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label15);
             this.guna2CustomGradientPanel2.Controls.Add(this.employee_servicesDone_lbl);
             this.guna2CustomGradientPanel2.Controls.Add(this.label12);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label17);
+            this.guna2CustomGradientPanel2.Controls.Add(this.employee_lastServiceDate_lbl);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(60, 197);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(944, 60);
             this.guna2CustomGradientPanel2.TabIndex = 4;
-            // 
-            // employee_carNumber_lbl
-            // 
-            this.employee_carNumber_lbl.AutoSize = true;
-            this.employee_carNumber_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.employee_carNumber_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_carNumber_lbl.Location = new System.Drawing.Point(775, 31);
-            this.employee_carNumber_lbl.Name = "employee_carNumber_lbl";
-            this.employee_carNumber_lbl.Size = new System.Drawing.Size(30, 16);
-            this.employee_carNumber_lbl.TabIndex = 3;
-            this.employee_carNumber_lbl.Text = "N/A";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(772, 4);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(138, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "License Number";
             // 
             // employee_servicesDone_lbl
             // 
@@ -814,6 +669,28 @@
             this.label12.Size = new System.Drawing.Size(125, 20);
             this.label12.TabIndex = 0;
             this.label12.Text = "Services Done";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(705, 4);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 20);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Last Service Date";
+            // 
+            // employee_lastServiceDate_lbl
+            // 
+            this.employee_lastServiceDate_lbl.AutoSize = true;
+            this.employee_lastServiceDate_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.employee_lastServiceDate_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_lastServiceDate_lbl.Location = new System.Drawing.Point(706, 31);
+            this.employee_lastServiceDate_lbl.Name = "employee_lastServiceDate_lbl";
+            this.employee_lastServiceDate_lbl.Size = new System.Drawing.Size(30, 16);
+            this.employee_lastServiceDate_lbl.TabIndex = 1;
+            this.employee_lastServiceDate_lbl.Text = "N/A";
             // 
             // label10
             // 
@@ -872,7 +749,7 @@
             this.employee_search_tb.Location = new System.Drawing.Point(140, 57);
             this.employee_search_tb.Name = "employee_search_tb";
             this.employee_search_tb.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.employee_search_tb.PlaceholderText = "Enter Car Number";
+            this.employee_search_tb.PlaceholderText = "Enter Car Number or Cnic";
             this.employee_search_tb.SelectedText = "";
             this.employee_search_tb.Size = new System.Drawing.Size(647, 41);
             this.employee_search_tb.TabIndex = 0;
@@ -910,7 +787,7 @@
             this.aiDetection_pnl.Controls.Add(this.aiDetection_UploadImage_btn);
             this.aiDetection_pnl.Controls.Add(this.aiDetection_pictureBox);
             this.aiDetection_pnl.Controls.Add(this.label4);
-            this.aiDetection_pnl.Location = new System.Drawing.Point(221, 0);
+            this.aiDetection_pnl.Location = new System.Drawing.Point(221, 1);
             this.aiDetection_pnl.Name = "aiDetection_pnl";
             this.aiDetection_pnl.Size = new System.Drawing.Size(1051, 749);
             this.aiDetection_pnl.TabIndex = 7;
@@ -1016,6 +893,19 @@
             this.aiDetection_UploadImage_btn.Text = "Upload Image";
             this.aiDetection_UploadImage_btn.Click += new System.EventHandler(this.aiDetection_UploadImage_btn_Click);
             // 
+            // aiDetection_pictureBox
+            // 
+            this.aiDetection_pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.aiDetection_pictureBox.BorderRadius = 50;
+            this.aiDetection_pictureBox.FillColor = System.Drawing.Color.LightGray;
+            this.aiDetection_pictureBox.ImageRotate = 0F;
+            this.aiDetection_pictureBox.Location = new System.Drawing.Point(140, 91);
+            this.aiDetection_pictureBox.Name = "aiDetection_pictureBox";
+            this.aiDetection_pictureBox.Size = new System.Drawing.Size(757, 273);
+            this.aiDetection_pictureBox.TabIndex = 1;
+            this.aiDetection_pictureBox.TabStop = false;
+            this.aiDetection_pictureBox.Click += new System.EventHandler(this.aiDetection_pictureBox_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -1062,26 +952,26 @@
             // 
             this.employee_schedule_gridView.AllowUserToAddRows = false;
             this.employee_schedule_gridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.employee_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employee_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.employee_schedule_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employee_schedule_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.employee_schedule_gridView.ColumnHeadersHeight = 40;
             this.employee_schedule_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employee_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employee_schedule_gridView.DefaultCellStyle = dataGridViewCellStyle9;
             this.employee_schedule_gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.employee_schedule_gridView.Location = new System.Drawing.Point(100, 91);
             this.employee_schedule_gridView.Name = "employee_schedule_gridView";
@@ -1171,7 +1061,7 @@
             this.employee_appointmentPaymentSummry_pnl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employee_appointmentPaymentSummry_pnl.Location = new System.Drawing.Point(52, 91);
             this.employee_appointmentPaymentSummry_pnl.Name = "employee_appointmentPaymentSummry_pnl";
-            this.employee_appointmentPaymentSummry_pnl.Size = new System.Drawing.Size(958, 584);
+            this.employee_appointmentPaymentSummry_pnl.Size = new System.Drawing.Size(958, 588);
             this.employee_appointmentPaymentSummry_pnl.TabIndex = 29;
             this.employee_appointmentPaymentSummry_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             // 
@@ -1500,7 +1390,7 @@
             this.employee_appointmentPayment_pnl.FillColor = System.Drawing.Color.LightGray;
             this.employee_appointmentPayment_pnl.Location = new System.Drawing.Point(53, 91);
             this.employee_appointmentPayment_pnl.Name = "employee_appointmentPayment_pnl";
-            this.employee_appointmentPayment_pnl.Size = new System.Drawing.Size(958, 584);
+            this.employee_appointmentPayment_pnl.Size = new System.Drawing.Size(958, 588);
             this.employee_appointmentPayment_pnl.TabIndex = 28;
             // 
             // employee_appointmentDone_btn
@@ -1569,13 +1459,13 @@
             this.employee_appointment_GrandTotal_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.employee_appointment_GrandTotal_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.employee_appointment_GrandTotal_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employee_appointment_GrandTotal_tb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_appointment_GrandTotal_tb.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.employee_appointment_GrandTotal_tb.ForeColor = System.Drawing.Color.Black;
             this.employee_appointment_GrandTotal_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.employee_appointment_GrandTotal_tb.Location = new System.Drawing.Point(362, 150);
             this.employee_appointment_GrandTotal_tb.Name = "employee_appointment_GrandTotal_tb";
             this.employee_appointment_GrandTotal_tb.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.employee_appointment_GrandTotal_tb.PlaceholderText = "Enter Address";
+            this.employee_appointment_GrandTotal_tb.PlaceholderText = "Grand Total";
             this.employee_appointment_GrandTotal_tb.SelectedText = "";
             this.employee_appointment_GrandTotal_tb.Size = new System.Drawing.Size(236, 36);
             this.employee_appointment_GrandTotal_tb.TabIndex = 8;
@@ -2157,7 +2047,7 @@
             this.employee_user_pnl.Controls.Add(this.label54);
             this.employee_user_pnl.Controls.Add(this.employee_userAccountType_lbl);
             this.employee_user_pnl.Controls.Add(this.label55);
-            this.employee_user_pnl.Location = new System.Drawing.Point(221, 1);
+            this.employee_user_pnl.Location = new System.Drawing.Point(221, 0);
             this.employee_user_pnl.Name = "employee_user_pnl";
             this.employee_user_pnl.Size = new System.Drawing.Size(1148, 748);
             this.employee_user_pnl.TabIndex = 12;
@@ -2297,6 +2187,119 @@
             this.employee_userEdit_pnl.Size = new System.Drawing.Size(992, 512);
             this.employee_userEdit_pnl.TabIndex = 12;
             this.employee_userEdit_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.employee_userEdit_pnl_Paint);
+            // 
+            // employee_userEditDone_btn
+            // 
+            this.employee_userEditDone_btn.Animated = true;
+            this.employee_userEditDone_btn.AutoRoundedCorners = true;
+            this.employee_userEditDone_btn.BackColor = System.Drawing.Color.Transparent;
+            this.employee_userEditDone_btn.BorderThickness = 1;
+            this.employee_userEditDone_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.employee_userEditDone_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.employee_userEditDone_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.employee_userEditDone_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.employee_userEditDone_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.employee_userEditDone_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_userEditDone_btn.ForeColor = System.Drawing.Color.Black;
+            this.employee_userEditDone_btn.Location = new System.Drawing.Point(431, 343);
+            this.employee_userEditDone_btn.Name = "employee_userEditDone_btn";
+            this.employee_userEditDone_btn.Size = new System.Drawing.Size(180, 39);
+            this.employee_userEditDone_btn.TabIndex = 6;
+            this.employee_userEditDone_btn.Text = "Done";
+            this.employee_userEditDone_btn.UseTransparentBackground = true;
+            this.employee_userEditDone_btn.Click += new System.EventHandler(this.employee_userEditDone_btn_Click);
+            // 
+            // employeeEditEmail_tb
+            // 
+            this.employeeEditEmail_tb.Animated = true;
+            this.employeeEditEmail_tb.AutoRoundedCorners = true;
+            this.employeeEditEmail_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditEmail_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditEmail_tb.DefaultText = "";
+            this.employeeEditEmail_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditEmail_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditEmail_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditEmail_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditEmail_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditEmail_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditEmail_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditEmail_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditEmail_tb.Location = new System.Drawing.Point(509, 126);
+            this.employeeEditEmail_tb.Name = "employeeEditEmail_tb";
+            this.employeeEditEmail_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditEmail_tb.PlaceholderText = "Email";
+            this.employeeEditEmail_tb.SelectedText = "";
+            this.employeeEditEmail_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditEmail_tb.TabIndex = 5;
+            // 
+            // employeeEditPhone_tb
+            // 
+            this.employeeEditPhone_tb.Animated = true;
+            this.employeeEditPhone_tb.AutoRoundedCorners = true;
+            this.employeeEditPhone_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditPhone_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditPhone_tb.DefaultText = "";
+            this.employeeEditPhone_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditPhone_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditPhone_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPhone_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPhone_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPhone_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditPhone_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditPhone_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPhone_tb.Location = new System.Drawing.Point(759, 126);
+            this.employeeEditPhone_tb.Name = "employeeEditPhone_tb";
+            this.employeeEditPhone_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditPhone_tb.PlaceholderText = "Phone";
+            this.employeeEditPhone_tb.SelectedText = "";
+            this.employeeEditPhone_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditPhone_tb.TabIndex = 4;
+            // 
+            // employeeEditPassword_tb
+            // 
+            this.employeeEditPassword_tb.Animated = true;
+            this.employeeEditPassword_tb.AutoRoundedCorners = true;
+            this.employeeEditPassword_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditPassword_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditPassword_tb.DefaultText = "";
+            this.employeeEditPassword_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditPassword_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditPassword_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPassword_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditPassword_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPassword_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditPassword_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditPassword_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditPassword_tb.Location = new System.Drawing.Point(275, 128);
+            this.employeeEditPassword_tb.Name = "employeeEditPassword_tb";
+            this.employeeEditPassword_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditPassword_tb.PlaceholderText = "Password";
+            this.employeeEditPassword_tb.SelectedText = "";
+            this.employeeEditPassword_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditPassword_tb.TabIndex = 3;
+            // 
+            // employeeEditName_tb
+            // 
+            this.employeeEditName_tb.Animated = true;
+            this.employeeEditName_tb.AutoRoundedCorners = true;
+            this.employeeEditName_tb.BorderColor = System.Drawing.Color.Black;
+            this.employeeEditName_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEditName_tb.DefaultText = "";
+            this.employeeEditName_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEditName_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEditName_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditName_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEditName_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditName_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.employeeEditName_tb.ForeColor = System.Drawing.Color.Black;
+            this.employeeEditName_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEditName_tb.Location = new System.Drawing.Point(25, 129);
+            this.employeeEditName_tb.Name = "employeeEditName_tb";
+            this.employeeEditName_tb.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.employeeEditName_tb.PlaceholderText = "Name";
+            this.employeeEditName_tb.SelectedText = "";
+            this.employeeEditName_tb.Size = new System.Drawing.Size(200, 36);
+            this.employeeEditName_tb.TabIndex = 2;
             // 
             // employee_userEditBack_btn
             // 
@@ -2452,18 +2455,6 @@
             this.label55.TabIndex = 0;
             this.label55.Text = "Account Type:";
             // 
-            // aiDetection_pictureBox
-            // 
-            this.aiDetection_pictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.aiDetection_pictureBox.BorderRadius = 50;
-            this.aiDetection_pictureBox.FillColor = System.Drawing.Color.LightGray;
-            this.aiDetection_pictureBox.ImageRotate = 0F;
-            this.aiDetection_pictureBox.Location = new System.Drawing.Point(140, 91);
-            this.aiDetection_pictureBox.Name = "aiDetection_pictureBox";
-            this.aiDetection_pictureBox.Size = new System.Drawing.Size(757, 273);
-            this.aiDetection_pictureBox.TabIndex = 1;
-            this.aiDetection_pictureBox.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -2473,131 +2464,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(50, 12);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 53);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 4;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // employeeEditName_tb
-            // 
-            this.employeeEditName_tb.Animated = true;
-            this.employeeEditName_tb.AutoRoundedCorners = true;
-            this.employeeEditName_tb.BorderColor = System.Drawing.Color.Black;
-            this.employeeEditName_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeEditName_tb.DefaultText = "";
-            this.employeeEditName_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.employeeEditName_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.employeeEditName_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditName_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditName_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditName_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.employeeEditName_tb.ForeColor = System.Drawing.Color.Black;
-            this.employeeEditName_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditName_tb.Location = new System.Drawing.Point(25, 129);
-            this.employeeEditName_tb.Name = "employeeEditName_tb";
-            this.employeeEditName_tb.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.employeeEditName_tb.PlaceholderText = "Name";
-            this.employeeEditName_tb.SelectedText = "";
-            this.employeeEditName_tb.Size = new System.Drawing.Size(200, 36);
-            this.employeeEditName_tb.TabIndex = 2;
-            // 
-            // employeeEditPassword_tb
-            // 
-            this.employeeEditPassword_tb.Animated = true;
-            this.employeeEditPassword_tb.AutoRoundedCorners = true;
-            this.employeeEditPassword_tb.BorderColor = System.Drawing.Color.Black;
-            this.employeeEditPassword_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeEditPassword_tb.DefaultText = "";
-            this.employeeEditPassword_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.employeeEditPassword_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.employeeEditPassword_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditPassword_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditPassword_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditPassword_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.employeeEditPassword_tb.ForeColor = System.Drawing.Color.Black;
-            this.employeeEditPassword_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditPassword_tb.Location = new System.Drawing.Point(275, 128);
-            this.employeeEditPassword_tb.Name = "employeeEditPassword_tb";
-            this.employeeEditPassword_tb.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.employeeEditPassword_tb.PlaceholderText = "Password";
-            this.employeeEditPassword_tb.SelectedText = "";
-            this.employeeEditPassword_tb.Size = new System.Drawing.Size(200, 36);
-            this.employeeEditPassword_tb.TabIndex = 3;
-            // 
-            // employeeEditPhone_tb
-            // 
-            this.employeeEditPhone_tb.Animated = true;
-            this.employeeEditPhone_tb.AutoRoundedCorners = true;
-            this.employeeEditPhone_tb.BorderColor = System.Drawing.Color.Black;
-            this.employeeEditPhone_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeEditPhone_tb.DefaultText = "";
-            this.employeeEditPhone_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.employeeEditPhone_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.employeeEditPhone_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditPhone_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditPhone_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditPhone_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.employeeEditPhone_tb.ForeColor = System.Drawing.Color.Black;
-            this.employeeEditPhone_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditPhone_tb.Location = new System.Drawing.Point(759, 126);
-            this.employeeEditPhone_tb.Name = "employeeEditPhone_tb";
-            this.employeeEditPhone_tb.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.employeeEditPhone_tb.PlaceholderText = "Phone";
-            this.employeeEditPhone_tb.SelectedText = "";
-            this.employeeEditPhone_tb.Size = new System.Drawing.Size(200, 36);
-            this.employeeEditPhone_tb.TabIndex = 4;
-            // 
-            // employeeEditEmail_tb
-            // 
-            this.employeeEditEmail_tb.Animated = true;
-            this.employeeEditEmail_tb.AutoRoundedCorners = true;
-            this.employeeEditEmail_tb.BorderColor = System.Drawing.Color.Black;
-            this.employeeEditEmail_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeEditEmail_tb.DefaultText = "";
-            this.employeeEditEmail_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.employeeEditEmail_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.employeeEditEmail_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditEmail_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.employeeEditEmail_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditEmail_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.employeeEditEmail_tb.ForeColor = System.Drawing.Color.Black;
-            this.employeeEditEmail_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.employeeEditEmail_tb.Location = new System.Drawing.Point(509, 126);
-            this.employeeEditEmail_tb.Name = "employeeEditEmail_tb";
-            this.employeeEditEmail_tb.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.employeeEditEmail_tb.PlaceholderText = "Email";
-            this.employeeEditEmail_tb.SelectedText = "";
-            this.employeeEditEmail_tb.Size = new System.Drawing.Size(200, 36);
-            this.employeeEditEmail_tb.TabIndex = 5;
-            // 
-            // employee_userEditDone_btn
-            // 
-            this.employee_userEditDone_btn.Animated = true;
-            this.employee_userEditDone_btn.AutoRoundedCorners = true;
-            this.employee_userEditDone_btn.BackColor = System.Drawing.Color.Transparent;
-            this.employee_userEditDone_btn.BorderThickness = 1;
-            this.employee_userEditDone_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.employee_userEditDone_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.employee_userEditDone_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.employee_userEditDone_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.employee_userEditDone_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.employee_userEditDone_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_userEditDone_btn.ForeColor = System.Drawing.Color.Black;
-            this.employee_userEditDone_btn.Location = new System.Drawing.Point(431, 343);
-            this.employee_userEditDone_btn.Name = "employee_userEditDone_btn";
-            this.employee_userEditDone_btn.Size = new System.Drawing.Size(180, 39);
-            this.employee_userEditDone_btn.TabIndex = 6;
-            this.employee_userEditDone_btn.Text = "Done";
-            this.employee_userEditDone_btn.UseTransparentBackground = true;
-            this.employee_userEditDone_btn.Click += new System.EventHandler(this.employee_userEditDone_btn_Click);
             // 
             // Employee
             // 
@@ -2615,6 +2481,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.employee_menu_pnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Employee";
             this.Text = "Empoyee";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -2623,13 +2490,11 @@
             this.employee_menu_pnl.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.employee_search_pnl.ResumeLayout(false);
             this.employee_search_pnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_searchCarDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employee_searchGridView)).EndInit();
-            this.guna2CustomGradientPanel4.ResumeLayout(false);
-            this.guna2CustomGradientPanel4.PerformLayout();
-            this.guna2CustomGradientPanel3.ResumeLayout(false);
-            this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             this.aiDetection_pnl.ResumeLayout(false);
@@ -2638,6 +2503,7 @@
             this.guna2Panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).EndInit();
             this.employee_schedule_pnl.ResumeLayout(false);
             this.employee_schedule_pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employee_schedule_gridView)).EndInit();
@@ -2652,9 +2518,7 @@
             this.employee_user_pnl.ResumeLayout(false);
             this.employee_user_pnl.PerformLayout();
             this.employee_userEdit_pnl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.aiDetection_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2677,25 +2541,9 @@
         private Guna.UI2.WinForms.Guna2Button employee_schedule_btn;
         private System.Windows.Forms.Panel employee_search_pnl;
         private Guna.UI2.WinForms.Guna2DataGridView employee_searchGridView;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private System.Windows.Forms.Label employee_color_lbl;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label employee_Year_lbl;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label employee_make_lbl;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label employee_model_lbl;
-        private System.Windows.Forms.Label label23;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private System.Windows.Forms.Label employee_phoneNumber_lbl;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label employee_address_lbl;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label employee_ownerName_lbl;
+        private System.Windows.Forms.Label employee_lastServiceDate_lbl;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.Label employee_carNumber_lbl;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label employee_servicesDone_lbl;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
@@ -2824,5 +2672,7 @@
         private Guna.UI2.WinForms.Guna2TextBox employeeEditPassword_tb;
         private Guna.UI2.WinForms.Guna2TextBox employeeEditName_tb;
         private Guna.UI2.WinForms.Guna2Button employee_userEditDone_btn;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2DataGridView employee_searchCarDataGridView;
     }
 }
