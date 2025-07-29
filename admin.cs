@@ -1067,9 +1067,9 @@ namespace FYP_PROJECT
                 {
                     var values = new Dictionary<string, string>
             {
-                { "mocean-api-key", "1f2fbc99" },
-                { "mocean-api-secret", "8f6ea851" },
-                { "mocean-from", "Fazi420" },
+                { "mocean-api-key", "" },
+                { "mocean-api-secret", "" },
+                { "mocean-from", "" },
                 { "mocean-to", toNumber },
                 { "mocean-text", messageBody }
             };
