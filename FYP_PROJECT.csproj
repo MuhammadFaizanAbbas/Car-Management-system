@@ -243,6 +243,7 @@
     <Compile Include="Helpers\CommonHelpers\UIHelper.cs" />
     <Compile Include="Helpers\AdminHelpers\UserUpdateHelper.cs" />
     <Compile Include="Helpers\LoginHelpers\FadeHelper.cs" />
+    <Compile Include="Helpers\LoginHelpers\PasswordToggleHelper.cs" />
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +333,8 @@
     <Content Include="app_icon.ico" />
     <Content Include="app_icon1.ico" />
     <Content Include="ChatGPT Image Jul 6, 2025, 10_30_40 PM.ico" />
+    <None Include="Resources\eyeShow.png" />
+    <None Include="Resources\eyeHide.png" />
     <None Include="Resources\10002065961.png" />
     <None Include="Resources\pristine_shine-removebg-preview1.png" />
     <None Include="Resources\f002a213-5e35-49e7-b81c-15c161d96421_rw_1200.gif" />

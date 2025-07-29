@@ -346,8 +346,6 @@ namespace FYP_PROJECT
             this.label35 = new System.Windows.Forms.Label();
             this.admin_user_Name_lbl = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.admin_userAccountType_lbl = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.admin_menu_pnl.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -799,9 +797,9 @@ namespace FYP_PROJECT
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(747, 353);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 24);
+            this.label7.Size = new System.Drawing.Size(166, 24);
             this.label7.TabIndex = 12;
-            this.label7.Text = "TotalEmployees";
+            this.label7.Text = "Total Employees";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -1095,7 +1093,7 @@ namespace FYP_PROJECT
             this.admin_search_pnl.Controls.Add(this.label44);
             this.admin_search_pnl.Controls.Add(this.employee_searchBar_btn);
             this.admin_search_pnl.Controls.Add(this.employee_search_tb);
-            this.admin_search_pnl.Location = new System.Drawing.Point(206, 698);
+            this.admin_search_pnl.Location = new System.Drawing.Point(221, 0);
             this.admin_search_pnl.Name = "admin_search_pnl";
             this.admin_search_pnl.Size = new System.Drawing.Size(1151, 751);
             this.admin_search_pnl.TabIndex = 5;
@@ -1384,7 +1382,7 @@ namespace FYP_PROJECT
             this.admin_employee_pnl.Controls.Add(this.guna2Button1);
             this.admin_employee_pnl.Controls.Add(this.admin_employee_gridView);
             this.admin_employee_pnl.Controls.Add(this.label14);
-            this.admin_employee_pnl.Location = new System.Drawing.Point(206, 701);
+            this.admin_employee_pnl.Location = new System.Drawing.Point(220, 0);
             this.admin_employee_pnl.Name = "admin_employee_pnl";
             this.admin_employee_pnl.Size = new System.Drawing.Size(1151, 748);
             this.admin_employee_pnl.TabIndex = 4;
@@ -1991,7 +1989,7 @@ namespace FYP_PROJECT
             this.admin_service_pnl.Controls.Add(this.admin_serviceAdd_btn);
             this.admin_service_pnl.Controls.Add(this.label16);
             this.admin_service_pnl.Controls.Add(this.admin_service_gridView);
-            this.admin_service_pnl.Location = new System.Drawing.Point(206, 702);
+            this.admin_service_pnl.Location = new System.Drawing.Point(220, 0);
             this.admin_service_pnl.Name = "admin_service_pnl";
             this.admin_service_pnl.Size = new System.Drawing.Size(1145, 750);
             this.admin_service_pnl.TabIndex = 6;
@@ -2379,7 +2377,7 @@ namespace FYP_PROJECT
             // 
             this.admin_clients_pnl.Controls.Add(this.admin_client_gridView);
             this.admin_clients_pnl.Controls.Add(this.label18);
-            this.admin_clients_pnl.Location = new System.Drawing.Point(206, 707);
+            this.admin_clients_pnl.Location = new System.Drawing.Point(219, 0);
             this.admin_clients_pnl.Name = "admin_clients_pnl";
             this.admin_clients_pnl.Size = new System.Drawing.Size(1148, 751);
             this.admin_clients_pnl.TabIndex = 7;
@@ -2456,7 +2454,7 @@ namespace FYP_PROJECT
             this.admin_schedule_pnl.Controls.Add(this.label20);
             this.admin_schedule_pnl.Controls.Add(this.admin_schedule_gridView);
             this.admin_schedule_pnl.Controls.Add(this.guna2CustomGradientPanel5);
-            this.admin_schedule_pnl.Location = new System.Drawing.Point(206, 717);
+            this.admin_schedule_pnl.Location = new System.Drawing.Point(218, 0);
             this.admin_schedule_pnl.Name = "admin_schedule_pnl";
             this.admin_schedule_pnl.Size = new System.Drawing.Size(1151, 751);
             this.admin_schedule_pnl.TabIndex = 8;
@@ -2621,7 +2619,7 @@ namespace FYP_PROJECT
             this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportExpenses_gridView);
             this.admin_financialReport_pnl.Controls.Add(this.admin_financialReportIncome_gridView);
             this.admin_financialReport_pnl.Controls.Add(this.label24);
-            this.admin_financialReport_pnl.Location = new System.Drawing.Point(206, 723);
+            this.admin_financialReport_pnl.Location = new System.Drawing.Point(217, 0);
             this.admin_financialReport_pnl.Name = "admin_financialReport_pnl";
             this.admin_financialReport_pnl.Size = new System.Drawing.Size(1151, 748);
             this.admin_financialReport_pnl.TabIndex = 9;
@@ -2962,7 +2960,7 @@ namespace FYP_PROJECT
             this.admin_appointment_pnl.Controls.Add(this.admin_appointmentTodayAppointment_gridView);
             this.admin_appointment_pnl.Controls.Add(this.label31);
             this.admin_appointment_pnl.Controls.Add(this.label30);
-            this.admin_appointment_pnl.Location = new System.Drawing.Point(206, 740);
+            this.admin_appointment_pnl.Location = new System.Drawing.Point(215, 0);
             this.admin_appointment_pnl.Name = "admin_appointment_pnl";
             this.admin_appointment_pnl.Size = new System.Drawing.Size(1148, 751);
             this.admin_appointment_pnl.TabIndex = 10;
@@ -3201,9 +3199,7 @@ namespace FYP_PROJECT
             this.admin_user_pnl.Controls.Add(this.label35);
             this.admin_user_pnl.Controls.Add(this.admin_user_Name_lbl);
             this.admin_user_pnl.Controls.Add(this.label36);
-            this.admin_user_pnl.Controls.Add(this.admin_userAccountType_lbl);
-            this.admin_user_pnl.Controls.Add(this.label34);
-            this.admin_user_pnl.Location = new System.Drawing.Point(206, 726);
+            this.admin_user_pnl.Location = new System.Drawing.Point(216, 0);
             this.admin_user_pnl.Name = "admin_user_pnl";
             this.admin_user_pnl.Size = new System.Drawing.Size(1148, 748);
             this.admin_user_pnl.TabIndex = 11;
@@ -3233,7 +3229,7 @@ namespace FYP_PROJECT
             this.manageOtherUserEdit_pnl.Controls.Add(this.editUserName_tb);
             this.manageOtherUserEdit_pnl.Controls.Add(this.guna2Button2);
             this.manageOtherUserEdit_pnl.Controls.Add(this.guna2Button3);
-            this.manageOtherUserEdit_pnl.Location = new System.Drawing.Point(60, 46);
+            this.manageOtherUserEdit_pnl.Location = new System.Drawing.Point(73, 67);
             this.manageOtherUserEdit_pnl.Name = "manageOtherUserEdit_pnl";
             this.manageOtherUserEdit_pnl.Size = new System.Drawing.Size(1014, 608);
             this.manageOtherUserEdit_pnl.TabIndex = 6;
@@ -3684,7 +3680,7 @@ namespace FYP_PROJECT
             this.admin_userManagerOtherUsers_pnl.Controls.Add(this.admin_userManageOtherUsersEdit_btn);
             this.admin_userManagerOtherUsers_pnl.Controls.Add(this.admin_userManageOtherUsersBack_btn);
             this.admin_userManagerOtherUsers_pnl.Controls.Add(this.admin_editOtherUsers_gridView);
-            this.admin_userManagerOtherUsers_pnl.Location = new System.Drawing.Point(60, 46);
+            this.admin_userManagerOtherUsers_pnl.Location = new System.Drawing.Point(73, 67);
             this.admin_userManagerOtherUsers_pnl.Name = "admin_userManagerOtherUsers_pnl";
             this.admin_userManagerOtherUsers_pnl.Size = new System.Drawing.Size(1014, 607);
             this.admin_userManagerOtherUsers_pnl.TabIndex = 13;
@@ -3891,7 +3887,7 @@ namespace FYP_PROJECT
             this.admin_userEdit_pnl.Controls.Add(this.adminEditName_tb);
             this.admin_userEdit_pnl.Controls.Add(this.admin_userEditDone_btn);
             this.admin_userEdit_pnl.Controls.Add(this.admin_userEditBack_btn);
-            this.admin_userEdit_pnl.Location = new System.Drawing.Point(60, 46);
+            this.admin_userEdit_pnl.Location = new System.Drawing.Point(73, 67);
             this.admin_userEdit_pnl.Name = "admin_userEdit_pnl";
             this.admin_userEdit_pnl.Size = new System.Drawing.Size(1011, 608);
             this.admin_userEdit_pnl.TabIndex = 12;
@@ -4406,31 +4402,6 @@ namespace FYP_PROJECT
             this.label36.Text = "Name:";
             this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
-            // admin_userAccountType_lbl
-            // 
-            this.admin_userAccountType_lbl.AutoSize = true;
-            this.admin_userAccountType_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_userAccountType_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.admin_userAccountType_lbl.Location = new System.Drawing.Point(579, 54);
-            this.admin_userAccountType_lbl.Name = "admin_userAccountType_lbl";
-            this.admin_userAccountType_lbl.Size = new System.Drawing.Size(35, 20);
-            this.admin_userAccountType_lbl.TabIndex = 1;
-            this.admin_userAccountType_lbl.Text = "N/A";
-            this.admin_userAccountType_lbl.Click += new System.EventHandler(this.admin_userAccountType_lbl_Click);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label34.Location = new System.Drawing.Point(376, 49);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(163, 25);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Account Type:";
-            this.label34.Click += new System.EventHandler(this.label34_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -4593,9 +4564,7 @@ namespace FYP_PROJECT
         private Guna.UI2.WinForms.Guna2DataGridView admin_appointmentCompletedToday_gridView;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel admin_user_pnl;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label admin_userAccountType_lbl;
         private System.Windows.Forms.Label admin_user_Name_lbl;
         private System.Windows.Forms.Label admin_userUsername_lbl;
         private System.Windows.Forms.Label label35;

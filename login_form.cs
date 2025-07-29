@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using FYP_PROJECT.Helpers.LoginHelpers;
+using Guna.UI2.WinForms;
 
 
 namespace FYP_PROJECT
 {
     public partial class Login_form : Form
     {
+        private PasswordToggleHelper passwordToggleHelper;
         private Timer loginSlideTimer;  // Timer for smooth login panel animation
         private Timer signupSlideTimer;  // Timer for smooth signup panel animation
         private int loginTargetPosition;  // Target position for login panel (fully visible)
@@ -42,6 +44,7 @@ namespace FYP_PROJECT
             employee_signup_pnl.Visible = false;
             admin_login_btn.Visible = false;
             employee_login_btn.Visible = false;
+          
             main_gif_pb.SendToBack();
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
@@ -299,7 +302,16 @@ namespace FYP_PROJECT
 
         private void Login_form_Load(object sender, EventArgs e)
         {
+            this.AcceptButton = admin_login_btn;
+            this.AcceptButton = employee_login_btn;
+            this.AcceptButton = admin_signupDone_btn;
+            this.AcceptButton = employee_signupDone_btn;
             this.Icon = Properties.Resources.app_icon;
+            passwordToggleHelper = new PasswordToggleHelper(employe_password_tb, btnTogglePassword);
+            passwordToggleHelper = new PasswordToggleHelper(admin_password_tb, guna2Button1);
+            passwordToggleHelper = new PasswordToggleHelper(tb_emp_password, guna2Button5);
+            passwordToggleHelper = new PasswordToggleHelper(tb_admin_password, guna2Button6);
+            passwordToggleHelper = new PasswordToggleHelper(forgotPassword_NewPassword, guna2Button7);
 
             employe_username_tb.MaxLength = 40;
             admin_userName_tb.MaxLength = 40;
@@ -449,6 +461,8 @@ namespace FYP_PROJECT
 
         private async void signup_btn_Click_1(object sender, EventArgs e)
         {
+            signup_admin_pnl.Hide();
+            employee_signup_pnl.Hide();
             await Task.WhenAll(
            FadeHelper.FadeOutControl(label1),
             FadeHelper.FadeOutControl(admin_login_btn),
@@ -943,6 +957,31 @@ namespace FYP_PROJECT
         }
 
         private void main_gif_pb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTogglePassword_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
         {
 
         }

@@ -113,6 +113,26 @@ namespace FYP_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eyeHide {
+            get {
+                object obj = ResourceManager.GetObject("eyeHide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eyeShow {
+            get {
+                object obj = ResourceManager.GetObject("eyeShow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap f002a213_5e35_49e7_b81c_15c161d96421_rw_1200 {
             get {
                 object obj = ResourceManager.GetObject("f002a213-5e35-49e7-b81c-15c161d96421_rw_1200", resourceCulture);

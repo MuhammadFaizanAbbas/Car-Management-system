@@ -107,6 +107,7 @@ namespace FYP_PROJECT
         }
         private void admin_Load(object sender, EventArgs e)
         {
+            
             this.Icon = Properties.Resources.app_icon;
             string currentMonth = DateTime.Now.ToString("MMMM");
             // Select current month in comboBox
@@ -115,6 +116,19 @@ namespace FYP_PROJECT
             admin_designation_lbl.Text = Session.Occupation; // Set role from session
             // Load current month's profit
             LoadMonthlyProfit(currentMonth);
+            gunaChart2.BackColor = Color.Black;
+            gunaChart2.ForeColor = Color.White;
+
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.GridLines.Display = false;
+
+
+            gunaChart2.XAxes.GridLines.Display = false;
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.Ticks.Font.Size = 10;
+            BuildLast30DaysIncomeBar();
+            LoadIncomePieChart();
+            BuildServicesDoneThisMonthBar();
             //Initialize all required fields on load
             UpdateDashboardLabels();
             LoadEmployees();
@@ -188,6 +202,28 @@ namespace FYP_PROJECT
             admin_financialReport_pnl.Hide();
             admin_appointment_pnl.Hide();
             admin_user_pnl.Hide();
+            string currentMonth = DateTime.Now.ToString("MMMM");
+            // Select current month in comboBox
+            admin_financialReportMonthSelection_cb.SelectedItem = currentMonth;
+            admin_name_lbl.Text = Session.Name;               // Set name from session
+            admin_designation_lbl.Text = Session.Occupation; // Set role from session
+            // Load current month's profit
+            LoadMonthlyProfit(currentMonth);
+            gunaChart2.BackColor = Color.Black;
+            gunaChart2.ForeColor = Color.White;
+
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.GridLines.Display = false;
+
+
+            gunaChart2.XAxes.GridLines.Display = false;
+            gunaChart2.YAxes.GridLines.Display = false;
+            gunaChart2.XAxes.Ticks.Font.Size = 10;
+            BuildLast30DaysIncomeBar();
+            LoadIncomePieChart();
+            BuildServicesDoneThisMonthBar();
+            //Initialize all required fields on load
+            UpdateDashboardLabels();
         }
 
         private void BuildLast30DaysIncomeBar()
@@ -257,7 +293,7 @@ namespace FYP_PROJECT
     {
         Color.MediumSeaGreen, Color.SeaGreen, Color.ForestGreen,
         Color.LightGreen, Color.DarkOliveGreen, Color.OliveDrab,
-        Color.YellowGreen, Color.DarkGreen
+        Color.YellowGreen, Color.DarkGreen, Color.AliceBlue,Color.Azure, Color.BlanchedAlmond, Color.BurlyWood
     };
 
             gunaChart3.Datasets.Clear();
@@ -614,7 +650,7 @@ namespace FYP_PROJECT
         }
         private void LoadAdminInfoToLabels()
         {
-            admin_accountType_lbl.Text = Session.AccountType;
+            
             admin_user_Name_lbl.Text = Session.Name;
             admin_userUsername_lbl.Text = Session.Username;
             admin_userPassword_lbl.Text = Session.Password;
@@ -730,6 +766,9 @@ namespace FYP_PROJECT
             }
         }
 
+        private int incomePrintIndex = 0;
+        private int expensePrintIndex = 0;
+
         private void PrintFinancialReport(object sender, PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -757,7 +796,9 @@ namespace FYP_PROJECT
                 y += (int)size.Height + 20;
             }
 
-            // 3. Income Section
+            int bottomMargin = e.PageBounds.Height - 100; // Leave space for footer
+
+            // 3. Income Section (Print remaining income rows)
             using (Font sectionFont = new Font("Segoe UI", 14, FontStyle.Bold))
             {
                 g.DrawString("Income", sectionFont, Brushes.Green, margin, y);
@@ -766,8 +807,9 @@ namespace FYP_PROJECT
 
             using (Font itemFont = new Font("Segoe UI", 11))
             {
-                foreach (DataRow row in incomeTable.Rows)
+                while (incomePrintIndex < incomeTable.Rows.Count && y + lineHeight < bottomMargin)
                 {
+                    DataRow row = incomeTable.Rows[incomePrintIndex];
                     string id = row["Income_Id"].ToString();
                     string source = row["Income_Source"].ToString();
                     string date = Convert.ToDateTime(row["Income_Date"]).ToShortDateString();
@@ -777,9 +819,22 @@ namespace FYP_PROJECT
                     string line = $"ID: {id} | {date} | Source: {source} | Amount: Rs {amount} | Appointment ID: {appId}";
                     g.DrawString(line, itemFont, Brushes.Black, margin, y);
                     y += lineHeight;
+                    incomePrintIndex++;
                 }
+            }
 
-                y += 10;
+            // If we still have income rows left, print this page and continue later
+            if (incomePrintIndex < incomeTable.Rows.Count)
+            {
+                e.HasMorePages = true;
+                return;
+            }
+
+            y += 10;
+
+            // After income done, print totals if on last page of income
+            using (Font itemFont = new Font("Segoe UI", 11))
+            {
                 g.DrawString($"Total Income Entries: {incomeTable.Rows.Count}", itemFont, Brushes.Black, margin, y);
                 y += lineHeight;
                 g.DrawString($"Total Income Amount: Rs {totalIncome.ToString("N0")}", itemFont, Brushes.DarkGreen, margin, y);
@@ -790,7 +845,7 @@ namespace FYP_PROJECT
             g.DrawLine(Pens.Gray, margin, y, pageWidth - margin, y);
             y += 15;
 
-            // 4. Expense Section
+            // 4. Expense Section (Print expenses)
             using (Font sectionFont = new Font("Segoe UI", 14, FontStyle.Bold))
             {
                 g.DrawString("Expenses", sectionFont, Brushes.Red, margin, y);
@@ -799,8 +854,9 @@ namespace FYP_PROJECT
 
             using (Font itemFont = new Font("Segoe UI", 11))
             {
-                foreach (DataRow row in expenseTable.Rows)
+                while (expensePrintIndex < expenseTable.Rows.Count && y + lineHeight < bottomMargin)
                 {
+                    DataRow row = expenseTable.Rows[expensePrintIndex];
                     string id = row["Expense_Id"].ToString();
                     string desc = row["Expense_Discription"].ToString();
                     string date = Convert.ToDateTime(row["Expense_Date"]).ToShortDateString();
@@ -809,9 +865,22 @@ namespace FYP_PROJECT
                     string line = $"ID: {id} | {date} | Description: {desc} | Amount: Rs {amount}";
                     g.DrawString(line, itemFont, Brushes.Black, margin, y);
                     y += lineHeight;
+                    expensePrintIndex++;
                 }
+            }
 
-                y += 10;
+            // If we still have expense rows left, print this page and continue later
+            if (expensePrintIndex < expenseTable.Rows.Count)
+            {
+                e.HasMorePages = true;
+                return;
+            }
+
+            y += 10;
+
+            // Totals after expenses printed fully
+            using (Font itemFont = new Font("Segoe UI", 11))
+            {
                 g.DrawString($"Total Expense Entries: {expenseTable.Rows.Count}", itemFont, Brushes.Black, margin, y);
                 y += lineHeight;
                 g.DrawString($"Total Expense Amount: Rs {totalExpense.ToString("N0")}", itemFont, Brushes.DarkRed, margin, y);
@@ -834,6 +903,12 @@ namespace FYP_PROJECT
                 SizeF footerSize = g.MeasureString(footer, footerFont);
                 g.DrawString(footer, footerFont, Brushes.Gray, (pageWidth - footerSize.Width) / 2, e.PageBounds.Height - 50);
             }
+
+            // Reset for next print job
+            incomePrintIndex = 0;
+            expensePrintIndex = 0;
+
+            e.HasMorePages = false;
         }
 
         private void admin_financialReportExpenses_btn_Click(object sender, EventArgs e)
@@ -901,7 +976,7 @@ namespace FYP_PROJECT
             }
 
             // Get Appointment_Id from selected row
-            int appointmentId = Convert.ToInt32(admin_schedule_gridView.SelectedRows[0].Cells["Appointment_Id"].Value);
+            int appointmentId = Convert.ToInt32(admin_schedule_gridView.SelectedRows[0].Cells["ID"].Value);
 
             string connectionString = "server=localhost;uid=root;pwd=;database=pristineshine;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))

@@ -134,18 +134,18 @@ namespace FYP_PROJECT.Helpers.AdminHelpers
 
                     string query = @"
                 SELECT 
-                    a.Appointment_Id,
-                    a.Appointment_Date,
-                    a.Appointment_Total,
-                    a.Appointment_Grand_Total,
-                    a.Appointment_Pay_Method,
-                    a.Appointment_Status,
-                    c.Client_Name,
-                    c.Client_Phone,
-                    c.Client_Car_Number,
-                    c.Client_Car_Model,
-                    c.Client_Car_Make,
-                    c.Client_Car_Year
+                    a.Appointment_Id AS 'ID',
+                    a.Appointment_Date AS 'DATE',
+                    a.Appointment_Total AS 'TOTAL',
+                    a.Appointment_Grand_Total AS 'GRAND TOTAL',
+                    a.Appointment_Pay_Method AS 'PAY METHOD',
+                    a.Appointment_Status AS 'STATUS',
+                    c.Client_Name AS 'CLIENT NAME',
+                    c.Client_Phone AS 'PHONE',
+                    c.Client_Car_Number AS 'CAR NUMBER',
+                    c.Client_Car_Model AS 'CAR MODEL',
+                    c.Client_Car_Make AS 'CAR MAKE',
+                    c.Client_Car_Year AS 'CAR YEAR'
                 FROM appointment a
                 INNER JOIN clients c ON a.Appointment_Client_Id = c.Client_id
                 WHERE a.Appointment_Alert = '1'";
