@@ -443,7 +443,7 @@ namespace FYP_PROJECT
             Image resizedImage = ImageAndAIHelpers.ResizeImage(aiDetection_pictureBox.Image, 150, 150);
             string base64Image = ImageAndAIHelpers.ImageToBase64(resizedImage, ImageFormat.Jpeg);
 
-            string apiKey = "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";  // Use your real key here!
+            string apiKey = "Enter Key";  // Use your real key here!
 
             OpenAIResponse result = await OpenAIHelper.GetCarDetailingSuggestionsAsync(base64Image, apiKey);
 
