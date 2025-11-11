@@ -1,5 +1,5 @@
 # Pristine Shine — Car Detailing Management System
-Author: Muhammad Faizan Abbas (with team)  
+Author: Muhammad Faizan Abbas
 Technologies: C# (.NET WinForms), MySQL, Python (AI), Mocean SMS API, Inno Setup
 
 ## Overview
@@ -17,3 +17,4 @@ Pristine Shine is a desktop application for car-detailing studios that provides 
 - docs/Pristine_Shine_FYP.pdf: full report
 
 Contact: muhammadfaizanabbas@example.com
+
